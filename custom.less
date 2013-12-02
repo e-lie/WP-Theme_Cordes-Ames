@@ -1,0 +1,263 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+*/
+
+
+/*
+*  {{{ ---------------- GLOBAL RULES
+*/
+
+@jazzColor: rgba(255, 230, 163, 0.9); 
+
+body {
+  padding: 0;
+}
+
+.col-full {
+  max-width: 120em;
+}
+
+// }}}
+
+/* 
+* {{{ ----------------- PRODUCT CLOUD SHORTCODE-------------------- 
+*/
+
+@media only screen and (min-width: 1160px) { 
+
+  ul.products li.product {
+    position: relative;
+    margin: 2% !important;
+    width: 18%;
+    box-shadow: 0 0 4px 6px @jazzColor;
+
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    
+    .caption {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+      visibility: hidden;
+
+      -webkit-transition: opacity 0s;
+      -moz-transition: opacity 0s;
+      transition: opacity 0s;
+
+      img {
+        border-radius: 3%;
+        box-shadow: 0 0 4px 6px @jazzColor;
+      }
+      
+      &:hover {
+        -webkit-transition: opacity 0.4s ease;
+        -moz-transition: opacity 0.4s ease;
+        transition: opacity 0.4s ease;
+      }
+        
+    }
+
+
+    &.tiny {
+      width: 15%;
+      &:hover {
+        //width: 19%;
+        //margin: 0 !important;
+      }
+    }
+    
+    &.line1{
+      &.first{
+        margin-left: 10% !important;
+        &:hover {
+          //margin-left: 8% !important;
+        }
+      }
+    }
+
+    &.line2{
+      &.first{
+        margin-left: 5% !important;
+        &:hover {
+          //margin-left: 3% !important;
+        }
+      }
+    }
+
+    &.line3{
+      &.first{
+        margin-left: 5% !important;
+        &:hover {
+          //margin-left: 3% !important;
+        }
+      }
+    }
+
+    &.line4{
+      &.first{
+        margin-left: 14% !important;
+        &:hover {
+          //margin-left: 12% !important;
+        }
+      }
+    }
+    
+    &:hover {
+      //width: 22%;
+      //margin: 0 !important;
+      z-index: 100;
+      
+      .caption{
+        visibility: visible;
+        opacity: 1;
+        box-shadow: 0 8px 18px -4px rgba(0,0,0,0.4); 
+      }
+    }
+
+    img {
+      padding: 0;
+      margin: 0;
+      //background-color: orange;
+      //padding: 6px;
+      border: 0px !important;
+    }
+  }
+
+  .rb-overlay {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: -1;
+    pointer-events: none;
+    cursor: default;
+    background-color: #555;
+  }
+
+  .rb-grid {
+    li {
+      cursor: pointer;
+    }
+  }
+
+  .rb-close {
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    width: 2em;
+    height: 2em;
+    text-indent: -9000px;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: red;
+  }
+
+  .rb-close::before {
+    content: 'x';
+    font-weight: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    line-height: 0.6;
+    text-align: center;
+    text-indent: 0px;
+  }
+}
+
+.filter-index {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+    
+
+// }}}
+
+/*
+*  {{{ --------------------- RECENT POST SHORTCODE ------------------------
+*/
+.recent-posts-list {
+  list-style: none outside none;
+}
+
+.post-short {
+  .post-content {
+    width: 100%;
+  }
+
+  .thumbnail {
+    float: left;
+    width: 30%;
+  }
+}
+
+// }}} 
+
+
+/* {{{ --------------------- HOMEPAGE LAYOUT -------------------------- 
+*/
+
+.home-cea {
+  
+  &#main {
+    width: 100% !important;
+  }
+
+  @media only screen and (min-width: 768px) { 
+
+    .about-area {
+      height: 500px;
+      width: 100%;
+    }
+
+    .recent-posts {
+      height: 500px;
+      width: 100%;
+    }
+
+  }
+
+
+  @media only screen and (min-width: 1160px) { 
+
+    .about-area {
+      float: left;
+      height: 500px;
+      width: 25%;
+    }
+
+    .recent-posts {
+      float: left;
+      height: 500px;
+      width: 25%;
+    }
+
+    .product-cloud {
+      width: 49%;
+      float: left;
+    }
+
+    
+  }
+
+}
+
+// }}}
+
+
