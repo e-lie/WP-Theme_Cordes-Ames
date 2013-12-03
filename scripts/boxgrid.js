@@ -44,7 +44,7 @@ $special = $event.special.debouncedresize = {
 
 var Boxgrid = (function() {
 
-	var $items = $( '.rb-grid li' ),
+	var $items = $( '.rb-grid li .rb-trigger' ),
 		transEndEventNames = {
 			'WebkitTransition' : 'webkitTransitionEnd',
 			'MozTransition' : 'transitionend',
@@ -65,23 +65,19 @@ var Boxgrid = (function() {
 		winsize = getWindowSize();
 
 	function init( options ) {		
-		// apply fittext plugin
-		//$items.find( 'div.rb-week > div span' ).fitText( 0.3 ).end().find( 'span.rb-city' ).fitText( 0.5 );
-    console.log('cool');
 		initEvents();
 	}
 
 	function initEvents() {
 		
-        console.log($items);
-		$items.each( function() {
+    $items.each( function() {
 
 			var $item = $( this ),
-				$close = $item.find( 'span.rb-close' ),
-				$overlay = $item.children( 'div.rb-overlay' );
+      $close = $item.find( 'span.rb-close' ),
+      $overlay = $item.children( 'div.rb-overlay' );
 
 			$item.on( 'click', function() {
-
+    
 				if( $item.data( 'isExpanded' ) ) {
 					return false;
 				}
@@ -91,10 +87,10 @@ var Boxgrid = (function() {
 
 				var layoutProp = getItemLayoutProp( $item ),
 					clipPropFirst = 'rect(' 
-                          + ( layoutProp.top - layoutProp.height * 0.5 ) + 'px ' 
-                          + ( layoutProp.left + layoutProp.width * 1.5 ) + 'px ' 
-                          + ( layoutProp.top + layoutProp.height * 1.5 ) + 'px ' 
-                          + ( layoutProp.left - layoutProp.width * 0.5 ) + 'px)',
+                          + layoutProp.top + 'px ' 
+                          + ( layoutProp.left + layoutProp.width ) + 'px ' 
+                          + ( layoutProp.top + layoutProp.height ) + 'px ' 
+                          + layoutProp.left + 'px)',
 					clipPropLast = 'rect(0px ' + winsize.width + 'px ' + winsize.height + 'px 0px)';
 
 				$overlay.css( {

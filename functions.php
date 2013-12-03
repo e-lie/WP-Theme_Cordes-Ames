@@ -24,7 +24,7 @@ function products_cloud_shortcode( $atts ) {
 		global $woocommerce_loop;
 
 		extract(shortcode_atts(array(
-			'per_page' 	=> '18',
+			'per_page' 	=> '14',
 			'columns' 	=> '4',
 			'orderby' => 'date',
 			'order' => 'desc'
@@ -57,14 +57,18 @@ function products_cloud_shortcode( $atts ) {
 		$woocommerce_loop['columns'] = $columns;
 
 		if ( $products->have_posts() ) : ?>
-      <ul class="filter-index">
-        <li>categories:</li>
-        <li><a href="#">All</a></li>
-        <li><a title="classique" href="#">classique</a></li>
-        <li><a title="jazz" href="#">jazz</a></li>
-        <li><a title="baroque" href="#">baroque</a></li>
-        <li><a title="world" href="#">world</a></li>
-      </ul>
+
+      <input id="select-type-all" name="radio-set-1" type="radio" class="css-filter filter-all" checked="checked" />
+      <label for="select-type-all" class="ff-label-type-all">All</label>
+       
+      <input id="select-type-1" name="radio-set-1" type="radio" class="css-filter filter-1" />
+      <label for="select-type-1" class="ff-label-type-1">Web Design</label>
+       
+      <input id="select-type-2" name="radio-set-1" type="radio" class="css-filter filter-2" />
+      <label for="select-type-2" class="ff-label-type-2">Illustration</label>
+       
+      <input id="select-type-3" name="radio-set-1" type="radio" class="css-filter filter-3" />
+      <label for="select-type-3" class="ff-label-type-3">Icon Design</label>
 
       <ul class="products rb-grid">
 

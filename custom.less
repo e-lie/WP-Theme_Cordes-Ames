@@ -8,7 +8,7 @@ WOO CUSTOM STYLESHEET
 *  {{{ ---------------- GLOBAL RULES
 */
 
-@jazzColor: rgba(255, 230, 163, 0.9); 
+@jazzColor: rgba(255, 230, 163, 1); 
 
 body {
   padding: 0;
@@ -26,108 +26,78 @@ body {
 
 @media only screen and (min-width: 1160px) { 
 
+.product-cloud {
   ul.products li.product {
     position: relative;
-    margin: 2% !important;
-    width: 18%;
-    box-shadow: 0 0 4px 6px @jazzColor;
+    margin: 3% !important;
+    width: 24%;
+    border-radius: 3px;
+    opacity: 0;
+    box-shadow: 0 0 0px 5px @jazzColor,0 0 0px 6px darken(@jazzColor, 10%), 0 8px 18px -4px rgba(0,0,0,0.4);
 
-    &:after {
-      content: "";
-      clear: both;
-      display: block;
-    }
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
     
-    .caption {
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      opacity: 0;
-      visibility: hidden;
-
-      -webkit-transition: opacity 0s;
-      -moz-transition: opacity 0s;
-      transition: opacity 0s;
-
-      img {
-        border-radius: 3%;
-        box-shadow: 0 0 4px 6px @jazzColor;
-      }
-      
-      &:hover {
-        -webkit-transition: opacity 0.4s ease;
-        -moz-transition: opacity 0.4s ease;
-        transition: opacity 0.4s ease;
-      }
-        
-    }
-
-
-    &.tiny {
-      width: 15%;
-      &:hover {
-        //width: 19%;
-        //margin: 0 !important;
-      }
-    }
-    
-    &.line1{
-      &.first{
-        margin-left: 10% !important;
-        &:hover {
-          //margin-left: 8% !important;
-        }
-      }
-    }
-
-    &.line2{
-      &.first{
-        margin-left: 5% !important;
-        &:hover {
-          //margin-left: 3% !important;
-        }
-      }
-    }
-
-    &.line3{
-      &.first{
-        margin-left: 5% !important;
-        &:hover {
-          //margin-left: 3% !important;
-        }
-      }
-    }
-
-    &.line4{
-      &.first{
-        margin-left: 14% !important;
-        &:hover {
-          //margin-left: 12% !important;
-        }
-      }
-    }
-    
-    &:hover {
-      //width: 22%;
-      //margin: 0 !important;
-      z-index: 100;
-      
-      .caption{
-        visibility: visible;
-        opacity: 1;
-        box-shadow: 0 8px 18px -4px rgba(0,0,0,0.4); 
-      }
-    }
-
     img {
       padding: 0;
       margin: 0;
-      //background-color: orange;
-      //padding: 6px;
       border: 0px !important;
+      border-radius: 3px;
     }
+
+    &.tiny {
+      width: 18%;
+    }
+    
+    &.first{
+      &.line1{
+        margin-left: 5% !important;
+      }
+      &.line2{
+        margin-left: 3% !important;
+      }
+      &.line3{
+        margin-left: 3% !important;
+      }
+      &.line4{
+        margin-left: 15% !important;
+      }
+    }
+
+    &:hover {
+      width: 30%;
+      margin: 0 !important;
+      z-index: 100;
+
+      &.tiny {
+        width: 24%;
+      }
+
+      &.first{
+        &.line1{
+          margin-left: 2% !important;
+        }
+        &.line2{
+          margin-left: 0% !important;
+        }
+        &.line3{
+          margin-left: 0% !important;
+        }
+        &.line4{
+          margin-left: 12% !important;
+        }
+      }
+    }
+
+  }
+
+  .rb-trigger {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
   }
 
   .rb-overlay {
@@ -137,9 +107,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     z-index: -1;
     pointer-events: none;
     cursor: default;
@@ -177,13 +147,59 @@ body {
     text-align: center;
     text-indent: 0px;
   }
+
+
+
+  input.filter-all:checked ~ .products li.product,
+  input.filter-1:checked ~ .products li.product.line1,
+  input.filter-2:checked ~ .products li.product.line2,
+  input.filter-3:checked ~ .products li.product.line3,
+  input.filter-4:checked ~ .products li.product.line4{
+      opacity: 1 !important;
+  } 
+
+  input.filter-1:checked ~ .products li.product:not(.line1),
+  input.filter-2:checked ~ .products li.product:not(.line2),
+  input.filter-3:checked ~ .products li.product:not(.line3),
+  input.filter-4:checked ~ .products li.product:not(.line4){
+      
+      opacity: 0.2;
+      box-shadow: none;
+      cursor: default;
+
+      &:hover {
+        width: 24%;
+        margin: 3% !important;
+        z-index: 100;
+
+        &.tiny {
+          width: 18%;
+        }
+
+        &.first{
+          &.line1{
+            margin-left: 5% !important;
+          }
+          &.line2{
+            margin-left: 3% !important;
+          }
+          &.line3{
+            margin-left: 3% !important;
+          }
+          &.line4{
+            margin-left: 15% !important;
+          }
+        }
+      }
+
+      .rb-trigger {
+        display: none;
+      }
+
+  }
+
 }
 
-.filter-index {
-  list-style: none;
-  li {
-    display: inline-block;
-  }
 }
     
 

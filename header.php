@@ -51,7 +51,7 @@ global $woo_options, $woocommerce;
 <div id="wrapper">
 
 
-
+<?php if( is_page('Shop') ) { ?>
 	<div id="top">
 		<nav class="col-full" role="navigation">
 			<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
@@ -68,10 +68,9 @@ global $woo_options, $woocommerce;
 			?>
 		</nav>
 	</div><!-- /#top -->
+<?php }
 
-
-
-    <?php woo_header_before(); ?>
+  woo_header_before(); ?>
 
 	<header id="header" class="col-full">
 

@@ -31,24 +31,24 @@ $woocommerce_loop['loop']++;
 // Extra post classes
 $classes = array();
 
-$position = ($woocommerce_loop['loop'] - 1) % 18;
+$position = ($woocommerce_loop['loop'] - 1) % 14;
 
-  if ( $position >= 0 && $position <= 3) {
+  if ( $position >= 0 && $position <= 2) {
     $classes[] = 'line1';
-  }elseif ( $position >= 4 && $position <= 8) {
+  }elseif ( $position >= 3 && $position <= 6) {
     $classes[] = 'line2';
-  }elseif ( $position >= 9 && $position <= 13) {
+  }elseif ( $position >= 7 && $position <= 10) {
     $classes[] = 'line3';
-  }elseif ( $position >= 14 && $position <= 17) {
+  }elseif ( $position >= 11 && $position <= 13) {
     $classes[] = 'line4';
   }
 
   if ( $position >= 3 )
     $classes[] = 'tiny';
 
-  if ( $position == 0 || $position == 4 || $position == 9 || $position == 14 )
+  if ( $position == 0 || $position == 3 || $position == 7 || $position == 11 )
     $classes[] = 'first';
-  if ( $position == 3 || $position == 8 || $position == 13 || $position == 17 )
+  if ( $position == 2 || $position == 6 || $position == 10 || $position == 13 )
     $classes[] = 'last';
   
  
@@ -65,19 +65,10 @@ $position = ($woocommerce_loop['loop'] - 1) % 18;
 			 */
 			do_action( 'woocommerce_before_cloud_item' );
 		?>
-    <div class="caption">
-      <?php
-        /**
-         * custom hook : woocommerce_before_cloud_item
-         *
-         * @hooked woocommerce_template_loop_product_thumbnail - 10
-         */
-        do_action( 'woocommerce_before_cloud_item' );
-      ?>
-    </div>
-  
-    <div class="rb-overlay" >
-      <span class="rb-close">close</span>    
-      <h3><?php the_title(); ?></h3>
+    <div class="rb-trigger" > 
+      <div class="rb-overlay" >
+        <span class="rb-close">close</span>    
+        <h3><?php the_title(); ?></h3>
+      </div>
     </div>
 </li>
