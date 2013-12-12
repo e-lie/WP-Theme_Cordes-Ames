@@ -32,7 +32,7 @@ global $woo_options, $woocommerce;
 
 <?php
 	wp_head();
-	//woo_head();
+	woo_head();
 ?>
 
 <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/custom.less" />
@@ -40,7 +40,7 @@ global $woo_options, $woocommerce;
 
 <?php wp_enqueue_script( 'modernizr', get_bloginfo('stylesheet_directory').'/scripts/modernizr.custom.js', array() , '2.6.2', true ); ?> 
 <?php wp_enqueue_script( 'boxgrid', get_bloginfo('stylesheet_directory').'/scripts/boxgrid.js', array() , '1.0', true ); ?> 
-<?php wp_enqueue_script( 'quicksand', get_bloginfo('stylesheet_directory').'/scripts/jquery.quicksand.js', array() , '1.3', true ); ?> 
+<?php wp_enqueue_script( 'cookie', get_bloginfo('stylesheet_directory').'/scripts/jquery.cookie.js', array() , '1.0', true ); ?> 
 <?php wp_enqueue_script( 'app', get_bloginfo('stylesheet_directory').'/scripts/app.js', array() , '1.0', true ); ?> 
 
 </head>
@@ -97,11 +97,13 @@ global $woo_options, $woocommerce;
 
         <?php woo_nav_before(); ?>
 
+    <input id="menu-checkbox" name="menu-panel" type="checkbox" autocomplete="off" />
+    <label id="menu-button" class="woo-sc-button silver" for="menu-checkbox">Menu</label> 
 		<nav id="navigation" class="col-full" role="navigation">
 
 			<?php
 			if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
-				wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav fr', 'theme_location' => 'primary-menu' ) );
+				wp_nav_menu( array( 'depth' => 4, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav fr', 'theme_location' => 'primary-menu' ) );
 			} else {
 			?>
 	        <ul id="main-nav" class="nav fl">

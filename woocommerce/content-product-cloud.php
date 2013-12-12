@@ -58,12 +58,11 @@ $position = ($woocommerce_loop['loop'] - 1) % 14;
 <li <?php post_class( $classes ); ?>">
 
 		<?php
-			/**
-			 * custom hook : woocommerce_before_cloud_item
-			 *
-			 * @hooked woocommerce_template_loop_product_thumbnail - 10
-			 */
-			do_action( 'woocommerce_before_cloud_item' );
+      if ( has_post_thumbnail() ) {
+        the_post_thumbnail( array(230, 230) );
+      }elseif ( woocommerce_placeholder_img_src() ){
+        echo woocommerce_placeholder_img( 'shop_catalog' );
+      }
 		?>
     <div class="rb-trigger" > 
       <div class="rb-overlay" >

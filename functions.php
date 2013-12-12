@@ -1,18 +1,59 @@
 <?php
+/* functions.php : Thème Cordes&Âmes */
+
+// {{{ ----------------- Custom post type and Custom taxonomy declaration
+
 
 function custom_init() {
   register_post_type( 'artist', array(
   'label' => __('Artistes'),
     'singular_label' => __('Artiste'),
     'public' => true,
+    'has_archive' => true,
     'show_ui' => true,
     'capability_type' => 'post',
     'hierarchical' => false,
     'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'trackbacks', 'revisions', 'page-attributes')
   )); 
+
+	$labels = array(
+		'name'              => _x( 'Genres', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Genre', 'taxonomy singular name' ),
+		'search_items'      => __( 'Rechercher par genres' ),
+		'all_items'         => __( 'Tous les genres' ),
+		'edit_item'         => __( 'Edit Genre' ),
+		'update_item'       => __( 'Mettre à jour le genre' ),
+		'add_new_item'      => __( 'Ajouter genre' ),
+		'new_item_name'     => __( 'Nouveau genre' ),
+		'menu_name'         => __( 'Genre' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'genre' ),
+	);
+  
+  register_taxonomy( 'genre', array( 'artist' ), $args );
 }
 add_action('init', 'custom_init');
 
+// }}}
+
+// {{{ ------------------ hooks customization (particularly woocommerce actions)
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+
+// }}}
+
+// {{{ ------------------ theme parameter definition ------------
+
+//}}}
+
+// {{{ ------------------ Custom shortcodes declaration
 
 /**
 * Custom shortcode for the home page depending on woocommerce
@@ -58,17 +99,19 @@ function products_cloud_shortcode( $atts ) {
 
 		if ( $products->have_posts() ) : ?>
 
+      <h2><?php echo $atts['title'] ?></h2>
+  
       <input id="select-type-all" name="radio-set-1" type="radio" class="css-filter filter-all" checked="checked" />
       <label for="select-type-all" class="ff-label-type-all">All</label>
        
       <input id="select-type-1" name="radio-set-1" type="radio" class="css-filter filter-1" />
-      <label for="select-type-1" class="ff-label-type-1">Web Design</label>
+      <label for="select-type-1" class="ff-label-type-1">catégorie1</label>
        
       <input id="select-type-2" name="radio-set-1" type="radio" class="css-filter filter-2" />
-      <label for="select-type-2" class="ff-label-type-2">Illustration</label>
+      <label for="select-type-2" class="ff-label-type-2">catégorie2</label>
        
       <input id="select-type-3" name="radio-set-1" type="radio" class="css-filter filter-3" />
-      <label for="select-type-3" class="ff-label-type-3">Icon Design</label>
+      <label for="select-type-3" class="ff-label-type-3">catégorie3</label>
 
       <ul class="products rb-grid">
 
@@ -103,7 +146,8 @@ add_action( 'woocommerce_before_cloud_item', 'woocommerce_template_loop_product_
 
 function about_begin_shortcode( $atts ) {
 		ob_start();
-		return '<div class="about-area">' . ob_get_clean() ;
+		return '<div class="about-area">
+                <h2>' . $atts['title'] . '</h2>' . ob_get_clean() ;
 	}
 
 add_shortcode( 'about_begin', 'about_begin_shortcode' );
@@ -147,6 +191,8 @@ function recent_posts_shortcode( $atts ) {
 
 		if ( $products->have_posts() ) : ?>
 
+      <h2><?php echo $atts['title'] ?></h2>
+  
       <ul class="recent-posts-list">
 
 				<?php while ( $products->have_posts() ) : $products->the_post(); ?>
@@ -166,6 +212,10 @@ function recent_posts_shortcode( $atts ) {
 
 add_shortcode( 'recent_posts', 'recent_posts_shortcode' );
 
+// }}}
+
+// {{{ ------------------------ Utilitary functions
+
 function get_categories_as_classes($custom_post, $taxonomy_name) {
   $terms = get_the_terms( $custom_post->ID, $taxonomy_name );
 
@@ -181,6 +231,39 @@ function get_categories_as_classes($custom_post, $taxonomy_name) {
   }
   return $terms_slug_str;
 }
+
+function get_categories_display($custom_post, $taxonomy_name) {
+  $terms = get_the_terms( $custom_post->ID, $taxonomy_name );
+
+  if ($terms && ! is_wp_error($terms)) {
+    $term_slugs_arr = array();
+
+    foreach ($terms as $term) {
+        $term_slugs_arr[] = $term->slug;
+    }
+
+    $terms_slug_str = join( ", ", $term_slugs_arr);
+
+  }
+  return $terms_slug_str;
+}
+
+function get_related_artists ($product_id) {
+  $related_artists_ids = rpt_get_object_relation($product_id, 'artist');
+  if ( ! empty($related_artists_ids) ) {
+      $related_artists = get_posts( array(
+          'post_type' => 'artist',
+          'post_status' => 'publish',
+          'posts_per_page' => 5,
+          'post__in' => $related_artists_ids,
+          'orderby' => 'post_date',
+          'order' => 'DESC',
+      ) );
+  }
+  return $related_artists;
+}
+
+// }}}
 
 ?>
 
