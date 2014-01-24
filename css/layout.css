@@ -56,15 +56,15 @@ INDEX
   
   }
   ul.nav li {
-    position: relative;
-    float: left;
+    //--position: relative;
+    //--float: left;
     zoom: 1;
     list-style: none;
   }
-  ul.nav li a {
-    display: block;
-    padding: .53em 1em;
-  }
+  //--ul.nav li a {
+  //--  display: block;
+  //--  padding: .53em 1em;
+  //--}
   ul.nav ul {
     width: 15.379em;
     visibility: hidden;
@@ -198,9 +198,9 @@ INDEX
   
   }
   #header #navigation ul.nav > li a {
-    border: 1px solid #fcfcfc;
-    background: #fcfcfc;
-    font-weight: bold;
+    //--border: 1px solid #fcfcfc;
+    //--background: #fcfcfc;
+    //--font-weight: bold;
     position: relative;
     -webkit-border-radius: 0.236em;
     border-radius: 0.236em;
@@ -281,17 +281,17 @@ INDEX
   #header #navigation ul.nav > li.parent ul li.parent ul li.parent ul li a:after {
     visibility: hidden;
   }
-  #header #navigation ul.nav ul {
-    border: 1px solid #e8e4e3;
-    margin-top: -1px;
-    padding: .372em 0;
-    box-shadow: 0 0.202em 0 0 rgba(232, 228, 227, 0.4);
-    -webkit-box-shadow: 0 0.202em 0 0 rgba(232, 228, 227, 0.4);
-    background: #fff;
-  }
+  //--#header #navigation ul.nav ul {
+  //--  border: 1px solid #e8e4e3;
+  //--  margin-top: -1px;
+  //--  padding: .372em 0;
+  //--  box-shadow: 0 0.202em 0 0 rgba(232, 228, 227, 0.4);
+  //--  -webkit-box-shadow: 0 0.202em 0 0 rgba(232, 228, 227, 0.4);
+  //--  background: #fff;
+  //--}
   #header #navigation ul.nav ul li a {
     border: 0;
-    background: #fff;
+    //--background: #fff;
   }
   #header #navigation ul.nav ul ul {
     left: 100%;
@@ -603,25 +603,26 @@ INDEX
   #header hgroup {
     //--float: left;
   }
-  #header #navigation {
-    float: right;
-    clear: none;
-    border: 0;
-    background: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: auto;
-  }
+  //--#header #navigation {
+  //--  float: right;
+  //--  clear: none;
+  //--  border: 0;
+  //--  background: 0;
+  //--  -webkit-box-shadow: none;
+  //--  box-shadow: none;
+  //--  width: auto;
+  //--}
   #main.fullwidth,
   .layout-full #main,
   .col-full,
   .no-sidebar #main {
-    max-width: 75.998em;
+    //--max-width: 75.998em;
     margin: 0 auto;
     width: 100%;
   }
   #main {
-    width: 69.2%;
+    //--width: 69.2%;
+    width: 100%;
   }
   #sidebar {
     margin-top: 0;

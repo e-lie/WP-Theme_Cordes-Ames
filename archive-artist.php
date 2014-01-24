@@ -1,13 +1,7 @@
 <?php
-/**
- * The Template for displaying product archives, including the main shop page which is a post type archive.
- *
- * Override this template by copying it to yourtheme/woocommerce/archive-product.php
- *
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     2.0.0
- */
+/*
+Template Name: Artists archive
+*/
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -21,21 +15,18 @@ get_header('shop'); ?>
 	        <?php woo_main_before(); ?>
 	        <div id="main" class="col-left">
 
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
 			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
 
-		<?php endif; ?>
-
 		<?php do_action( 'woocommerce_archive_description' );
-          $ajax_request_type = 'product';
-          $post_type = 'product';
-          $taxonomy_name = 'product_cat';
+          $ajax_request_type = 'artist';
+          $post_type = 'artist';
+          $taxonomy_name = 'genre';
           $archive_type = 'yearly';
-          include(locate_template( 'product-filtering.php' )); ?>
+          include(locate_template( 'product-filtering.php' ));
+          $the_query = new WP_Query( array( 'posts_per_page' => '12', 'post_type' => 'artist' ) ); ?>
 
 
-		<?php if ( have_posts() ) : ?>
+		<?php if ( $the_query->have_posts() ) : ?>
 			<?php
           woocommerce_show_messages();
 			?>
@@ -51,9 +42,9 @@ get_header('shop'); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+					<?php woocommerce_get_template_part( 'content', 'artist' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 

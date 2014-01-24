@@ -78,7 +78,7 @@ jQuery.noConflict();
       
         $("#archive-wrapper")
           .empty()
-          .html("<div style='text-align: center; padding: 30px;'><img src='/smash_wp_theme_1/wp-content/themes/Theme_Cordes&Ames/images/ajax-loader.gif' /></div>");
+          .html("<div style='text-align: center; padding: 30px;'><img src='/cordesetames/wp-content/themes/Theme_Cordes&Ames/images/ajax-loader.gif' /></div>");
       
         var dateArray = $("#date-choice").val().split("/");
         var y = dateArray[4];
@@ -129,7 +129,7 @@ jQuery.noConflict();
 
     $("#archive-wrapper")
       .empty()
-      .html("<div style='text-align: center; padding: 30px;'><img src='/smash_wp_theme_1/wp-content/themes/Theme_Cordes&Ames/images/ajax-loader.gif' /></div>");
+      .html("<div style='text-align: center; padding: 30px;'><img src='/cordesetames/wp-content/themes/Theme_Cordes&Ames/images/ajax-loader.gif' /></div>");
   
     var dateArray = $("#date-choice").val().split("/");
     var y = dateArray[4];
@@ -137,6 +137,7 @@ jQuery.noConflict();
     var cat = $("#cat").val();
     var target = $("#archive-browser").attr("target");
     var type = $("#archive-browser").attr("type");
+    var orderby = $("#orderby").val();
 
     
     $.ajax({
@@ -149,7 +150,8 @@ jQuery.noConflict();
         "cea_y" : y,
         "cea_m" : m,
         "cea_c" : cat,
-        "cea_p" : page
+        "cea_p" : page,
+        "cea_o" : orderby
       }),
       success: function(data) {
         $("#archive-wrapper").html(data);

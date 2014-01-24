@@ -9,14 +9,25 @@
     if (htmlspecialchars(trim($_POST['cea_t'])) == 'product') {
       $post_type = 'product';
       $taxonomy_name = 'product_cat';
+    }elseif (htmlspecialchars(trim($_POST['cea_t'])) == 'artist') {
+      $post_type = 'artist';
+      $taxonomy_name = 'genre';
     }
+      
     $year = htmlspecialchars(trim($_POST['cea_y']));
     $month = htmlspecialchars(trim($_POST['cea_m']));
     $cat_id = htmlspecialchars(trim($_POST['cea_c']));
     $page = htmlspecialchars(trim($_POST['cea_p']));
+    $orderby = htmlspecialchars(trim($_POST['cea_o']));
     
-    $args = array ( 'year' => $year, 'monthnum' => $month, 'posts_per_page' => '12', 'paged' => $page, 'post_type' => $post_type, 'orderby' => 'popularity');
-
+    if( $orderby == 'name' ){
+      $order = 'ASC';
+    }else{
+      $order = 'DESC';
+    }
+    
+    $args = array ( 'year' => $year, 'monthnum' => $month, 'posts_per_page' => '12', 'paged' => $page, 'post_type' => $post_type, 'orderby' => $orderby, 'order' => $order);
+    
     if ( $cat_id != -1 ){
       $cat_name = get_term( $cat_id, $taxonomy_name )->slug; 
       $args[$taxonomy_name] = $cat_name;
@@ -34,7 +45,7 @@
 	    <?php    
 	        if (have_posts()) : while (have_posts()) : the_post(); ?>
           
-					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+					<?php woocommerce_get_template_part( 'content', 'artist' ); ?>
 	    <?php 
 	        endwhile; else:
 	        
