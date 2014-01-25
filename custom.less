@@ -2,28 +2,8 @@
 ---------------------
 */
 
-//{{{ -------------------- TYPEFACES ---------------
 
-
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
-
-
-//}}}
-
-//  {{{ ---------------- GLOBAL RULES ------------------------------- 
-
-
-@jazzColor: #aafaff; 
-@darkgreyblue: #303942;
-@pantone311C: #23C2E3;
-
-body {
-  padding: 0;
-  .app_font;
-  font-size: 18px;
-  line-height: 24px;
-  .background_white_blue
-}
+/*{{{ -------------------- MIXINS ---------------*/
 
 .transition (@target: all, @delay: 0.3s, @mode: ease){
   -moz-transition: @target @delay @mode;
@@ -33,9 +13,9 @@ body {
 }
 
 .columns(@number){
-  //-webkit-columns: @number;
-  //-moz-columns: @number;
-  //columns: @number;
+/*   -webkit-columns: @number; */
+/*   -moz-columns: @number; */
+/*   columns: @number; */
   column-count: @number;
   column-fill: balance;
   -moz-column-count: @number;
@@ -54,6 +34,33 @@ body {
   background: linear-gradient(to @end,  @color1 @position1,@color2 @position2,@color3 @position3); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color3',GradientType=1 ); /* IE6-9 */
 }
+
+/* }}} */
+
+/* {{{ -------------------- TYPEFACES --------------- */
+
+
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
+
+
+/* }}} */
+
+/*   {{{ ---------------- GLOBAL RULES -------------------------------  */
+
+
+@jazzColor: #aafaff; 
+@darkgreyblue: #303942;
+@pantone311C: #23C2E3;
+
+body {
+  padding: 0;
+  .app_font;
+  font-size: 18px;
+  line-height: 24px;
+  .background_white_blue
+}
+
+
 
 .content_block {
   padding: 1.3em;
@@ -80,7 +87,7 @@ body {
   .content_font;
   color: #444;
   font-weight: 700;
-  //text-shadow: 0 1px rgba(0,0,0,0.3);
+/*   text-shadow: 0 1px rgba(0,0,0,0.3); */
   .transition(all, 0.2s);
   &:hover{
     color: @pantone311C;
@@ -115,25 +122,8 @@ body {
 }
 
 .background_white_blue {
-//  background: rgb(252,252,252); /* old browsers */
-//  background: -moz-linear-gradient(left,  rgba(252,252,252,1) 0%, rgba(234,246,252,1) 50%, rgba(252,252,252,1) 100%); /* ff3.6+ */
-//  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(252,252,252,1)), color-stop(50%,rgba(234,246,252,1)), color-stop(100%,rgba(252,252,252,1))); /* chrome,safari4+ */
-//  background: -webkit-linear-gradient(left,  rgba(252,252,252,1) 0%,rgba(234,246,252,1) 50%,rgba(252,252,252,1) 100%); /* chrome10+,safari5.1+ */
-//  background: -o-linear-gradient(left,  rgba(252,252,252,1) 0%,rgba(234,246,252,1) 50%,rgba(252,252,252,1) 100%); /* opera 11.10+ */
-//  background: -ms-linear-gradient(left,  rgba(252,252,252,1) 0%,rgba(234,246,252,1) 50%,rgba(252,252,252,1) 100%); /* ie10+ */
-//  background: linear-gradient(to right,  rgba(252,252,252,1) 0%,rgba(234,246,252,1) 50%,rgba(252,252,252,1) 100%); /* w3c */
-//  filter: progid:dximagetransform.microsoft.gradient( startcolorstr='#fcfcfc', endcolorstr='#fcfcfc',gradienttype=1 ); /* ie6-9 */
-//
-//background: rgb(215,237,247); /* Old browsers */
-//background: -moz-linear-gradient(left,  rgba(215,237,247,1) 0%, rgba(255,255,255,1) 50%, rgba(215,237,247,1) 100%); /* FF3.6+ */
-//background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(215,237,247,1)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(215,237,247,1))); /* Chrome,Safari4+ */
-//background: -webkit-linear-gradient(left,  rgba(215,237,247,1) 0%,rgba(255,255,255,1) 50%,rgba(215,237,247,1) 100%); /* Chrome10+,Safari5.1+ */
-//background: -o-linear-gradient(left,  rgba(215,237,247,1) 0%,rgba(255,255,255,1) 50%,rgba(215,237,247,1) 100%); /* Opera 11.10+ */
-//background: -ms-linear-gradient(left,  rgba(215,237,247,1) 0%,rgba(255,255,255,1) 50%,rgba(215,237,247,1) 100%); /* IE10+ */
-//background: linear-gradient(to right,  rgba(215,237,247,1) 0%,rgba(255,255,255,1) 50%,rgba(215,237,247,1) 100%); /* W3C */
-//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7edf7', endColorstr='#d7edf7',GradientType=1 ); /* IE6-9 */
 
-.background-linear-gradient( rgba(215,237,247,1), rgba(255,255,255,1), rgba(215,237,247,1), 0%, 50%, 100%, linear, left, right); 
+  .background-linear-gradient( rgba(215,237,247,1), rgba(255,255,255,1), rgba(215,237,247,1), 0%, 50%, 100%, linear, left, right); 
 
 }
 
@@ -151,6 +141,7 @@ a{
     margin: 1em auto;
   }
 }
+
 
 #navigation {
   .blue_under_zone;
@@ -204,7 +195,7 @@ a{
   }
 }
   
-// {{{ woo button
+/*  {{{ woo button */
 .woo-sc-button {
   font-family: sans-serif;
   display: inline-block;
@@ -261,6 +252,7 @@ a{
             color-stop(1, #1666ca)
           );
     background: -moz-linear-gradient(
+}
             center top,
             #3e9ee5 20%,
             #1666ca 100%
@@ -299,9 +291,9 @@ a{
 }
 
 
-// }}}
+/*  }}} */
 
-// {{{ mystile buttons
+/*  {{{ mystile buttons */
 a.button,
 a.comment-reply-link,
 #commentform #submit,
@@ -532,11 +524,11 @@ button.button:active {
   box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-//}}}
+/* }}} */
 
-// }}}
+/*  }}} */
 
-//  {{{ ---------------- HOMEPAGE GLOBAL STYLE ------------------------------------
+/*   {{{ ---------------- HOMEPAGE GLOBAL STYLE ------------------------------------ */
 
 
 .home-cea {
@@ -547,9 +539,9 @@ button.button:active {
   }
 }
 
-// }}}
+/*  }}} */
 
-// {{{ ----------------- PRODUCT CLOUD SHORTCODE-------------------- 
+/*  {{{ ----------------- PRODUCT CLOUD SHORTCODE--------------------  */
 
 
 @media only screen and (min-width: 1160px) { 
@@ -734,7 +726,7 @@ button.button:active {
 
     
 
-// }}}
+/*  }}} */
 /*
 *  {{{ --------------------- RECENT POST SHORTCODE ------------------------
 */
@@ -753,9 +745,9 @@ button.button:active {
   }
 }
 
-// }}} 
+/*  }}}  */
 
-// {{{ --------------------- HOMEPAGE LAYOUT -------------------------- 
+/*  {{{ --------------------- HOMEPAGE LAYOUT --------------------------  */
 
 
 .home-cea {
@@ -804,9 +796,9 @@ button.button:active {
 
 }
 
-// }}}
+/*  }}} */
 
-//{{{ ------------------------- ARCHIVE PRODUCT LIST -------------------------------- 
+/* {{{ ------------------------- ARCHIVE PRODUCT LIST --------------------------------  */
 
 .archive-product {
   
@@ -852,6 +844,6 @@ button.button:active {
         
 
 
-// }}}
+/*  }}} */
 
 
