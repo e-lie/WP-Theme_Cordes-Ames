@@ -1,0 +1,33 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
+
+.transition (@target: all, @delay: 0.3s, @mode: ease){
+  -moz-transition: @target @delay @mode;
+  -o-transition: @target @delay @mode;
+  -webkit-transition: @target @delay @mode;
+  transition: @target @delay @mode
+}
+
+.columns(@number){
+/*   -webkit-columns: @number; */
+/*   -moz-columns: @number; */
+/*   columns: @number; */
+  column-count: @number;
+  column-fill: balance;
+  -moz-column-count: @number;
+  -moz-column-fill: balance;
+  -webkit-column-count: @number;
+  -webkit-column-fill: balance;
+}
+
+.background-linear-gradient(@color1, @color2:@color1, @color3:@color2, @position1:0%, @position2:50%, @position3:100%, @gradient-shape:linear, @begin:left, @end:right ){
+  background: @color1; /* Old browsers */
+  background: -moz-linear-gradient(@begin,  @color1 @position1, @color2 @position2, @color3 @position1); /* FF3.6+ */
+  background: -webkit-gradient(@gradient-shape, @begin top, @end top, color-stop(@position1,@color1), color-stop(@position2,@color2), color-stop(@position1,@color3)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(@begin,  @color1 @position1,@color2 @position2,@color3 @position1); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(@begin,  @color1 @position1,@color2 @position2,@color3 @position3); /* Opera 11.10+ */
+  background: -ms-linear-gradient(@begin,  @color1 @position1,@color2 @position2,@color3 @position3); /* IE10+ */
+  background: linear-gradient(to @end,  @color1 @position1,@color2 @position2,@color3 @position3); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color3',GradientType=1 ); /* IE6-9 */
+}
