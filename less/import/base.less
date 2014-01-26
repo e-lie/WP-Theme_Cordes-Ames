@@ -1,0 +1,92 @@
+body {
+  padding: 0;
+  .app_font;
+  font-size: 18px;
+  line-height: 24px;
+  .background_white_blue
+}
+
+a{
+  .link_style1;
+} 
+
+#content {
+  width: 95%;
+}
+
+#header {
+  hgroup {
+    width: 30%;
+    margin: 1em auto;
+  }
+}
+
+
+#navigation {
+  .blue_under_zone;
+  overflow: hidden;
+  height: auto; // by default the menu is open
+
+  .transition(height, 0.4s, ease-in-out);  
+
+  ul.nav {
+    width: 75%;
+    margin: 0 auto;
+    .columns(3);
+
+    li.menu-item {
+      a {
+        .link_style2;
+      }
+    }
+
+    ul {
+      display: block;
+      position: relative;
+      visibility: visible;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background: none;
+      box-shadow: none;
+      li a{
+        font-size: 0.85em;
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
+
+#menu-button {
+  position: absolute;
+  left: 3%;
+  top: 140px;
+}
+
+#menu-checkbox {
+  display: none;
+  &:not(:checked) ~ #navigation{
+    height: 0; //if recent css3 rules are supported, the menu is closed
+  }
+  &:checked ~ #navigation {
+    height: 7.6em; //and can be reopen of course      li {
+  }
+}
+
+.home-cea {  
+  
+  &#main {
+    width: 100% !important;
+  }
+  
+  .entry {
+    h2 {
+      text-align: center;
+    }
+  }
+  
+}
+  
+  
+  

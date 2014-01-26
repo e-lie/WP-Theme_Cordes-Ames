@@ -1,0 +1,74 @@
+
+@media only screen and (min-width: 1160px) { 
+
+
+  .home-cea {
+    .about-area {
+      float: left;
+      width: 21%;
+      .content_block;
+      .bordered_glass_block;
+    }
+
+    .recent-posts {
+      float: left;
+      width: 21%;
+      .content_block
+    }
+
+    .product-cloud {
+      .cloud; //generic style
+      
+      width: 45%;
+      float: left;
+      .content_block
+    }
+  }
+
+  //-------------------------------------
+  
+  .archive-product {
+    
+    ul.products {
+      &.list{
+	& > li {
+	  float: none;
+	  width: 100%;
+	  text-align: left; 
+	  
+	  img {
+	    width: 30%;
+	    margin: 0;
+	    display: inline-block;
+	  } 
+	  .caption {
+	    display: inline-block;
+	    width: 50%;
+	    min-width: 300px;
+	    vertical-align: top
+	  }
+	}
+      }
+
+      &.grid{
+	& > li {
+	  display: block;
+	  float: left;
+	  width: 22.05%;
+	  height: 25%;
+	  
+	  a.thumb {
+	    width: 100%;
+	  }
+	  
+	  .caption .post-excerpt{
+	    display: none;
+	  }
+	}
+      }
+    }
+  }
+
+  //-------------------------------------
+  
+}
