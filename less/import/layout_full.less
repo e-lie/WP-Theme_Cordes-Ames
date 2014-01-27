@@ -33,18 +33,25 @@
       &.list{
 	& > li {
 	  float: none;
+	  clear: both;
 	  width: 100%;
+	  margin-bottom: 2em;
 	  text-align: left; 
 	  
-	  img {
+	  a.thumb {
+	    float: left;
 	    width: 30%;
-	    margin: 0;
-	    display: inline-block;
-	  } 
-	  .caption {
-	    display: inline-block;
-	    width: 50%;
+	    margin-right: 5%;
+	    margin-bottom: 2em;
+	    
+	    img {
+	      overflow: visible;
+	    }
+	  }
+	  
+	  section.content {
 	    min-width: 300px;
+	    margin-bottom: 2em;
 	    vertical-align: top
 	  }
 	}

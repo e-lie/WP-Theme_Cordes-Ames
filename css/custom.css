@@ -309,6 +309,9 @@ button.button:active {
 .link_style2p:hover {
   color: #222;
 }
+.typo_paragraph {
+  font-family: 'Crimson Text', sans-serif;
+}
 .content_block {
   padding: 1.3em;
 }
@@ -318,186 +321,27 @@ button.button:active {
   border-radius: 0.6em;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
 }
-.blue_under_zone {
-  background: #23c2e3;
-  box-shadow: inset 0 0 9px 4px rgba(0, 0, 0, 0.2);
+.inner_shadow_block {
+  background: #a0947d;
+  box-shadow: inset 0 0 9px 4px rgba(0, 0, 0, 0.35);
 }
 .background_white_blue {
-  background: #d7edf7;
+  background: #f2edcb;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #d7edf7 0%, #ffffff 50%, #d7edf7 0%);
+  background: -moz-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 0%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #d7edf7), color-stop(50%, #ffffff), color-stop(0%, #d7edf7));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f2edcb), color-stop(50%, #ffffff), color-stop(0%, #f2edcb));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #d7edf7 0%, #ffffff 50%, #d7edf7 0%);
+  background: -webkit-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 0%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #d7edf7 0%, #ffffff 50%, #d7edf7 100%);
+  background: -o-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #d7edf7 0%, #ffffff 50%, #d7edf7 100%);
+  background: -ms-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* IE10+ */
-  background: linear-gradient(to right, #d7edf7 0%, #ffffff 50%, #d7edf7 100%);
+  background: linear-gradient(to right, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color3', GradientType=1);
   /* IE6-9 */
-}
-.cloud ul.products li.product {
-  position: relative;
-  margin: 3% !important;
-  width: 15%;
-  border-radius: 3px;
-  opacity: 0;
-  box-shadow: 0 0 0px 2px #aafaff, 0 2px 2px 1px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.cloud ul.products li.product img {
-  padding: 0;
-  margin: 0;
-  border: 0px !important;
-  border-radius: 3px;
-}
-.cloud ul.products li.product.first.line1 {
-  margin-left: 13% !important;
-}
-.cloud ul.products li.product.first.line2 {
-  margin-left: 3% !important;
-}
-.cloud ul.products li.product.first.line3 {
-  margin-left: 3% !important;
-}
-.cloud ul.products li.product.first.line4 {
-  margin-left: 13% !important;
-}
-.cloud ul.products li.product:hover {
-  width: 21%;
-  margin: 0 !important;
-  z-index: 100;
-  box-shadow: 0 0 0px 2px #aafaff, 0 5px 6px 2px rgba(0, 0, 0, 0.2);
-}
-.cloud ul.products li.product:hover.first.line1 {
-  margin-left: 10% !important;
-}
-.cloud ul.products li.product:hover.first.line2 {
-  margin-left: 0% !important;
-}
-.cloud ul.products li.product:hover.first.line3 {
-  margin-left: 0% !important;
-}
-.cloud ul.products li.product:hover.first.line4 {
-  margin-left: 10% !important;
-}
-.cloud .rb-trigger {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 20;
-}
-.cloud .rb-overlay {
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  z-index: -1;
-  pointer-events: none;
-  cursor: default;
-  background-color: #555;
-}
-.cloud .rb-grid li {
-  cursor: pointer;
-}
-.cloud .rb-close {
-  position: absolute;
-  top: 10%;
-  right: 6%;
-  width: 2em;
-  height: 2em;
-  text-indent: -9000px;
-  cursor: pointer;
-  z-index: 1000;
-  background-color: red;
-}
-.cloud .rb-close::before {
-  content: 'x';
-  font-weight: 100;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 3em;
-  line-height: 0.6;
-  text-align: center;
-  text-indent: 0px;
-}
-.cloud input.filter-all:checked ~ .products li.product,
-.cloud input.filter-1:checked ~ .products li.product.line1,
-.cloud input.filter-2:checked ~ .products li.product.line2,
-.cloud input.filter-3:checked ~ .products li.product.line3,
-.cloud input.filter-4:checked ~ .products li.product.line4 {
-  opacity: 1 !important;
-}
-.cloud input.filter-1:checked ~ .products li.product:not(.line1),
-.cloud input.filter-2:checked ~ .products li.product:not(.line2),
-.cloud input.filter-3:checked ~ .products li.product:not(.line3),
-.cloud input.filter-4:checked ~ .products li.product:not(.line4) {
-  opacity: 0.2;
-  box-shadow: none;
-  cursor: default;
-}
-.cloud input.filter-1:checked ~ .products li.product:not(.line1):hover,
-.cloud input.filter-2:checked ~ .products li.product:not(.line2):hover,
-.cloud input.filter-3:checked ~ .products li.product:not(.line3):hover,
-.cloud input.filter-4:checked ~ .products li.product:not(.line4):hover {
-  width: 15%;
-  margin: 3% !important;
-  z-index: 100;
-}
-.cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line1,
-.cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line1,
-.cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line1,
-.cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line1 {
-  margin-left: 13% !important;
-}
-.cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line2,
-.cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line2,
-.cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line2,
-.cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line2 {
-  margin-left: 3% !important;
-}
-.cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line3,
-.cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line3,
-.cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line3,
-.cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line3 {
-  margin-left: 3% !important;
-}
-.cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line4,
-.cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line4,
-.cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line4,
-.cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line4 {
-  margin-left: 13% !important;
-}
-.cloud input.filter-1:checked ~ .products li.product:not(.line1) .rb-trigger,
-.cloud input.filter-2:checked ~ .products li.product:not(.line2) .rb-trigger,
-.cloud input.filter-3:checked ~ .products li.product:not(.line3) .rb-trigger,
-.cloud input.filter-4:checked ~ .products li.product:not(.line4) .rb-trigger {
-  display: none;
-}
-.recent-posts .recent-posts-list {
-  list-style: none outside none;
-}
-.recent-posts .post-short .post-content {
-  width: 100%;
-}
-.recent-posts .post-short .thumbnail {
-  float: left;
-  width: 30%;
 }
 .cloud ul.products li.product {
   position: relative;
@@ -665,19 +509,19 @@ body {
   line-height: 1.8em;
   font-size: 18px;
   line-height: 24px;
-  background: #d7edf7;
+  background: #f2edcb;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #d7edf7 0%, #ffffff 50%, #d7edf7 0%);
+  background: -moz-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 0%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #d7edf7), color-stop(50%, #ffffff), color-stop(0%, #d7edf7));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f2edcb), color-stop(50%, #ffffff), color-stop(0%, #f2edcb));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #d7edf7 0%, #ffffff 50%, #d7edf7 0%);
+  background: -webkit-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 0%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #d7edf7 0%, #ffffff 50%, #d7edf7 100%);
+  background: -o-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #d7edf7 0%, #ffffff 50%, #d7edf7 100%);
+  background: -ms-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* IE10+ */
-  background: linear-gradient(to right, #d7edf7 0%, #ffffff 50%, #d7edf7 100%);
+  background: linear-gradient(to right, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color3', GradientType=1);
   /* IE6-9 */
@@ -695,6 +539,9 @@ a {
 a:hover {
   color: #23c2e3;
 }
+p {
+  font-family: 'Crimson Text', sans-serif;
+}
 #content {
   width: 95%;
 }
@@ -703,8 +550,8 @@ a:hover {
   margin: 1em auto;
 }
 #navigation {
-  background: #23c2e3;
-  box-shadow: inset 0 0 9px 4px rgba(0, 0, 0, 0.2);
+  background: #a0947d;
+  box-shadow: inset 0 0 9px 4px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   height: auto;
   -moz-transition: height 0.4s ease-in-out;
@@ -951,169 +798,25 @@ a:hover {
   .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4) .rb-trigger {
     display: none;
   }
-  .home-cea .product-cloud ul.products li.product {
-    position: relative;
-    margin: 3% !important;
-    width: 15%;
-    border-radius: 3px;
-    opacity: 0;
-    box-shadow: 0 0 0px 2px #aafaff, 0 2px 2px 1px rgba(0, 0, 0, 0.4);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  .home-cea .product-cloud ul.products li.product img {
-    padding: 0;
-    margin: 0;
-    border: 0px !important;
-    border-radius: 3px;
-  }
-  .home-cea .product-cloud ul.products li.product.first.line1 {
-    margin-left: 13% !important;
-  }
-  .home-cea .product-cloud ul.products li.product.first.line2 {
-    margin-left: 3% !important;
-  }
-  .home-cea .product-cloud ul.products li.product.first.line3 {
-    margin-left: 3% !important;
-  }
-  .home-cea .product-cloud ul.products li.product.first.line4 {
-    margin-left: 13% !important;
-  }
-  .home-cea .product-cloud ul.products li.product:hover {
-    width: 21%;
-    margin: 0 !important;
-    z-index: 100;
-    box-shadow: 0 0 0px 2px #aafaff, 0 5px 6px 2px rgba(0, 0, 0, 0.2);
-  }
-  .home-cea .product-cloud ul.products li.product:hover.first.line1 {
-    margin-left: 10% !important;
-  }
-  .home-cea .product-cloud ul.products li.product:hover.first.line2 {
-    margin-left: 0% !important;
-  }
-  .home-cea .product-cloud ul.products li.product:hover.first.line3 {
-    margin-left: 0% !important;
-  }
-  .home-cea .product-cloud ul.products li.product:hover.first.line4 {
-    margin-left: 10% !important;
-  }
-  .home-cea .product-cloud .rb-trigger {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
-  }
-  .home-cea .product-cloud .rb-overlay {
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    z-index: -1;
-    pointer-events: none;
-    cursor: default;
-    background-color: #555;
-  }
-  .home-cea .product-cloud .rb-grid li {
-    cursor: pointer;
-  }
-  .home-cea .product-cloud .rb-close {
-    position: absolute;
-    top: 10%;
-    right: 6%;
-    width: 2em;
-    height: 2em;
-    text-indent: -9000px;
-    cursor: pointer;
-    z-index: 1000;
-    background-color: red;
-  }
-  .home-cea .product-cloud .rb-close::before {
-    content: 'x';
-    font-weight: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 3em;
-    line-height: 0.6;
-    text-align: center;
-    text-indent: 0px;
-  }
-  .home-cea .product-cloud input.filter-all:checked ~ .products li.product,
-  .home-cea .product-cloud input.filter-1:checked ~ .products li.product.line1,
-  .home-cea .product-cloud input.filter-2:checked ~ .products li.product.line2,
-  .home-cea .product-cloud input.filter-3:checked ~ .products li.product.line3,
-  .home-cea .product-cloud input.filter-4:checked ~ .products li.product.line4 {
-    opacity: 1 !important;
-  }
-  .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1),
-  .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2),
-  .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3),
-  .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4) {
-    opacity: 0.2;
-    box-shadow: none;
-    cursor: default;
-  }
-  .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1):hover,
-  .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover,
-  .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3):hover,
-  .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4):hover {
-    width: 15%;
-    margin: 3% !important;
-    z-index: 100;
-  }
-  .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line1,
-  .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line1,
-  .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line1,
-  .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line1 {
-    margin-left: 13% !important;
-  }
-  .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line2,
-  .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line2,
-  .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line2,
-  .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line2 {
-    margin-left: 3% !important;
-  }
-  .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line3,
-  .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line3,
-  .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line3,
-  .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line3 {
-    margin-left: 3% !important;
-  }
-  .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line4,
-  .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line4,
-  .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line4,
-  .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line4 {
-    margin-left: 13% !important;
-  }
-  .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1) .rb-trigger,
-  .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2) .rb-trigger,
-  .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3) .rb-trigger,
-  .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4) .rb-trigger {
-    display: none;
-  }
   .archive-product ul.products.list > li {
     float: none;
+    clear: both;
     width: 100%;
+    margin-bottom: 2em;
     text-align: left;
   }
-  .archive-product ul.products.list > li img {
+  .archive-product ul.products.list > li a.thumb {
+    float: left;
     width: 30%;
-    margin: 0;
-    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 2em;
   }
-  .archive-product ul.products.list > li .caption {
-    display: inline-block;
-    width: 50%;
+  .archive-product ul.products.list > li a.thumb img {
+    overflow: visible;
+  }
+  .archive-product ul.products.list > li section.content {
     min-width: 300px;
+    margin-bottom: 2em;
     vertical-align: top;
   }
   .archive-product ul.products.grid > li {

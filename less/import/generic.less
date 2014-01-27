@@ -31,10 +31,20 @@
 
 // ---------------------- COLORS ----------------------
 
+// palette generic
 @jazzColor: #aafaff; 
 @darkgreyblue: #303942;
 @pantone311C: #23C2E3;
+@pantoneClair: rgba(215,237,247,1);
+@beige1: rgba(244,229,190,1);
+@beige2: rgba(242,237,203,1);
+@beigeFonce1: #A0947D;
+@beigeFonce2: #605849;
 
+// design colors
+@bg1: @beige2;
+@bg2: white;
+@bgMenu: @beigeFonce1;
 // ---------------------- TYPOGRAPHY ------------------
 
 @import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
@@ -82,6 +92,10 @@
   }
 }
 
+.typo_paragraph{
+  .content_font;
+}
+
 // ---------------------- BLOCS ------------------
 .content_block {
   padding: 1.3em;
@@ -94,199 +108,19 @@
   box-shadow: 0 2px 2px -2px rgba(0,0,0,0.4);
 }
 
-.blue_under_zone{
-  background: @pantone311C;
-  box-shadow: inset 0 0 9px 4px rgba(0,0,0,.2);
+.inner_shadow_block{ // bloc avec une ombre interne en haut et en bas (menu)
+  background: @bgMenu;
+  box-shadow: inset 0 0 9px 4px rgba(0,0,0,.35);
 }
 
 .background_white_blue {
-
-  .background-linear-gradient( rgba(215,237,247,1), rgba(255,255,255,1), rgba(215,237,247,1), 0%, 50%, 100%, linear, left, right); 
-  
+  .background-linear-gradient( @bg1, @bg2, @bg1, 0%, 50%, 100%, linear, left, right); 
 }
 
 // ---------------------- BUTTONS ------------------
 
 // ---------------------- REUSABLE UI ELEMENTS -----------------
 
-.cloud {
-  ul.products li.product {
-    position: relative;
-    margin: 3% !important;
-    width: 15%;
-    border-radius: 3px;
-    opacity: 0;
-    box-shadow: 0 0 0px 2px @jazzColor, 0 2px 2px 1px rgba(0,0,0,0.4);
 
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    
-    img {
-      padding: 0;
-      margin: 0;
-      border: 0px !important;
-      border-radius: 3px;
-    }
-    
-    &.first{
-      &.line1{
-        margin-left: 13% !important;
-      }
-      &.line2{
-        margin-left: 3% !important;
-      }
-      &.line3{
-        margin-left: 3% !important;
-      }
-      &.line4{
-        margin-left: 13% !important;
-      }
-    }
-
-    &:hover {
-      width: 21%;
-      margin: 0 !important;
-      z-index: 100;
-      box-shadow: 0 0 0px 2px @jazzColor, 0 5px 6px 2px rgba(0,0,0,0.2);
-
-      &.first{
-        &.line1{
-          margin-left: 10% !important;
-        }
-        &.line2{
-          margin-left: 0% !important;
-        }
-        &.line3{
-          margin-left: 0% !important;
-        }
-        &.line4{
-          margin-left: 10% !important;
-        }
-      }
-    }
-
-  }
-
-  .rb-trigger {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
-  }
-
-  .rb-overlay {
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    z-index: -1;
-    pointer-events: none;
-    cursor: default;
-    background-color: #555;
-  }
-
-  .rb-grid {
-    li {
-      cursor: pointer;
-    }
-  }
-
-  .rb-close {
-    position: absolute;
-    top: 10%;
-    right: 6%;
-    width: 2em;
-    height: 2em;
-    text-indent: -9000px;
-    cursor: pointer;
-    z-index: 1000;
-    background-color: red;
-  }
-
-  .rb-close::before {
-    content: 'x';
-    font-weight: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 3em;
-    line-height: 0.6;
-    text-align: center;
-    text-indent: 0px;
-  }
-
-  input.filter-all:checked ~ .products li.product,
-  input.filter-1:checked ~ .products li.product.line1,
-  input.filter-2:checked ~ .products li.product.line2,
-  input.filter-3:checked ~ .products li.product.line3,
-  input.filter-4:checked ~ .products li.product.line4{
-      opacity: 1 !important;
-  } 
-
-  input.filter-1:checked ~ .products li.product:not(.line1),
-  input.filter-2:checked ~ .products li.product:not(.line2),
-  input.filter-3:checked ~ .products li.product:not(.line3),
-  input.filter-4:checked ~ .products li.product:not(.line4){
-      
-    opacity: 0.2;
-    box-shadow: none;
-    cursor: default;
-
-    &:hover {
-      width: 15%;
-      margin: 3% !important;
-      z-index: 100;
-
-      &.first{
-        &.line1{
-          margin-left: 13% !important;
-        }
-        &.line2{
-          margin-left: 3% !important;
-        }
-        &.line3{
-          margin-left: 3% !important;
-        }
-        &.line4{
-          margin-left: 13% !important;
-        }
-      }
-    }
-
-    .rb-trigger {
-      display: none;
-    }
-
-  } 
-  
-}
-
-  //-------------------------------------
-  
-.recent-posts {
-  .recent-posts-list {
-    list-style: none outside none;
-  }
-
-  .post-short {
-    .post-content {
-      width: 100%;
-    }
-
-    .thumbnail {
-      float: left;
-      width: 30%;
-    }
-  }
-}
 
 

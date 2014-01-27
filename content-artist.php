@@ -6,7 +6,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 <?php
 /**
- * The template for displaying content of 'artist' type
+ * The template for displaying content of 'artist' type (based on content-short)
  */
 
 	global $woo_options;
@@ -18,7 +18,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
  */
 
  	$settings = array(
-					'thumb_w' => 787, 
+					'thumb_w' => 300, 
 					'thumb_h' => 300, 
 					'thumb_align' => 'aligncenter'
 					);
@@ -27,29 +27,23 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
  
 ?>
 
-	<article <?php post_class(); ?>>
-		<aside class="meta">
-			<span class="month"><?php the_time( 'M' ); ?></span>
-			<span class="day"><?php the_time( 'd' ); ?></span>
-			<span class="year"><?php the_time( 'o' ); ?></span>
-		</aside>
-		
-		<section class="post-content">
-		    <?php 
-		    	if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'content' ) { 
-		    		woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); 
-		    	} 
-		    ?>
-		    
-			<header>
-				<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-			</header>
-	
-			<section class="entry">
-			<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'content' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
-			</section>
-	
-			  
-		</section><!--/.post-content -->
+<li <?php post_class(); ?>>
+    <a href="<?php the_permalink(); ?>" class="thumb">
+    <?php
+	$size = 'shop_catalog';
+	if ( has_post_thumbnail() )
+	  the_post_thumbnail();
+	elseif ( woocommerce_placeholder_img_src() )
+	  echo woocommerce_placeholder_img( $size );
+    ?>
+    </a>
+    
+    <section class="content">
+	<h3><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3>
+	<section class="entry">
+	<span class="post-date"><?php the_time(__('M j, Y')) ?></span>
+	    <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'content' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
+	</section>
+    </section><!--/.post-content -->
 
-	</article><!-- /.post -->
+</li><!-- /.post -->

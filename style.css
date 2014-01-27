@@ -1960,7 +1960,7 @@ ul.products li.product .price {
 ul.products li.product img {
   width: 100%;
   height: auto;
-  padding: .53em;
+  //--padding: .53em;
   display: block;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */

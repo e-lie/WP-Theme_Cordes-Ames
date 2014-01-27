@@ -42,10 +42,10 @@
       <?php get_template_part('pagination-ajax'); ?>
 
 			<ul class="products list">
-	    <?php    
+	    <?php 
 	        if (have_posts()) : while (have_posts()) : the_post(); ?>
-          
-					<?php woocommerce_get_template_part( 'content', 'artist' ); ?>
+		
+					<?php woocommerce_get_template_part( 'content' , $post_type ); ?>
 	    <?php 
 	        endwhile; else:
 	        

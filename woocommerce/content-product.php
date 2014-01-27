@@ -8,6 +8,8 @@
  * @package 	WooCommerce/Templates
  * @version     1.6.4
  */
+ 
+ // customization (override) of content-product
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -37,21 +39,20 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 ?>
 <li <?php post_class( $classes ); ?>>
 
-	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
+    <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
-	<a href="<?php the_permalink(); ?>" class="thumb">
+    <a href="<?php the_permalink(); ?>" class="thumb">
+    <?php
+	$size = 'shop_catalog';
+	if ( has_post_thumbnail() )
+	  the_post_thumbnail();
+	elseif ( woocommerce_placeholder_img_src() )
+	  echo woocommerce_placeholder_img( $size );
+    ?>
+    </a>
 
-		<?php
-      $size = 'shop_catalog';
-      if ( has_post_thumbnail() )
-        the_post_thumbnail();
-      elseif ( woocommerce_placeholder_img_src() )
-        echo woocommerce_placeholder_img( $size );
-		?>
-	</a>
-
-    <div class="caption">
-		<h3><?php the_title(); ?></h3>
+    <section class="content">
+    <h3><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3>
     <div class="post-category"><?php echo get_categories_display($product, 'product_cat'); ?></div>
     <span class="post-date"><?php the_time(__('M j, Y')) ?></span>
     <div class="post-excerpt"><?php the_excerpt(); ?></div>
@@ -59,7 +60,6 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
       $related_artists = get_related_artists(get_the_id());
 
       if ( ! empty($related_artists) ) {
-      echo 'Related artists' . "\n";
       echo '<ul>' . "\n";
       foreach ( $related_artists as $artist ) {
           setup_postdata( $artist );
@@ -69,10 +69,8 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
       wp_reset_postdata();
       }
      ?>
-    </div>
+    </section>
 
-
-
-	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
+    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 
 </li>

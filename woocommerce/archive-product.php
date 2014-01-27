@@ -39,7 +39,7 @@ get_header('shop'); ?>
 			<?php
           woocommerce_show_messages();
 			?>
-       <a id="mode" class="" href="javascript: void(0);">mode</a> 
+      <a id="mode" class="" href="javascript: void(0);">mode</a> 
 
       <div id="archive-wrapper">
 
@@ -57,7 +57,7 @@ get_header('shop'); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
-      </ul>
+			</ul>
 
       <?php get_template_part('pagination-ajax'); ?>
 

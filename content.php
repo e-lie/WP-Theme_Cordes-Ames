@@ -28,7 +28,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 
 	<article <?php post_class(); ?>>
-		<aside class="meta">
+<!--		<aside class="meta">
 			<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
 				<?php echo get_avatar( get_the_author_meta('email'), '128' ); ?>
 			</a>
@@ -36,7 +36,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 			<span class="day"><?php the_time( 'd' ); ?></span>
 			<span class="year"><?php the_time( 'o' ); ?></span>
 		</aside>
-		
+		-->
 		<section class="post-content">
 		    <?php 
 		    	if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'content' ) { 
