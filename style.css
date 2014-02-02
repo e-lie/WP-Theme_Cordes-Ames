@@ -1942,7 +1942,7 @@ ul.products li.product {
   position: relative;
   float: left;
   width: 48%;
-  margin-right: 3.8%;
+  //--margin-right: 3.8%;
   margin-bottom: 1.618em;
   text-align: center;
 }

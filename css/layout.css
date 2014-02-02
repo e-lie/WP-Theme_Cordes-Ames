@@ -672,7 +672,7 @@ INDEX
     margin: 0;
   }
   .footer-wrap {
-    background: #f7f7f7;
+    //-- background: #f7f7f7;
     margin: 0 -3.631em;
     padding: 0 3.631em;
   }
@@ -686,7 +686,7 @@ INDEX
     width: 22.05%;
   }
   ul.products li.product:nth-child(2n) {
-    margin-right: 3.8%;
+    //-- margin-right: 3.8%;
   }
   ul.products li.product.first {
     clear: both;

@@ -59,7 +59,7 @@ $position = ($woocommerce_loop['loop'] - 1) % 14;
 
 		<?php
       if ( has_post_thumbnail() ) {
-        the_post_thumbnail( array(230, 230) );
+        the_post_thumbnail( array(300, 300) );
       }elseif ( woocommerce_placeholder_img_src() ){
         echo woocommerce_placeholder_img( 'shop_catalog' );
       }

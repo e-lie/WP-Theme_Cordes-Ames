@@ -3,7 +3,8 @@ body {
   .app_font;
   font-size: 18px;
   line-height: 24px;
-  .background_white_blue
+  background: url("../images/bg1.jpg");
+  background-size: cover;
 }
 
 a{
@@ -25,6 +26,9 @@ p{
   }
 }
 
+.about-area, .recent-posts, .product-cloud {
+  //border: 1px dashed rgba(0,0,0,0.4);
+}
 
 #navigation {
   .inner_shadow_block;
@@ -66,6 +70,7 @@ p{
   position: absolute;
   left: 3%;
   top: 140px;
+  .style1_button;
 }
 
 #menu-checkbox {
@@ -76,6 +81,11 @@ p{
   &:checked ~ #navigation {
     height: 7.6em; //and can be reopen of course      li {
   }
+}
+
+#footer{
+  background: #333;
+  border-radius: 20% 20% 0% 0%;
 }
 
 .home-cea {  

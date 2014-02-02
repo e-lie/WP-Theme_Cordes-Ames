@@ -313,7 +313,8 @@ button.button:active {
   font-family: 'Crimson Text', sans-serif;
 }
 .content_block {
-  padding: 1.3em;
+  padding: 1.2em;
+  padding-top: 0.5em;
 }
 .bordered_glass_block {
   border: 1px solid #ccc;
@@ -343,13 +344,29 @@ button.button:active {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color3', GradientType=1);
   /* IE6-9 */
 }
+.style1_button {
+  border: 5px solid white;
+  background: none;
+  border-radius: 0.4%;
+  font-family: 'Roboto', serif;
+  font-weight: 300;
+  line-height: 1.8em;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+.cloud ul.products {
+  background-color: red;
+  border-radius: 50%;
+}
 .cloud ul.products li.product {
   position: relative;
   margin: 3% !important;
-  width: 15%;
+  width: 19%;
   border-radius: 3px;
   opacity: 0;
-  box-shadow: 0 0 0px 2px #aafaff, 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -361,7 +378,7 @@ button.button:active {
   border-radius: 3px;
 }
 .cloud ul.products li.product.first.line1 {
-  margin-left: 13% !important;
+  margin-left: 15.5% !important;
 }
 .cloud ul.products li.product.first.line2 {
   margin-left: 3% !important;
@@ -370,16 +387,16 @@ button.button:active {
   margin-left: 3% !important;
 }
 .cloud ul.products li.product.first.line4 {
-  margin-left: 13% !important;
+  margin-left: 15.5% !important;
 }
 .cloud ul.products li.product:hover {
-  width: 21%;
+  width: 25%;
   margin: 0 !important;
   z-index: 100;
-  box-shadow: 0 0 0px 2px #aafaff, 0 5px 6px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 6px 2px rgba(0, 0, 0, 0.2);
 }
 .cloud ul.products li.product:hover.first.line1 {
-  margin-left: 10% !important;
+  margin-left: 12.5% !important;
 }
 .cloud ul.products li.product:hover.first.line2 {
   margin-left: 0% !important;
@@ -388,7 +405,7 @@ button.button:active {
   margin-left: 0% !important;
 }
 .cloud ul.products li.product:hover.first.line4 {
-  margin-left: 10% !important;
+  margin-left: 12.5% !important;
 }
 .cloud .rb-trigger {
   position: absolute;
@@ -458,7 +475,7 @@ button.button:active {
 .cloud input.filter-2:checked ~ .products li.product:not(.line2):hover,
 .cloud input.filter-3:checked ~ .products li.product:not(.line3):hover,
 .cloud input.filter-4:checked ~ .products li.product:not(.line4):hover {
-  width: 15%;
+  width: 19%;
   margin: 3% !important;
   z-index: 100;
 }
@@ -466,7 +483,7 @@ button.button:active {
 .cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line1,
 .cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line1,
 .cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line1 {
-  margin-left: 13% !important;
+  margin-left: 15.5% !important;
 }
 .cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line2,
 .cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line2,
@@ -484,7 +501,7 @@ button.button:active {
 .cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line4,
 .cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line4,
 .cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line4 {
-  margin-left: 13% !important;
+  margin-left: 15.5% !important;
 }
 .cloud input.filter-1:checked ~ .products li.product:not(.line1) .rb-trigger,
 .cloud input.filter-2:checked ~ .products li.product:not(.line2) .rb-trigger,
@@ -509,22 +526,8 @@ body {
   line-height: 1.8em;
   font-size: 18px;
   line-height: 24px;
-  background: #f2edcb;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 0%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f2edcb), color-stop(50%, #ffffff), color-stop(0%, #f2edcb));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 0%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
-  /* IE10+ */
-  background: linear-gradient(to right, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color3', GradientType=1);
-  /* IE6-9 */
+  background: url("../images/bg1.jpg");
+  background-size: cover;
 }
 a {
   font-family: 'Crimson Text', sans-serif;
@@ -605,6 +608,16 @@ p {
   position: absolute;
   left: 3%;
   top: 140px;
+  border: 5px solid white;
+  background: none;
+  border-radius: 0.4%;
+  font-family: 'Roboto', serif;
+  font-weight: 300;
+  line-height: 1.8em;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 }
 #menu-checkbox {
   display: none;
@@ -614,6 +627,10 @@ p {
 }
 #menu-checkbox:checked ~ #navigation {
   height: 7.6em;
+}
+#footer {
+  background: #333;
+  border-radius: 20% 20% 0% 0%;
 }
 .home-cea#main {
   width: 100% !important;
@@ -633,29 +650,34 @@ p {
   .home-cea .about-area {
     float: left;
     width: 21%;
-    padding: 1.3em;
-    border: 1px solid #ccc;
-    background: rgba(0, 0, 0, 0.02);
-    border-radius: 0.6em;
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+    padding: 1.2em;
+    padding-top: 0.5em;
+    margin-top: 3%;
   }
   .home-cea .recent-posts {
     float: left;
     width: 21%;
-    padding: 1.3em;
+    padding: 1.2em;
+    padding-top: 0.5em;
+    margin-top: 3%;
   }
   .home-cea .product-cloud {
     width: 45%;
     float: left;
-    padding: 1.3em;
+    padding: 1.2em;
+    padding-top: 0.5em;
+  }
+  .home-cea .product-cloud ul.products {
+    background-color: red;
+    border-radius: 50%;
   }
   .home-cea .product-cloud ul.products li.product {
     position: relative;
     margin: 3% !important;
-    width: 15%;
+    width: 19%;
     border-radius: 3px;
     opacity: 0;
-    box-shadow: 0 0 0px 2px #aafaff, 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -667,7 +689,7 @@ p {
     border-radius: 3px;
   }
   .home-cea .product-cloud ul.products li.product.first.line1 {
-    margin-left: 13% !important;
+    margin-left: 15.5% !important;
   }
   .home-cea .product-cloud ul.products li.product.first.line2 {
     margin-left: 3% !important;
@@ -676,16 +698,16 @@ p {
     margin-left: 3% !important;
   }
   .home-cea .product-cloud ul.products li.product.first.line4 {
-    margin-left: 13% !important;
+    margin-left: 15.5% !important;
   }
   .home-cea .product-cloud ul.products li.product:hover {
-    width: 21%;
+    width: 25%;
     margin: 0 !important;
     z-index: 100;
-    box-shadow: 0 0 0px 2px #aafaff, 0 5px 6px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 6px 2px rgba(0, 0, 0, 0.2);
   }
   .home-cea .product-cloud ul.products li.product:hover.first.line1 {
-    margin-left: 10% !important;
+    margin-left: 12.5% !important;
   }
   .home-cea .product-cloud ul.products li.product:hover.first.line2 {
     margin-left: 0% !important;
@@ -694,7 +716,7 @@ p {
     margin-left: 0% !important;
   }
   .home-cea .product-cloud ul.products li.product:hover.first.line4 {
-    margin-left: 10% !important;
+    margin-left: 12.5% !important;
   }
   .home-cea .product-cloud .rb-trigger {
     position: absolute;
@@ -764,7 +786,7 @@ p {
   .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover,
   .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3):hover,
   .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4):hover {
-    width: 15%;
+    width: 19%;
     margin: 3% !important;
     z-index: 100;
   }
@@ -772,7 +794,7 @@ p {
   .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line1,
   .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line1,
   .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line1 {
-    margin-left: 13% !important;
+    margin-left: 15.5% !important;
   }
   .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line2,
   .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line2,
@@ -790,7 +812,7 @@ p {
   .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line4,
   .home-cea .product-cloud input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line4,
   .home-cea .product-cloud input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line4 {
-    margin-left: 13% !important;
+    margin-left: 15.5% !important;
   }
   .home-cea .product-cloud input.filter-1:checked ~ .products li.product:not(.line1) .rb-trigger,
   .home-cea .product-cloud input.filter-2:checked ~ .products li.product:not(.line2) .rb-trigger,
