@@ -15,6 +15,14 @@ p{
   .typo_paragraph;
 }
 
+h2{
+  .content_font;
+}
+
+h3{
+  font-size: 1.1em;
+}
+
 #content {
   width: 95%;
 }
@@ -28,6 +36,19 @@ p{
 
 .about-area, .recent-posts, .product-cloud {
   //border: 1px dashed rgba(0,0,0,0.4);
+}
+
+.product-cloud{
+  input.css-filter{
+    display: none;
+  }
+  label{
+    display: inline-block;
+    .style1_button;
+  }
+  input.css-filter:checked{
+    .style1_button_checked;
+  }
 }
 
 #navigation {
@@ -70,7 +91,11 @@ p{
   position: absolute;
   left: 3%;
   top: 140px;
+  
   .style1_button;
+}
+#menu-checkbox:checked{
+  .style1_button_checked;
 }
 
 #menu-checkbox {

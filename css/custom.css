@@ -15,15 +15,19 @@
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   text-decoration: none !important;
   /*Border radius*/
+
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   /*Background*/
+
   background-color: #237fd7;
   /*Fallback*/
+
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #52a8e8), color-stop(1, #2e76cf));
   background: -moz-linear-gradient(center top, #52a8e8 20%, #2e76cf 100%);
   /*Box shadow*/
+
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3) /*Top*/, inset 0 0 2px rgba(255, 255, 255, 0.3) /*Shine*/, 0 1px 2px rgba(0, 0, 0, 0.29) /*Shadow*/;
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3) /*Top*/, inset 0 0 2px rgba(255, 255, 255, 0.3) /*Shine*/, 0 1px 2px rgba(0, 0, 0, 0.29) /*Shadow*/;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3) /*Top*/, inset 0 0 2px rgba(255, 255, 255, 0.3) /*Shine*/, 0 1px 2px rgba(0, 0, 0, 0.29) /*Shadow*/;
@@ -32,8 +36,10 @@
 .woo-sc-button.hover {
   text-decoration: none !important;
   /*Background*/
+
   background: #0073d2;
   /*Fallback*/
+
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #3e9ee5), color-stop(1, #1666ca));
   background: -moz-linear-gradient(center top, #3e9ee5 20%, #1666ca 100%);
 }
@@ -41,6 +47,7 @@
 .woo-sc-button:checked,
 .woo-sc-button.active {
   /*Box shadow*/
+
   -webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3) /*Shine*/, 0 1px 0 #ffffff /*Shadow*/;
   -moz-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3) /*Shine*/, 0 1px 0 #ffffff /*Shadow*/;
   box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3) /*Shine*/, 0 1px 0 #ffffff /*Shadow*/;
@@ -76,14 +83,19 @@ button.button {
   text-decoration: none;
   font-size: 1em;
   /* Make inputs the same size as normal text */
+
   font-family: inherit;
   /* Make inputs use the correct typeface instead of the browser default */
+
   cursor: pointer;
   /* Inputs need pointers! */
+
   overflow: visible;
   /* IE fix */
+
   width: auto;
   /* IE fix */
+
   line-height: 1.618em;
   margin: 0 .327em;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -92,14 +104,19 @@ button.button {
   background-color: #ff5911;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff5911), to(#dd2600));
   /* Saf4+, Chrome */
+
   background-image: -webkit-linear-gradient(top, #ff5911, #dd2600);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
+
   background-image: -moz-linear-gradient(top, #ff5911, #dd2600);
   /* FF3.6+ */
+
   background-image: -ms-linear-gradient(top, #ff5911, #dd2600);
   /* IE10 */
+
   background-image: -o-linear-gradient(top, #ff5911, #dd2600);
   /* Opera 11.10+ */
+
   background-image: linear-gradient(to bottom, #ff5911, #dd2600);
   border: 1px solid #bb0400;
   -webkit-border-radius: 0.202em;
@@ -127,14 +144,19 @@ button.button.checkout {
   background-color: #777777;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#777777), to(#444444));
   /* Saf4+, Chrome */
+
   background-image: -webkit-linear-gradient(top, #777777, #444444);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
+
   background-image: -moz-linear-gradient(top, #777777, #444444);
   /* FF3.6+ */
+
   background-image: -ms-linear-gradient(top, #777777, #444444);
   /* IE10 */
+
   background-image: -o-linear-gradient(top, #777777, #444444);
   /* Opera 11.10+ */
+
   background-image: linear-gradient(to bottom, #777777, #444444);
   text-shadow: 0 1px 0 #333333;
   border: 1px solid #222222;
@@ -158,14 +180,19 @@ button.button.checkout:hover {
   background-color: #777777;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#777777), to(#555555));
   /* Saf4+, Chrome */
+
   background-image: -webkit-linear-gradient(top, #777777, #555555);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
+
   background-image: -moz-linear-gradient(top, #777777, #555555);
   /* FF3.6+ */
+
   background-image: -ms-linear-gradient(top, #777777, #555555);
   /* IE10 */
+
   background-image: -o-linear-gradient(top, #777777, #555555);
   /* Opera 11.10+ */
+
   background-image: linear-gradient(to bottom, #777777, #555555);
 }
 a.button.alt:active,
@@ -185,14 +212,19 @@ button.button.checkout:active {
   background-color: #555555;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#777777));
   /* Saf4+, Chrome */
+
   background-image: -webkit-linear-gradient(top, #555555, #777777);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
+
   background-image: -moz-linear-gradient(top, #555555, #777777);
   /* FF3.6+ */
+
   background-image: -ms-linear-gradient(top, #555555, #777777);
   /* IE10 */
+
   background-image: -o-linear-gradient(top, #555555, #777777);
   /* Opera 11.10+ */
+
   background-image: linear-gradient(to bottom, #555555, #777777);
 }
 a.button.large,
@@ -224,14 +256,19 @@ button.button:hover {
   background-color: #ff5911;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff5911), to(#ee3700));
   /* Saf4+, Chrome */
+
   background-image: -webkit-linear-gradient(top, #ff5911, #ee3700);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
+
   background-image: -moz-linear-gradient(top, #ff5911, #ee3700);
   /* FF3.6+ */
+
   background-image: -ms-linear-gradient(top, #ff5911, #ee3700);
   /* IE10 */
+
   background-image: -o-linear-gradient(top, #ff5911, #ee3700);
   /* Opera 11.10+ */
+
   background-image: linear-gradient(to bottom, #ff5911, #ee3700);
 }
 a.button:active,
@@ -244,21 +281,25 @@ button.button:active {
   background-color: #ee3700;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ee3700), to(#ff5911));
   /* Saf4+, Chrome */
+
   background-image: -webkit-linear-gradient(top, #ee3700, #ff5911);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
+
   background-image: -moz-linear-gradient(top, #ee3700, #ff5911);
   /* FF3.6+ */
+
   background-image: -ms-linear-gradient(top, #ee3700, #ff5911);
   /* IE10 */
+
   background-image: -o-linear-gradient(top, #ee3700, #ff5911);
   /* Opera 11.10+ */
+
   background-image: linear-gradient(to bottom, #ee3700, #ff5911);
   -webkit-box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), inset 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 /* }}} */
-/*  }}} */
-.app_font {
+/*  }}} */.app_font {
   font-family: 'Roboto', serif;
   font-weight: 300;
   line-height: 1.8em;
@@ -271,6 +312,7 @@ button.button:active {
   color: #444;
   font-weight: 700;
   /*   text-shadow: 0 1px rgba(0,0,0,0.3); */
+
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -329,35 +371,54 @@ button.button:active {
 .background_white_blue {
   background: #f2edcb;
   /* Old browsers */
+
   background: -moz-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 0%);
   /* FF3.6+ */
+
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f2edcb), color-stop(50%, #ffffff), color-stop(0%, #f2edcb));
   /* Chrome,Safari4+ */
+
   background: -webkit-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 0%);
   /* Chrome10+,Safari5.1+ */
+
   background: -o-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* Opera 11.10+ */
+
   background: -ms-linear-gradient(left, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* IE10+ */
+
   background: linear-gradient(to right, #f2edcb 0%, #ffffff 50%, #f2edcb 100%);
   /* W3C */
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color3', GradientType=1);
   /* IE6-9 */
+
 }
 .style1_button {
-  border: 5px solid white;
-  background: none;
-  border-radius: 0.4%;
+  padding: 0.2em 0.6em;
+  border-radius: 10px;
+  min-width: 45px;
+  background-color: #23c2e3;
   font-family: 'Roboto', serif;
   font-weight: 300;
   line-height: 1.8em;
-  font-weight: 500;
   color: white;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+.style1_button:hover {
+  background-color: #189fbb;
+}
+.style1_button:active {
+  background-color: #158ca5;
+}
+.style1_button_checked + label {
+  background-color: #158ca5;
+}
+.cloud {
+  text-align: center;
 }
 .cloud ul.products {
-  background-color: red;
+  background-color: white;
   border-radius: 50%;
 }
 .cloud ul.products li.product {
@@ -534,6 +595,7 @@ a {
   color: #444;
   font-weight: 700;
   /*   text-shadow: 0 1px rgba(0,0,0,0.3); */
+
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -545,12 +607,42 @@ a:hover {
 p {
   font-family: 'Crimson Text', sans-serif;
 }
+h2 {
+  font-family: 'Crimson Text', sans-serif;
+}
+h3 {
+  font-size: 1.1em;
+}
 #content {
   width: 95%;
 }
 #header hgroup {
   width: 30%;
   margin: 1em auto;
+}
+.product-cloud input.css-filter {
+  display: none;
+}
+.product-cloud label {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 10px;
+  min-width: 45px;
+  background-color: #23c2e3;
+  font-family: 'Roboto', serif;
+  font-weight: 300;
+  line-height: 1.8em;
+  color: white;
+  font-weight: 500;
+}
+.product-cloud label:hover {
+  background-color: #189fbb;
+}
+.product-cloud label:active {
+  background-color: #158ca5;
+}
+.product-cloud input.css-filter:checked + label {
+  background-color: #158ca5;
 }
 #navigation {
   background: #a0947d;
@@ -566,8 +658,11 @@ p {
   width: 75%;
   margin: 0 auto;
   /*   -webkit-columns: @number; */
+
   /*   -moz-columns: @number; */
+
   /*   columns: @number; */
+
   column-count: 3;
   column-fill: balance;
   -moz-column-count: 3;
@@ -608,16 +703,24 @@ p {
   position: absolute;
   left: 3%;
   top: 140px;
-  border: 5px solid white;
-  background: none;
-  border-radius: 0.4%;
+  padding: 0.2em 0.6em;
+  border-radius: 10px;
+  min-width: 45px;
+  background-color: #23c2e3;
   font-family: 'Roboto', serif;
   font-weight: 300;
   line-height: 1.8em;
-  font-weight: 500;
   color: white;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+#menu-button:hover {
+  background-color: #189fbb;
+}
+#menu-button:active {
+  background-color: #158ca5;
+}
+#menu-checkbox:checked + label {
+  background-color: #158ca5;
 }
 #menu-checkbox {
   display: none;
@@ -662,13 +765,14 @@ p {
     margin-top: 3%;
   }
   .home-cea .product-cloud {
+    text-align: center;
     width: 45%;
     float: left;
     padding: 1.2em;
     padding-top: 0.5em;
   }
   .home-cea .product-cloud ul.products {
-    background-color: red;
+    background-color: white;
     border-radius: 50%;
   }
   .home-cea .product-cloud ul.products li.product {

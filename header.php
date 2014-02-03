@@ -99,7 +99,7 @@ global $woo_options, $woocommerce;
         <?php woo_nav_before(); ?>
 
     <input id="menu-checkbox" name="menu-panel" type="checkbox" autocomplete="off" />
-    <label id="menu-button" class="woo-sc-button silver" for="menu-checkbox">Menu</label> 
+    <label id="menu-button" class="button_type1" for="menu-checkbox">Menu</label> 
 		<nav id="navigation" class="col-full" role="navigation">
 			<?php
 			if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {

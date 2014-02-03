@@ -35,7 +35,9 @@
 @jazzColor: #aafaff; 
 @darkgreyblue: #303942;
 @pantone311C: #23C2E3;
-@pantoneClair: rgba(215,237,247,1);
+@pantone311C: #23C2E3;
+@pantoneFonce1: darken(@pantone311C, 10%);
+@pantoneFonce2: darken(@pantone311C, 15%);
 @beige1: rgba(244,229,190,1);
 @beige2: rgba(242,237,203,1);
 @beigeFonce1: #A0947D;
@@ -121,13 +123,27 @@
 // ---------------------- BUTTONS ------------------
 
 .style1_button{
-  border:5px solid white;
-  background: none;
-  border-radius: 20%/50%;
+  padding: 0.2em 0.6em;
+  border-radius: 10px;
+  min-width: 45px;
+  
+  background-color: @pantone311C;
+  
   .app_font;
-  font-weight: 500;
   color: white;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
-  text-shadow: 0 1px rgba(0,0,0,0.3);
+  font-weight: 500;
+  
+  &:hover{
+    background-color: @pantoneFonce1;
+  }
+  &:active{
+    background-color: @pantoneFonce2;
+  }
+}
+
+.style1_button_checked{
+  &+label{
+    background-color: @pantoneFonce2;
+  }
 }
   
