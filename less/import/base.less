@@ -1,10 +1,17 @@
 body {
-  padding: 0;
   .app_font;
+  padding: 0;
   font-size: 18px;
   line-height: 24px;
-  background: url("../images/bg1.jpg");
-  background-size: cover;
+  &.home{
+    background: url("../images/bg1.jpg");
+    background-size: cover;
+  }
+  &.single-product{
+    background: @darkdarkgrey;
+    color: white !important;
+  }
+
 }
 
 a{
@@ -32,6 +39,10 @@ h3{
     width: 30%;
     margin: 1em auto;
   }
+}
+
+.quantity{
+  color: @pantone311C !important;
 }
 
 .about-area, .recent-posts, .product-cloud {
@@ -126,6 +137,57 @@ h3{
   }
   
 }
+
+#product-title{
+  text-align: center;
   
+  a.artist-image{
+    img{
+      border-radius: 50%;
+    }
+  }
+}
+
+div#content.single-product-cea{
+  width: 75%;
+  margin: 0 auto;
+  
+  section.purchase{
+    .content_block_dark;
+    float: right;
+    right: 10%;
+    width : 10%;
+  }
+  
+  section.product-content{
+    width: 80%;
+    
+    h2{
+      padding: 0 2em 0 2em;
+      margin: 1em 0 0 0;
+      background-color: @pantoneFonce1;
+      border-radius: 20px 20px 0 0;
+    }
+    
+    .description{
+      .content_block_dark;
+      .columns(2);
+    }
+    
+    .listening{
+      .content_block_dark;
+  
+    }
+    
+    .gallery{
+      .content_block_dark;
+    }
+    
+    iframe{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
   
   

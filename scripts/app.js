@@ -1,7 +1,17 @@
 jQuery.noConflict();
 (function($) {
     $(function() {
-
+      
+        var stickyHeaderTop = $('section.purchase').offset().top;
+ 
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop ) {
+                        $('section.purchase').css({position: 'fixed', top: '0'});
+                } else {
+                        $('section.purchase').css({position: 'static', top: 'auto' });
+                }
+        });
+	
        // {{{ change display mode : list/grid 
 
         if ( $.cookie('mode') == 'grid' ) {

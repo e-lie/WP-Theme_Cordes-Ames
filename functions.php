@@ -178,7 +178,7 @@ add_action( 'woocommerce_before_cloud_item', 'woocommerce_template_loop_product_
 
 
 /**
-* Custom shortcodes for the home page depending on woocommerce
+* Custom shortcodes for the home page 
 * display the about area of the page
 */
 
@@ -195,7 +195,58 @@ function about_end_shortcode( $atts ) {
 		return '</div>' ;
 }
 
-add_shortcode( 'about_end', 'about_end_shortcode' );
+add_shortcode( 'about_end', 'about_end_shortcode' ); 
+
+/**
+* Custom shortcodes for the single product page
+* separation for the description part of the content 
+*/
+
+function desc_begin_shortcode( $atts ) {
+		return '<h2>Présentation</h2><div class="description">';
+	}
+
+add_shortcode( 'desc_begin', 'desc_begin_shortcode' );
+
+function desc_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'desc_end', 'desc_end_shortcode' );
+
+
+
+
+
+function listening_begin_shortcode( $atts ) {
+		return '<h2>Ecoute</h2><div class="listening">';
+	}
+
+add_shortcode( 'listening_begin', 'listening_begin_shortcode' );
+
+function listening_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'listening_end', 'listening_end_shortcode' );
+
+
+
+
+function gallery_begin_shortcode( $atts ) {
+		return '<h2>Gallerie</h2><div class="gallery">';
+	}
+
+add_shortcode( 'gallery_begin', 'gallery_begin_shortcode' );
+
+function gallery_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'gallery_end', 'gallery_end_shortcode' );
 
 /**
 * Custom shortcode for the home page depending on woocommerce

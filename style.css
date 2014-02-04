@@ -329,7 +329,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", sans-serif;
-  color: #363230;
+  //--color: #363230;
   margin: 0 0 .618em;
   font-weight: 400;
 }

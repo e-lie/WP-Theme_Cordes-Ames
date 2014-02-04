@@ -21,15 +21,14 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	<li <?php post_class('post-short'); ?>>
 
 		<section class="post-content">
-		    <?php 
-		    	if ( has_post_thumbnail() ) { 
-			  the_post_thumbnail('thumbnail');
-		    	} 
-		    ?>
-		    
-			<header>
-				<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-			</header>
+		    <header>
+		      <?php 
+			  if ( has_post_thumbnail() ) { 
+			    the_post_thumbnail('thumbnail');
+			  } 
+		      ?>
+		      <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+		    </header>
 	
 		</section><!--/.post-content -->
   </li>

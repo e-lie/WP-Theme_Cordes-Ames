@@ -455,8 +455,8 @@ INDEX
     height: auto;
   }
   .type-post .post-content {
-    width: 82.7%;
-    float: right;
+    //--width: 82.7%;
+    //--float: right;
   }
   .single .type-post p:first-child {
     font-size: 1.387em;

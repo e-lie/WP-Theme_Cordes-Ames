@@ -42,6 +42,8 @@
 @beige2: rgba(242,237,203,1);
 @beigeFonce1: #A0947D;
 @beigeFonce2: #605849;
+@darkgrey1: #333;
+@darkdarkgrey: #111;
 
 // design colors
 @bg1: @beige2;
@@ -49,16 +51,16 @@
 @bgMenu: @beigeFonce1;
 // ---------------------- TYPOGRAPHY ------------------
 
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
+//@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
 
 .app_font{
-  font-family: 'Roboto', serif;
+  //font-family: 'Roboto', serif;
   font-weight: 300;
   line-height: 1.8em;
 }
 
 .content_font{
-  font-family: 'Crimson Text', sans-serif;
+  //font-family: 'Crimson Text', sans-serif;
 }
 
 .link_style1{
@@ -119,6 +121,13 @@
 .background_white_blue {
   .background-linear-gradient( @bg1, @bg2, @bg1, 0%, 50%, 100%, linear, left, right); 
 }
+
+.content_block_dark {
+  padding: 1em 2em 4em 2em;
+  background-color: @darkgrey1;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 2em;
+} 
 
 // ---------------------- BUTTONS ------------------
 
