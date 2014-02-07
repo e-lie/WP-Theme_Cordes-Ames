@@ -100,43 +100,40 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
 function products_cloud_shortcode( $atts ) {
 
-		global $woocommerce_loop;
+  global $woocommerce_loop;
 
-		extract(shortcode_atts(array(
-			'per_page' 	=> '14',
-			'columns' 	=> '4',
-			'orderby' => 'date',
-			'order' => 'desc'
-		), $atts));
+  extract(shortcode_atts(array(
+    'per_page' 	=> '14',
+    'columns' 	=> '4',
+    'orderby' => 'date',
+    'order' => 'desc'
+  ), $atts));
 
-		$args = array(
-			'post_type'	=> 'product',
-			'post_status' => 'publish',
-			'ignore_sticky_posts'	=> 1,
-			'posts_per_page' => $per_page,
-			'orderby' => $orderby,
-			'order' => $order,
-			'meta_query' => array(
-				array(
-					'key' => '_visibility',
-					'value' => array('catalog', 'visible'),
-					'compare' => 'IN'
-				),
-				array(
-					'key' => '_featured',
-					'value' => 'yes'
-				)
-			)
-		);
-
-		ob_start();
-
-		$products = new WP_Query( $args );
-
-		$woocommerce_loop['columns'] = $columns;
-
-		if ( $products->have_posts() ) : ?>
-
+  $args = array(
+    'post_type'	=> 'product',
+    'post_status' => 'publish',
+    'ignore_sticky_posts'	=> 1,
+    'posts_per_page' => $per_page,
+    'orderby' => $orderby,
+    'order' => $order,
+    'meta_query' => array(
+    array(
+      'key' => '_visibility',
+      'value' => array('catalog', 'visible'),
+      'compare' => 'IN' ),
+    array(
+      'key' => '_featured',
+      'value' => 'yes'
+	 ) ) );
+  
+	ob_start();
+  
+	$products = new WP_Query( $args );
+  
+	$woocommerce_loop['columns'] = $columns;
+  
+	if ( $products->have_posts() ) : ?>
+  
       <h2><?php echo $atts['title'] ?></h2>
   
       <input id="select-type-all" name="radio-set-1" type="radio" class="css-filter filter-all" checked="checked" />
@@ -153,20 +150,20 @@ function products_cloud_shortcode( $atts ) {
 
       <ul class="products rb-grid">
 
-				<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+	<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-					<?php woocommerce_get_template_part( 'content', 'product-cloud' ); ?>
+	  <?php woocommerce_get_template_part( 'content', 'product-cloud' ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+	<?php endwhile; // end of the loop. ?>
 
-			</ul>
+      </ul>
 
-		<?php endif;
+      <?php endif;
 
-		wp_reset_postdata();
+      wp_reset_postdata();
 
-		return '<div class="woocommerce product-cloud">' . ob_get_clean() . '</div>';
-	}
+  return '<div class="woocommerce product-cloud">' . ob_get_clean() . '</div>';
+}
 
 add_shortcode( 'product_cloud', 'products_cloud_shortcode' );
 
@@ -216,7 +213,18 @@ function desc_end_shortcode( $atts ) {
 add_shortcode( 'desc_end', 'desc_end_shortcode' );
 
 
+function songs_list_begin_shortcode( $atts ) {
+		return '<div class="songs-list">';
+	}
 
+add_shortcode( 'songs_list_begin', 'songs_list_begin_shortcode' );
+
+function songs_list_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'songs_list_end', 'songs_list_end_shortcode' );
 
 
 function listening_begin_shortcode( $atts ) {

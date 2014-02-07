@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
 /* WOO CUSTOM STYLESHEET
 ---------------------
 */
@@ -302,11 +303,14 @@ button.button:active {
   font-weight: 300;
   line-height: 1.8em;
 }
+.content_font {
+  font-family: 'Crimson Text', sans-serif;
+}
 .link_style1 {
+  font-family: 'Crimson Text', sans-serif;
   color: #444;
   font-weight: 700;
-  /*   text-shadow: 0 1px rgba(0,0,0,0.3); */
-
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -342,6 +346,9 @@ button.button:active {
 }
 .link_style2p:hover {
   color: #222;
+}
+.typo_paragraph {
+  font-family: 'Crimson Text', sans-serif;
 }
 .content_block {
   padding: 1.2em;
@@ -425,6 +432,9 @@ button.button:active {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+}
+.cloud ul.products li.product > img {
+  width: 100%;
 }
 .cloud ul.products li.product img {
   padding: 0;
@@ -595,10 +605,10 @@ body.single-product {
   color: white !important;
 }
 a {
+  font-family: 'Crimson Text', sans-serif;
   color: #444;
   font-weight: 700;
-  /*   text-shadow: 0 1px rgba(0,0,0,0.3); */
-
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -606,6 +616,12 @@ a {
 }
 a:hover {
   color: #23c2e3;
+}
+p {
+  font-family: 'Crimson Text', sans-serif;
+}
+h2 {
+  font-family: 'Crimson Text', sans-serif;
 }
 h3 {
   font-size: 1.1em;
@@ -766,6 +782,9 @@ div#content.single-product-cea section.product-content h2 {
   background-color: #189fbb;
   border-radius: 20px 20px 0 0;
 }
+div#content.single-product-cea section.product-content .songs-list {
+  display: none;
+}
 div#content.single-product-cea section.product-content .description {
   padding: 1em 2em 4em 2em;
   background-color: #333333;
@@ -799,6 +818,56 @@ div#content.single-product-cea section.product-content .gallery {
 div#content.single-product-cea section.product-content iframe {
   display: block;
   margin: 0 auto;
+}
+.single-product-cloud {
+  width: 100%;
+  height: 100%;
+}
+.single-product-cloud section {
+  box-shadow: 0 0 0 1px red;
+  overflow: hidden;
+}
+.single-product-cloud section#product-title {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 50%;
+}
+.single-product-cloud section.purchase {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 50%;
+}
+.single-product-cloud section.product-content {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 50%;
+}
+.single-product-cloud section.product-content .listening {
+  display: none;
+}
+.single-product-cloud section.product-content .gallery {
+  display: none;
+}
+#content.webzine {
+  width: 80%;
+}
+#content.webzine .col-left {
+  width: 77%;
+}
+#content.webzine .col-left section.post-content {
+  margin-bottom: 2em;
+}
+#content.webzine .col-left img.wp-post-image {
+  float: left;
+  padding: 1em;
+}
+#content.webzine .col-right {
+  background-color: #eee;
+  height: 600px;
+  border-radius: 20px;
 }
 @media only screen and (min-width: 768px) {
   .home-cea .about-area {
@@ -844,6 +913,9 @@ div#content.single-product-cea section.product-content iframe {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+  }
+  .home-cea .product-cloud ul.products li.product > img {
+    width: 100%;
   }
   .home-cea .product-cloud ul.products li.product img {
     padding: 0;

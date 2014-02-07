@@ -74,9 +74,6 @@ global $woo_options, $woocommerce;
   woo_header_before(); ?>
 
 	<header id="header" class="col-full">
-
-
-
 	    <hgroup>
 
 	    	 <?php

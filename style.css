@@ -329,7 +329,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", sans-serif;
-  //--color: #363230;
+  color: #363230;
   margin: 0 0 .618em;
   font-weight: 400;
 }
@@ -811,7 +811,7 @@ table tr td:last-child {
   //--background: #fff;
   max-width: 100%;
   height: auto !important;
-  display: block;
+  //--display: block;
 }
 .post img:hover,
 .type-page img:hover {
@@ -1958,10 +1958,10 @@ ul.products li.product .price {
   margin-bottom: 1em;
 }
 ul.products li.product img {
-  width: 100%;
+  //--width: 100%;
   height: auto;
   //--padding: .53em;
-  display: block;
+  //--display: block;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
 

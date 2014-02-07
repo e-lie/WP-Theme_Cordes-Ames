@@ -68,6 +68,7 @@ $position = ($woocommerce_loop['loop'] - 1) % 14;
       <div class="rb-overlay" >
         <span class="rb-close">close</span>    
         <h3><?php the_title(); ?></h3>
+        <?php woocommerce_get_template_part('content', 'single-product-cloud'); ?>
       </div>
     </div>
 </li>
