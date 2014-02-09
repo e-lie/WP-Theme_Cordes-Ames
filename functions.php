@@ -135,6 +135,7 @@ function products_cloud_shortcode( $atts ) {
 	if ( $products->have_posts() ) : ?>
   
       <h2><?php echo $atts['title'] ?></h2>
+      <div class="cloud-wrapper">
   
       <input id="select-type-all" name="radio-set-1" type="radio" class="css-filter filter-all" checked="checked" />
       <label for="select-type-all" class="ff-label-type-all">All</label>
@@ -148,15 +149,16 @@ function products_cloud_shortcode( $atts ) {
       <input id="select-type-3" name="radio-set-1" type="radio" class="css-filter filter-3" />
       <label for="select-type-3" class="ff-label-type-3">catégorie3</label>
 
-      <ul class="products rb-grid">
+	<ul class="products rb-grid">
 
-	<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+	  <?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-	  <?php woocommerce_get_template_part( 'content', 'product-cloud' ); ?>
+	    <?php woocommerce_get_template_part( 'content', 'product-cloud' ); ?>
 
-	<?php endwhile; // end of the loop. ?>
+	  <?php endwhile; // end of the loop. ?>
 
-      </ul>
+	</ul>
+      </div>
 
       <?php endif;
 
@@ -182,7 +184,7 @@ add_action( 'woocommerce_before_cloud_item', 'woocommerce_template_loop_product_
 function about_begin_shortcode( $atts ) {
 		ob_start();
 		return '<div class="about-area">
-                <h2>' . $atts['title'] . '</h2>' . ob_get_clean() ;
+                <a href="#"><h2>' . $atts['title'] . '</h2></a>' . ob_get_clean() ;
 	}
 
 add_shortcode( 'about_begin', 'about_begin_shortcode' );
@@ -266,7 +268,7 @@ function recent_posts_shortcode( $atts ) {
 		global $woocommerce_loop;
 
 		extract(shortcode_atts(array(
-			'per_page' 	=> '8',
+			'per_page' 	=> '5',
 			'columns' 	=> '1',
 			'orderby' => 'date',
 			'order' => 'desc'
@@ -288,7 +290,7 @@ function recent_posts_shortcode( $atts ) {
 
 		if ( $products->have_posts() ) : ?>
 
-      <h2><?php echo $atts['title'] ?></h2>
+      <h2><a href="#"><?php echo $atts['title'] ?></a></h2>
   
       <ul class="recent-posts-list">
 

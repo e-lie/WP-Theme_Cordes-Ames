@@ -35,9 +35,10 @@
 @jazzColor: #aafaff; 
 @darkgreyblue: #303942;
 @pantone311C: #23C2E3;
-@pantone311C: #23C2E3;
+@pantoneClair1: lighten(@pantone311C, 40%);
 @pantoneFonce1: darken(@pantone311C, 10%);
 @pantoneFonce2: darken(@pantone311C, 15%);
+@pantoneFonce3: darken(@pantone311C, 30%);
 @beige1: rgba(244,229,190,1);
 @beige2: rgba(242,237,203,1);
 @beigeFonce1: #A0947D;
@@ -48,19 +49,19 @@
 // design colors
 @bg1: @beige2;
 @bg2: white;
-@bgMenu: @beigeFonce1;
+@bgMenu: @pantoneFonce1;
 // ---------------------- TYPOGRAPHY ------------------
 
 @import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
 
 .app_font{
-  //font-family: 'Roboto', serif;
+  font-family: 'Roboto', serif;
   font-weight: 300;
   line-height: 1.8em;
 }
 
 .content_font{
-  font-family: 'Crimson Text', sans-serif;
+   font-family: 'Crimson Text', sans-serif;
 }
 
 .link_style1{
@@ -101,10 +102,6 @@
 }
 
 // ---------------------- BLOCS ------------------
-.content_block {
-  padding: 1.2em;
-  padding-top: 0.5em;
-}
 
 .bordered_glass_block{
   border: 1px solid #ccc;
@@ -115,7 +112,7 @@
 
 .inner_shadow_block{ // bloc avec une ombre interne en haut et en bas (menu)
   background: @bgMenu;
-  box-shadow: inset 0 0 9px 4px rgba(0,0,0,.35);
+  box-shadow: inset 0 0 9px 4px rgba(0,0,0,.2);
 }
 
 .background_white_blue {

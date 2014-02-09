@@ -218,7 +218,7 @@ INDEX
   }
   #header #navigation ul.nav > li.current-menu-item > a,
   #header #navigation ul.nav > li.current_page_item > a {
-    color: #ff4800;
+    //--color: #ff4800;
   }
   #header #navigation ul.nav > li.parent a {
     -webkit-border-bottom-left-radius: 0;

@@ -1,7 +1,7 @@
 body {
   .app_font;
   padding: 0;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 24px;
   &.home{
     background: url("../images/bg1.jpg");
@@ -31,13 +31,16 @@ h3{
 }
 
 #content {
-  width: 95%;
+  width: 100%;
 }
 
-#header {
+#header{
   hgroup {
     width: 30%;
-    margin: 1em auto;
+    margin: 1em 5%;
+    img{
+      width: 40%;
+    }
   }
 }
 
@@ -72,12 +75,16 @@ h3{
   ul.nav {
     width: 75%;
     margin: 0 auto;
-    .columns(3);
+    .columns(4);
 
     li.menu-item {
       a {
         .link_style2;
       }
+    }
+    
+    li.current-menu-item a {
+      color: black;
     }
 
     ul {
@@ -101,7 +108,7 @@ h3{
 #menu-button {
   position: absolute;
   left: 3%;
-  top: 140px;
+  top: 8em;
   
   .style1_button;
 }
@@ -112,7 +119,7 @@ h3{
 #menu-checkbox {
   display: none;
   &:not(:checked) ~ #navigation{
-    height: 0; //if recent css3 rules are supported, the menu is closed
+    height: 2em; //if recent css3 rules are supported, the menu is closed
   }
   &:checked ~ #navigation {
     height: 7.6em; //and can be reopen of course      li {
@@ -120,7 +127,7 @@ h3{
 }
 
 #footer{
-  background: #333;
+  background: @pantoneFonce3;
   border-radius: 20% 20% 0% 0%;
 }
 
@@ -131,6 +138,7 @@ h3{
   }
   
   .entry {
+    text-align: justify;
     h2 {
       text-align: center;
     }
