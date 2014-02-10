@@ -98,6 +98,7 @@ global $woo_options, $woocommerce;
     <input id="menu-checkbox" name="menu-panel" type="checkbox" autocomplete="off" />
     <label id="menu-button" class="button_type1" for="menu-checkbox">Menu</label> 
 		<nav id="navigation" class="col-full" role="navigation">
+	        <div class="gradient-menu"></div>
 			<?php
 			if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
 				wp_nav_menu( array( 'depth' => 4, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav fr', 'theme_location' => 'primary-menu' ) );
@@ -111,6 +112,7 @@ global $woo_options, $woocommerce;
 	        <?php } ?>
 
 		</nav><!-- /#navigation -->
+	        <div class="gradient-menu"></div>
 
 		<?php woo_nav_after(); ?>
 

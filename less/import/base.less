@@ -4,7 +4,7 @@ body {
   font-size: 13px;
   line-height: 24px;
   &.home{
-    background: url("../images/bg1.jpg");
+    background: url("../images/fondindienfinal1.jpg");
     background-size: cover;
   }
   &.single-product{
@@ -31,13 +31,13 @@ h3{
 }
 
 #content {
-  width: 100%;
+  width: 80%;
 }
 
 #header{
   hgroup {
     width: 30%;
-    margin: 1em 5%;
+    margin: 1em 10%;
     img{
       width: 40%;
     }
@@ -66,15 +66,15 @@ h3{
 }
 
 #navigation {
-  .inner_shadow_block;
   overflow: hidden;
   height: auto; // by default the menu is open
-
+  
   .transition(height, 0.4s, ease-in-out);  
+  
 
   ul.nav {
-    width: 75%;
-    margin: 0 auto;
+    width: 65%;
+    margin: 0 10% 0 25%;
     .columns(4);
 
     li.menu-item {
@@ -107,8 +107,8 @@ h3{
 
 #menu-button {
   position: absolute;
-  left: 3%;
-  top: 8em;
+  left: 10%;
+  top: 9em;
   
   .style1_button;
 }
@@ -119,7 +119,7 @@ h3{
 #menu-checkbox {
   display: none;
   &:not(:checked) ~ #navigation{
-    height: 2em; //if recent css3 rules are supported, the menu is closed
+    height: 2.5em; //if recent css3 rules are supported, the menu is closed
   }
   &:checked ~ #navigation {
     height: 7.6em; //and can be reopen of course      li {

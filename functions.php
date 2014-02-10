@@ -133,9 +133,9 @@ function products_cloud_shortcode( $atts ) {
 	$woocommerce_loop['columns'] = $columns;
   
 	if ( $products->have_posts() ) : $products->the_post();?>
+      <h2><?php echo $atts['title'] ?></h2>
 	    <?php woocommerce_get_template_part( 'content', 'product-a-la-une' ); ?>
   
-      <h2><?php echo $atts['title'] ?></h2>
       <div class="cloud-wrapper">
   
       <input id="select-type-all" name="radio-set-1" type="radio" class="css-filter filter-all" checked="checked" />
