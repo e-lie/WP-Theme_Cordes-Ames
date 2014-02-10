@@ -1,18 +1,33 @@
 .cloud {
   @base-margin: 3%;
   @reduced-margin: 0%;
-  @base-width: 19%;
+  @base-width: 14%;
   @active-width: @base-width + (2 * (@base-margin - @reduced-margin));
-  @big-margin-left: 15.5%;
+  @big-margin-left: 3%;
   @reduced-bml: @big-margin-left - (@base-margin - @reduced-margin);
   @small-margin-left: 3%;
   @reduced-sml: @small-margin-left - (@base-margin - @reduced-margin);
   
   text-align: center;
   
+  .a-la-une{
+    width: 24%;
+    float: left;
+    padding: 2%;
+    margin: 4% 2% 0 4%;
+    background-color: @pantoneClair1;
+    border-radius: 8px;
+    box-shadow: 5px 2px 10px 0 rgba(0,0,0,0.15);
+    
+    img {
+      width: 40%;
+    }
+  }
+  
   .cloud-wrapper{
-    width: 78%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 0 4% 0 2%;
+    float: left;
   }
   
   ul.products{

@@ -103,7 +103,7 @@ function products_cloud_shortcode( $atts ) {
   global $woocommerce_loop;
 
   extract(shortcode_atts(array(
-    'per_page' 	=> '14',
+    'per_page' 	=> '15',
     'columns' 	=> '4',
     'orderby' => 'date',
     'order' => 'desc'
@@ -132,7 +132,8 @@ function products_cloud_shortcode( $atts ) {
   
 	$woocommerce_loop['columns'] = $columns;
   
-	if ( $products->have_posts() ) : ?>
+	if ( $products->have_posts() ) : $products->the_post();?>
+	    <?php woocommerce_get_template_part( 'content', 'product-a-la-une' ); ?>
   
       <h2><?php echo $atts['title'] ?></h2>
       <div class="cloud-wrapper">
@@ -310,6 +311,35 @@ function recent_posts_shortcode( $atts ) {
 	}
 
 add_shortcode( 'recent_posts', 'recent_posts_shortcode' );
+
+function bon_coin_shortcode( $atts ) {
+		global $woocommerce_loop;
+
+		extract(shortcode_atts(array(
+			'per_page' 	=> '5',
+			'columns' 	=> '1',
+			'orderby' => 'date',
+			'order' => 'desc'
+		), $atts));
+
+		$args = array(
+			'post_type'	=> 'post',
+			'post_status' => 'publish',
+			'ignore_sticky_posts'	=> 1,
+			'posts_per_page' => $per_page,
+			'orderby' => $orderby,
+			'order' => $order
+		);
+
+		ob_start(); ?>
+
+      <h2><a href="#"><?php echo $atts['title'] ?></a></h2>
+      <?php
+
+		return '<div class="bon-coin">' . ob_get_clean() . '</div>';
+	}
+
+add_shortcode( 'bon_coin', 'bon_coin_shortcode' );
 
 // }}}
 

@@ -31,24 +31,19 @@ $woocommerce_loop['loop']++;
 // Extra post classes
 $classes = array();
 
-$position = ($woocommerce_loop['loop'] - 1) % 14;
+$position = ($woocommerce_loop['loop'] - 2) % 14;
 
-  if ( $position >= 0 && $position <= 2) {
+  if ( $position >= 0 && $position <= 4) {
     $classes[] = 'line1';
-  }elseif ( $position >= 3 && $position <= 6) {
+  }elseif ( $position >= 5 && $position <= 9) {
     $classes[] = 'line2';
-  }elseif ( $position >= 7 && $position <= 10) {
+  }elseif ( $position >= 10 && $position <= 14) {
     $classes[] = 'line3';
-  }elseif ( $position >= 11 && $position <= 13) {
-    $classes[] = 'line4';
   }
 
-  if ( $position >= 3 )
-    $classes[] = 'tiny';
-
-  if ( $position == 0 || $position == 3 || $position == 7 || $position == 11 )
+  if ( $position == 0 || $position == 5 || $position == 10 )
     $classes[] = 'first';
-  if ( $position == 2 || $position == 6 || $position == 10 || $position == 13 )
+  if ( $position == 4 || $position == 9 || $position == 14 )
     $classes[] = 'last';
   
  
