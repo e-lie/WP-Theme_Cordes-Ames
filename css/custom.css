@@ -364,28 +364,28 @@ button.button:active {
   box-shadow: inset 0 0 9px 4px rgba(0, 0, 0, 0.2);
 }
 .gradient-menu {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   height: 0.6em;
-  background: -moz-linear-gradient(left, rgba(20, 109, 127, 0) 0%, rgba(20, 109, 127, 0.9) 20%, #146d7f 50%, rgba(20, 109, 127, 0.9) 80%, rgba(20, 109, 127, 0) 100%);
+  background: -moz-linear-gradient(left, rgba(21, 110, 127, 0) 0%, rgba(21, 110, 127, 0.9) 30%, #156e7f 50%, rgba(21, 110, 127, 0.9) 70%, rgba(21, 110, 127, 0) 100%);
   /* FF3.6+ */
 
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(20, 109, 127, 0)), color-stop(20%, rgba(20, 109, 127, 0.9)), color-stop(50%, #146d7f), color-stop(80%, rgba(20, 109, 127, 0.9)), color-stop(100%, rgba(20, 109, 127, 0)));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(21, 110, 127, 0)), color-stop(30%, rgba(21, 110, 127, 0.9)), color-stop(50%, #156e7f), color-stop(70%, rgba(21, 110, 127, 0.9)), color-stop(100%, rgba(21, 110, 127, 0)));
   /* Chrome,Safari4+ */
 
-  background: -webkit-linear-gradient(left, rgba(20, 109, 127, 0) 0%, rgba(20, 109, 127, 0.9) 20%, #146d7f 50%, rgba(20, 109, 127, 0.9) 80%, rgba(20, 109, 127, 0) 100%);
+  background: -webkit-linear-gradient(left, rgba(21, 110, 127, 0) 0%, rgba(21, 110, 127, 0.9) 30%, #156e7f 50%, rgba(21, 110, 127, 0.9) 70%, rgba(21, 110, 127, 0) 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-linear-gradient(left, rgba(20, 109, 127, 0) 0%, rgba(20, 109, 127, 0.9) 20%, #146d7f 50%, rgba(20, 109, 127, 0.9) 80%, rgba(20, 109, 127, 0) 100%);
+  background: -o-linear-gradient(left, rgba(21, 110, 127, 0) 0%, rgba(21, 110, 127, 0.9) 30%, #156e7f 50%, rgba(21, 110, 127, 0.9) 70%, rgba(21, 110, 127, 0) 100%);
   /* Opera 11.10+ */
 
-  background: -ms-linear-gradient(left, rgba(20, 109, 127, 0) 0%, rgba(20, 109, 127, 0.9) 20%, #146d7f 50%, rgba(20, 109, 127, 0.9) 80%, rgba(20, 109, 127, 0) 100%);
+  background: -ms-linear-gradient(left, rgba(21, 110, 127, 0) 0%, rgba(21, 110, 127, 0.9) 30%, #156e7f 50%, rgba(21, 110, 127, 0.9) 70%, rgba(21, 110, 127, 0) 100%);
   /* IE10+ */
 
-  background: linear-gradient(to right, rgba(20, 109, 127, 0) 0%, rgba(20, 109, 127, 0.9) 20%, #146d7f 50%, rgba(20, 109, 127, 0.9) 80%, rgba(20, 109, 127, 0) 100%);
+  background: linear-gradient(to right, rgba(21, 110, 127, 0) 0%, rgba(21, 110, 127, 0.9) 30%, #156e7f 50%, rgba(21, 110, 127, 0.9) 70%, rgba(21, 110, 127, 0) 100%);
   /* W3C */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00146d7f', endColorstr='#00146d7f', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00156e7f', endColorstr='#00156e7f', GradientType=1);
   /* IE6-9 */
 
 }
@@ -422,7 +422,7 @@ button.button:active {
   margin-bottom: 2em;
 }
 .style1_button {
-  padding: 0.2em 0.6em;
+  padding: 0 0.4em;
   border-radius: 10px;
   min-width: 45px;
   background-color: #23c2e3;
@@ -445,25 +445,17 @@ button.button:active {
   text-align: center;
 }
 .cloud .a-la-une {
-  width: 28%;
-  float: left;
   padding: 2%;
-  margin: 4% 2% 0 0%;
-  background-color: #fcfeff;
-  border-radius: 8px;
-  box-shadow: 5px 2px 10px 0 rgba(0, 0, 0, 0.15);
+  margin: 0% 2% 0 0%;
 }
 .cloud .a-la-une img {
-  width: 40%;
+  float: left;
+  clear: both;
+  max-width: 250px;
 }
 .cloud .cloud-wrapper {
-  width: 64%;
   margin: 0 0% 0 2%;
-  float: left;
-}
-.cloud ul.products {
-  background-color: #fcfeff;
-  border-radius: 50%;
+  clear: both;
 }
 .cloud ul.products li.product {
   position: relative;
@@ -637,12 +629,12 @@ body {
   font-weight: 300;
   line-height: 1.8em;
   padding: 0;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 24px;
 }
 body.home {
-  background: url("../images/fondindienfinal1.jpg");
-  background-size: cover;
+  background: url("../images/fondindienfinal1.jpg") no-repeat scroll 50% 200px;
+  background-size: auto 80%;
 }
 body.single-product {
   background: #111111;
@@ -671,14 +663,14 @@ h3 {
   font-size: 1.1em;
 }
 #content {
-  width: 80%;
+  width: 70%;
+}
+#header {
+  background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 15%, #ffffff 100%), url("../images/bandeauBW1.jpg") repeat-x scroll 50% 0%;
 }
 #header hgroup {
-  width: 30%;
-  margin: 1em 10%;
-}
-#header hgroup img {
-  width: 40%;
+  margin: 0 15%;
+  margin-bottom: 1.5em;
 }
 .quantity {
   color: #23c2e3 !important;
@@ -688,7 +680,7 @@ h3 {
 }
 .product-cloud label {
   display: inline-block;
-  padding: 0.2em 0.6em;
+  padding: 0 0.4em;
   border-radius: 10px;
   min-width: 45px;
   background-color: #23c2e3;
@@ -710,28 +702,19 @@ h3 {
 #navigation {
   overflow: hidden;
   height: auto;
+  width: 66%;
+  margin: 0 auto;
   -moz-transition: height 0.4s ease-in-out;
   -o-transition: height 0.4s ease-in-out;
   -webkit-transition: height 0.4s ease-in-out;
   transition: height 0.4s ease-in-out;
 }
-#navigation ul.nav {
-  width: 65%;
-  margin: 0 10% 0 25%;
-  /*   -webkit-columns: @number; */
-
-  /*   -moz-columns: @number; */
-
-  /*   columns: @number; */
-
-  column-count: 4;
-  column-fill: balance;
-  -moz-column-count: 4;
-  -moz-column-fill: balance;
-  -webkit-column-count: 4;
-  -webkit-column-fill: balance;
+#navigation ul.nav > li.menu-item {
+  float: left;
+  text-align: center;
+  width: 20%;
 }
-#navigation ul.nav li.menu-item a {
+#navigation ul.nav > li.menu-item a {
   font-family: 'Roboto', serif;
   font-weight: 300;
   line-height: 1.8em;
@@ -743,13 +726,10 @@ h3 {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-#navigation ul.nav li.menu-item a:hover {
+#navigation ul.nav > li.menu-item a:hover {
   color: #222;
 }
-#navigation ul.nav li.current-menu-item a {
-  color: black;
-}
-#navigation ul.nav ul {
+#navigation ul.nav > li.menu-item ul {
   display: block;
   position: relative;
   visibility: visible;
@@ -759,15 +739,16 @@ h3 {
   background: none;
   box-shadow: none;
 }
-#navigation ul.nav ul li a {
+#navigation ul.nav > li.menu-item ul li a {
   font-size: 0.85em;
-  padding-left: 1em;
+}
+#navigation ul.nav li.current-menu-item a {
+  color: black;
 }
 #menu-button {
-  position: absolute;
-  left: 10%;
-  top: 9em;
-  padding: 0.2em 0.6em;
+  float: left;
+  margin-right: 10%;
+  padding: 0 0.4em;
   border-radius: 10px;
   min-width: 45px;
   background-color: #23c2e3;
@@ -776,6 +757,9 @@ h3 {
   line-height: 1.8em;
   color: white;
   font-weight: 500;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1em;
 }
 #menu-button:hover {
   background-color: #189fbb;
@@ -790,10 +774,10 @@ h3 {
   display: none;
 }
 #menu-checkbox:not(:checked) ~ #navigation {
-  height: 2.5em;
+  height: 2em;
 }
 #menu-checkbox:checked ~ #navigation {
-  height: 7.6em;
+  height: 8.5em;
 }
 #footer {
   background: #0c5261;
@@ -934,7 +918,7 @@ div#content.single-product-cea section.product-content iframe {
 @media only screen and (min-width: 1160px) {
   .home-cea .about-area {
     float: left;
-    width: 28%;
+    width: 26%;
     padding: 2%;
     margin: 4% 2% 0 0%;
     background-color: #fcfeff;
@@ -943,8 +927,8 @@ div#content.single-product-cea section.product-content iframe {
   }
   .home-cea .recent-posts {
     float: left;
-    width: 24%;
-    margin: 4% 2% 0 2%;
+    width: 26%;
+    margin: 4% 3% 0 3%;
     padding: 2%;
     background-color: #fcfeff;
     border-radius: 8px;
@@ -956,25 +940,17 @@ div#content.single-product-cea section.product-content iframe {
     float: left;
   }
   .home-cea .product-cloud .a-la-une {
-    width: 28%;
-    float: left;
     padding: 2%;
-    margin: 4% 2% 0 0%;
-    background-color: #fcfeff;
-    border-radius: 8px;
-    box-shadow: 5px 2px 10px 0 rgba(0, 0, 0, 0.15);
+    margin: 0% 2% 0 0%;
   }
   .home-cea .product-cloud .a-la-une img {
-    width: 40%;
+    float: left;
+    clear: both;
+    max-width: 250px;
   }
   .home-cea .product-cloud .cloud-wrapper {
-    width: 64%;
     margin: 0 0% 0 2%;
-    float: left;
-  }
-  .home-cea .product-cloud ul.products {
-    background-color: #fcfeff;
-    border-radius: 50%;
+    clear: both;
   }
   .home-cea .product-cloud ul.products li.product {
     position: relative;
@@ -1130,7 +1106,7 @@ div#content.single-product-cea section.product-content iframe {
   }
   .home-cea .bon-coin {
     float: left;
-    width: 28%;
+    width: 26%;
     height: 300px;
     margin: 4% 0% 0 2%;
     padding: 2%;

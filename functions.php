@@ -98,7 +98,7 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 * display a cloud of 18 products (albums) 
 */
 
-function products_cloud_shortcode( $atts ) {
+function music_shortcode( $atts ) {
 
   global $woocommerce_loop;
 
@@ -168,7 +168,7 @@ function products_cloud_shortcode( $atts ) {
   return '<div class="woocommerce product-cloud">' . ob_get_clean() . '</div>';
 }
 
-add_shortcode( 'product_cloud', 'products_cloud_shortcode' );
+add_shortcode( 'music', 'music_shortcode' );
 
 /**
 * custom actions for the product cloud 
