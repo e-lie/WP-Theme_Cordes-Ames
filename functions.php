@@ -133,7 +133,6 @@ function music_shortcode( $atts ) {
 	$woocommerce_loop['columns'] = $columns;
   
 	if ( $products->have_posts() ) : $products->the_post();?>
-      <h2><?php echo $atts['title'] ?></h2>
 	    <?php woocommerce_get_template_part( 'content', 'product-a-la-une' ); ?>
   
       <div class="cloud-wrapper">

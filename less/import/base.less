@@ -5,7 +5,7 @@ body {
   line-height: 24px;
   &.home{
     background: url("../images/fondindienfinal1.jpg") no-repeat scroll 50% 200px;
-    background-size: auto 80%;
+    background-size: auto 60%;
   }
   &.single-product{
     background: @darkdarkgrey;
@@ -23,7 +23,7 @@ p{
 }
 
 h2{
-  .content_font;
+  .menu_font;
 }
 
 h3{
@@ -35,14 +35,20 @@ h3{
 }
 
 #header{
-  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 15%,rgba(255,255,255,1) 100%), url("../images/bandeauBW1.jpg") repeat-x scroll 50% 0%;
-  
+  background:  url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; 
+//   background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; /* FF3.6+ */
+//   background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+//   background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; /* Chrome10+,Safari5.1+ */
+//   background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; /* Opera 11.10+ */
+//   background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; /* IE10+ */
+//   background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 15%,rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%;
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
   
   hgroup {
     margin: 0 15%;
     img{
     }
-    margin-bottom: 1.5em;
+    margin-bottom: 1.3em;
   }
 }
 
@@ -77,6 +83,9 @@ h3{
   
 
   ul.nav {
+    a{
+      .menu_font;
+    }
 
     &>li.menu-item {
       float: left;
@@ -103,7 +112,7 @@ h3{
       }
     }
     
-    li.current-menu-item a {
+    li.current-menu-item>a {
       color: black;
     }
 

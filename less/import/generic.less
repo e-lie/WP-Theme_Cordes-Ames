@@ -52,16 +52,21 @@
 @bgMenu: @pantoneFonce1;
 // ---------------------- TYPOGRAPHY ------------------
 
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700|Roboto:300,400,500,900);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,900|Roboto+Slab:400,700);
 
 .app_font{
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 1.8em;
 }
 
 .content_font{
-   font-family: 'Crimson Text', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8em;
+}
+
+.menu_font{
+  font-family: 'Roboto Slab', serif;
 }
 
 .link_style1{
@@ -76,9 +81,10 @@
 }
 
 .link_style2{
-  .app_font;
   color: #777;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1.4em;
   text-shadow: 0 1px rgba(0,0,0,0.3);
   .transition(all, 0.3s);
   &:hover{
