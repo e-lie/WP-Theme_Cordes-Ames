@@ -287,7 +287,7 @@ function recent_posts_shortcode( $atts ) {
 
 		if ( $products->have_posts() ) : ?>
 
-      <h2><a href="#"><?php echo $atts['title'] ?></a></h2>
+      <a href="#"><h2><?php echo $atts['title'] ?></h2></a>
   
       <ul class="recent-posts-list">
 
@@ -329,7 +329,7 @@ function bon_coin_shortcode( $atts ) {
 
 		ob_start(); ?>
 
-      <h2><a href="#"><?php echo $atts['title'] ?></a></h2>
+      <a href="#"><h2><?php echo $atts['title'] ?></h2></a>
       <?php
 
 		return '<div class="bon-coin">' . ob_get_clean() . '</div>';

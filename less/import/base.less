@@ -1,182 +1,111 @@
-body {
-  .app_font;
+body{  
   padding: 0;
+  
+  font-family: @font1;
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  &.home{
-    background: url("../images/fondindienfinal1.jpg") no-repeat scroll 50% 200px;
-    background-size: auto 60%;
+  
+  a{ .link_style1(@font1);
+    h1, h2, h3{
+      .link_style1(@font2);
+    }
   }
-  &.single-product{
-    background: @darkdarkgrey;
-    color: white !important;
+  
+  h1, h2, h3{
+    font-family: @font2;
+    a{ font-family: @font2; }
   }
-
 }
 
-a{
-  .link_style1;
-} 
-
-p{
-  .typo_paragraph;
-}
-
-h2{
-  .menu_font;
-}
-
-h3{
-  font-size: 1.1em;
-}
-
-#content {
-  width: 65%;
-  max-width: 1400px;
-}
 
 #header{
   background:  url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; 
-//   background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; /* FF3.6+ */
-//   background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-//   background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; /* Chrome10+,Safari5.1+ */
-//   background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; /* Opera 11.10+ */
-//   background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; /* IE10+ */
-//   background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 15%,rgba(255,255,255,1) 100%), url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%;
-//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
   
   hgroup {
     margin: 0 15%;
-    img{
-    }
     margin-bottom: 1.3em;
   }
-}
-
-.quantity{
-  color: @pantone311C !important;
-}
-
-.about-area, .recent-posts, .product-cloud {
-  //border: 1px dashed rgba(0,0,0,0.4);
-}
-
-.product-cloud{
-  input.css-filter{
-    display: none;
-  }
-  label{
-    display: inline-block;
+  
+  #menu-button {
+    float: left;
+    margin-right: 10%;
     .style1_button;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1em;
   }
-  input.css-filter:checked{
-    .style1_button_checked;
-  }
-}
 
-#navigation {
-  overflow: hidden;
-  height: auto; // by default the menu is open
-  width: 66%;
-  margin: 0 auto;
-  
-  .transition(height, 0.4s, ease-in-out);  
-  
-
-  ul.nav {
-    a{
-      .menu_font;
+  #menu-checkbox {
+    display: none;
+    &:not(:checked) ~ #navigation{
+      height: 2em; //if recent css3 rules are supported, the menu is closed
     }
-
-    &>li.menu-item {
-      float: left;
-      text-align: center;
-      width: 20%;
+    &:checked ~ #navigation {
+      height: 8.5em; //and can be reopen of course      
+      .style1_button_checked;
+    }
+  }
+  
+  #navigation {
+    
+    height: auto; // by default the menu is open
+    width: 66%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    a{ 
+      font-family: @font2;
+      font-weight: 700;
+    }
+    
+    .transition(height, 0.4s, ease-in-out);  
+    
+    ul.nav {
+      ul.sub-menu li a {
+	  font-size: 0.85em;
+      }
       
-      a {
-        .link_style2;
-      } 
-      ul {
-	display: block;
-	position: relative;
-	visibility: visible;
-	border: none;
-	padding: 0;
-	margin: 0;
-	background: none;
-	box-shadow: none;
-	li {
-	  a{
-	    font-size: 0.85em;
-	  }
-	}
+      
+      &>li.menu-item {
+	text-align: center;
+	float: left;
+	text-align: center;
+	width: 20%;
       }
     }
     
     li.current-menu-item>a {
       color: black;
     }
-
+    
     
   }
 }
 
-
-#menu-button {
-  float: left;
-  margin-right: 10%;
-  .style1_button;
-  text-align: center;
-  font-size: 2em;
-  line-height: 1em;
-}
-#menu-checkbox:checked{
-  .style1_button_checked;
-}
-
-#menu-checkbox {
-  display: none;
-  &:not(:checked) ~ #navigation{
-    height: 2em; //if recent css3 rules are supported, the menu is closed
-  }
-  &:checked ~ #navigation {
-    height: 8.5em; //and can be reopen of course      li {
-  }
-}
-
 #footer{
-  background: @pantoneFonce3;
+  background: grey;
+  color: white;
   border-radius: 20% 20% 0% 0%;
 }
 
-.home-cea {  
+.home{
+  background: url("../images/fondindienfinal1.jpg") no-repeat scroll 50% 200px;
+  background-size: auto 60%;
+}
   
-  &#main {
-    width: 100% !important;
-  }
-  
-  .entry {
-    text-align: justify;
-    h2 {
-      text-align: center;
+.single-product{
+  background: @darkdarkgrey;
+  color: white !important;
+
+  .product-title{
+    text-align: center;
+    a.artist-image{
+      img{
+	border-radius: 50%;
+      }
     }
   }
-  
-}
-
-#product-title{
-  text-align: center;
-  
-  a.artist-image{
-    img{
-      border-radius: 50%;
-    }
-  }
-}
-
-div#content.single-product-cea{
-  width: 75%;
-  margin: 0 auto;
   
   section.purchase{
     .content_block_dark;
@@ -220,69 +149,59 @@ div#content.single-product-cea{
   }
 }
 
-.single-product-cloud {
-  width: 100%;
-  height: 100%;
-  
-  section{
-    box-shadow: 0 0 0 1px red;
-    overflow: hidden;
-  }
-  section#product-title{
-    display: none;
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 50%;
-  }
-  
-  section.purchase{
-    position: relative;
-    float: right;
-    width: 50%;
-    height: 100%;
-  }
-  
-  section.product-content{
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 100%;
+.blog{
+  #content{
+    width: 80%;
     
-    .description{
-      display: none;
+    .col-left{
+      width: 77%;
+      
+      section.post-content{
+	margin-bottom: 2em;
+      }
+      
+      img.wp-post-image{
+	float: left;
+	padding: 1em;
+      }
     }
-    .songs-list{
-      display: none;
-    }
-    .listening{
-    }
-    .gallery{
-      display: none;
+    .col-right{
+      background-color: #eee;
+      height: 600px;
+      border-radius: 20px;
     }
   }
 }
 
-#content.webzine{
-  width: 80%;
+.post-type-archive-product, .page-template-archive-artist-php{
+  background: @darkdarkgrey;
+  color: white !important;
   
-  .col-left{
-    width: 77%;
-    
-    section.post-content{
-      margin-bottom: 2em;
-    }
-    
-    img.wp-post-image{
-      float: left;
-      padding: 1em;
-    }
-  }
-  .col-right{
-    background-color: #eee;
-    height: 600px;
-    border-radius: 20px;
+  
+  a{ 
+    color: white;
   }
   
+  h1, h2, h3{
+    color: white;
+  }
+  
+  li.current-menu-item>a {
+    color: grey !important;
+  }
 }
   
+
+
+.product-cloud{
+  input.css-filter{
+    display: none;
+  }
+  label{
+    display: inline-block;
+    .style1_button;
+  }
+  input.css-filter:checked{
+    .style1_button_checked;
+  }
+}

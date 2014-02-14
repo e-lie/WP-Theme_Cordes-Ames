@@ -67,9 +67,9 @@ INDEX
   //--}
   ul.nav ul {
     //--width: 15.379em;
-    visibility: hidden;
-    display: none;
-    position: absolute;
+    //--visibility: hidden;
+    //--display: none;
+    //--position: absolute;
     top: 100%;
     left: 0;
     z-index: 9999;

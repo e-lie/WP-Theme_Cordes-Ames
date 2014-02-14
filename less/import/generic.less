@@ -54,25 +54,13 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,900|Roboto+Slab:400,700);
 
-.app_font{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 1.8em;
-}
+@font1: 'Roboto', sans-serif;
+@font2: 'Roboto Slab', serif;
 
-.content_font{
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.8em;
-}
-
-.menu_font{
-  font-family: 'Roboto Slab', serif;
-}
-
-.link_style1{
-  .content_font;
+.link_style1(@font:@font1){
+  font-family: @font;
   color: #444;
-  font-weight: 700;
+  font-weight: 400;
   text-shadow: 0 1px rgba(0,0,0,0.3);
   .transition(all, 0.2s);
   &:hover{
@@ -80,32 +68,29 @@
   }
 }
 
-.link_style2{
-  color: #777;
-  font-weight: 700;
-  font-size: 1.2em;
-  line-height: 1.4em;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
-  .transition(all, 0.3s);
-  &:hover{
-    color: #222;
-  }
-}
+// .link_style2{
+//   color: #777;
+//   font-weight: 700;
+//   font-size: 1.2em;
+//   line-height: 1.4em;
+//   text-shadow: 0 1px rgba(0,0,0,0.3);
+//   .transition(all, 0.3s);
+//   &:hover{
+//     color: #222;
+//   }
+// }
+// 
+// .link_style2p{
+//   .app_font;
+//   color: white;
+//   font-weight: 500;
+//   text-shadow: 0 1px rgba(0,0,0,0.3);
+//   .transition(all, 0.3s);
+//   &:hover{
+//     color: #222;
+//   }
+// }
 
-.link_style2p{
-  .app_font;
-  color: white;
-  font-weight: 500;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
-  .transition(all, 0.3s);
-  &:hover{
-    color: #222;
-  }
-}
-
-.typo_paragraph{
-  .content_font;
-}
 
 // ---------------------- BLOCS ------------------
 
@@ -149,16 +134,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
 
 // ---------------------- BUTTONS ------------------
 
-.style1_button{
+.style1_button(@font:@font1){
   padding: 0 0.4em;
   border-radius: 10px;
   min-width: 45px;
   
+  font-family: @font;
+  font-weight: 500;
+  color: white;
+  
   background-color: @pantone311C;
   
-  .app_font;
-  color: white;
-  font-weight: 500;
   
   &:hover{
     background-color: @pantoneFonce1;

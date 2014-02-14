@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
       
-  <section id="product-title">
+  <section class="product-title">
     <h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>
     
     <?php $related_artists = get_related_artists(get_the_id());

@@ -32,7 +32,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     <?php
 	$size = 'shop_catalog';
 	if ( has_post_thumbnail() )
-	  the_post_thumbnail();
+	  the_post_thumbnail('medium');
 	elseif ( woocommerce_placeholder_img_src() )
 	  echo woocommerce_placeholder_img( $size );
     ?>
