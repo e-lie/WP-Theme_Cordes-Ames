@@ -31,7 +31,8 @@ h3{
 }
 
 #content {
-  width: 70%;
+  width: 65%;
+  max-width: 1400px;
 }
 
 #header{
@@ -228,6 +229,7 @@ div#content.single-product-cea{
     overflow: hidden;
   }
   section#product-title{
+    display: none;
     position: relative;
     float: left;
     width: 50%;
@@ -236,19 +238,24 @@ div#content.single-product-cea{
   
   section.purchase{
     position: relative;
-    float: left;
+    float: right;
     width: 50%;
-    height: 50%;
+    height: 100%;
   }
   
   section.product-content{
     position: relative;
     float: left;
-    width: 100%;
-    height: 50%;
+    width: 50%;
+    height: 100%;
     
-    .listening{
+    .description{
       display: none;
+    }
+    .songs-list{
+      display: none;
+    }
+    .listening{
     }
     .gallery{
       display: none;

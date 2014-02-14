@@ -36,6 +36,9 @@ $classes[] = "a-la-une";
 <section <?php post_class( $classes ); ?>">
 
 		<?php
+		
+
+  
       if ( has_post_thumbnail() ) {
         the_post_thumbnail( array(300, 300) );
       }elseif ( woocommerce_placeholder_img_src() ){

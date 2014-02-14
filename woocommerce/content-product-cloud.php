@@ -52,18 +52,19 @@ $position = ($woocommerce_loop['loop'] - 2) % 14;
 ?>
 <li <?php post_class( $classes ); ?>">
 
-		<?php
+		<a href="<?php the_permalink(); ?>"><?php
       if ( has_post_thumbnail() ) {
         the_post_thumbnail( array(300, 300) );
       }elseif ( woocommerce_placeholder_img_src() ){
         echo woocommerce_placeholder_img( 'shop_catalog' );
       }
-		?>
+      ?></a>
+	<?php /*
     <div class="rb-trigger" > 
       <div class="rb-overlay" >
         <span class="rb-close">close</span>    
         <h3><?php the_title(); ?></h3>
         <?php woocommerce_get_template_part('content', 'single-product-cloud'); ?>
       </div>
-    </div>
+    </div>  */ ?>
 </li>

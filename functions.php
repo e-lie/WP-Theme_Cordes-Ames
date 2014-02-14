@@ -98,6 +98,7 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 * display a cloud of 18 products (albums) 
 */
 
+
 function music_shortcode( $atts ) {
 
   global $woocommerce_loop;
@@ -135,19 +136,15 @@ function music_shortcode( $atts ) {
 	if ( $products->have_posts() ) : $products->the_post();?>
 	    <?php woocommerce_get_template_part( 'content', 'product-a-la-une' ); ?>
   
-      <div class="cloud-wrapper">
-  
-      <input id="select-type-all" name="radio-set-1" type="radio" class="css-filter filter-all" checked="checked" />
-      <label for="select-type-all" class="ff-label-type-all">All</label>
-       
-      <input id="select-type-1" name="radio-set-1" type="radio" class="css-filter filter-1" />
-      <label for="select-type-1" class="ff-label-type-1">catégorie1</label>
-       
-      <input id="select-type-2" name="radio-set-1" type="radio" class="css-filter filter-2" />
-      <label for="select-type-2" class="ff-label-type-2">catégorie2</label>
-       
-      <input id="select-type-3" name="radio-set-1" type="radio" class="css-filter filter-3" />
-      <label for="select-type-3" class="ff-label-type-3">catégorie3</label>
+      <div class="cloud-wrapper" style="">
+	<input id="select-type-All" name="radio-set-1" type="radio" class="css-filter filter-All" checked="checked" />
+	<label for="select-type-All" class="ff-label-type-All">Tous les genres</label>
+	
+	<?php $cats = get_subcategories_as_array('product_cat', 16);
+	  foreach($cats as $cat){ ?>
+	<input id="select-type-<?php echo ($cat) ?>" name="radio-set-1" type="radio" class="css-filter filter-<?php echo ($cat) ?>" />
+	<label for="select-type-<?php echo ($cat) ?>" class="ff-label-type-<?php echo ($cat) ?>"><?php echo ($cat) ?></label>
+	<? } ?>
 
 	<ul class="products rb-grid">
 
@@ -343,6 +340,17 @@ add_shortcode( 'bon_coin', 'bon_coin_shortcode' );
 // }}}
 
 // {{{ ------------------------ Utilitary functions
+
+function get_subcategories_as_array($taxonomy_name, $parent_id){
+  $music_categories = get_terms('product_cat');
+  $cat_names = array();
+  foreach ( $music_categories as $cat ){
+    if( $cat->parent == $parent_id ){
+      $cat_names[] = $cat->slug;
+    }
+  }
+  return $cat_names;
+}
 
 function get_categories_as_classes($custom_post, $taxonomy_name) {
   $terms = get_the_terms( $custom_post->ID, $taxonomy_name );

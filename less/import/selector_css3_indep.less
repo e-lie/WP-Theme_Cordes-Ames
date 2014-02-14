@@ -1,0 +1,54 @@
+  @base-margin: 3%;
+  @reduced-margin: 0%;
+  @base-width: 14%;
+  @active-width: @base-width + (2 * (@base-margin - @reduced-margin));
+  @big-margin-left: 3%;
+  @reduced-bml: @big-margin-left - (@base-margin - @reduced-margin);
+  @small-margin-left: 3%;
+  @reduced-sml: @small-margin-left - (@base-margin - @reduced-margin);
+
+
+
+  input.filter-all:checked ~ .products li.product,
+  input.filter-1:checked ~ .products li.product.line1,
+  input.filter-2:checked ~ .products li.product.line2,
+  input.filter-3:checked ~ .products li.product.line3,
+  input.filter-4:checked ~ .products li.product.line4{
+      opacity: 1 !important;
+  } 
+
+  input.filter-1:checked ~ .products li.product:not(.line1),
+  input.filter-2:checked ~ .products li.product:not(.line2),
+  input.filter-3:checked ~ .products li.product:not(.line3),
+  input.filter-4:checked ~ .products li.product:not(.line4){
+      
+    opacity: 0.2;
+    box-shadow: none;
+    cursor: default;
+
+    &:hover {
+      width: @base-width;
+      margin: @base-margin !important;
+      z-index: 100;
+
+      &.first{
+        &.line1{
+          margin-left: @big-margin-left !important;
+        }
+        &.line2{
+          margin-left: @small-margin-left!important;
+        }
+        &.line3{
+          margin-left: @small-margin-left!important;
+        }
+        &.line4{
+          margin-left: @big-margin-left !important;
+        }
+      }
+    }
+
+    .rb-trigger {
+      display: none;
+    }
+
+  } 

@@ -44,6 +44,105 @@ global $woo_options, $woocommerce;
 <?php wp_enqueue_script( 'cookie', get_bloginfo('stylesheet_directory').'/scripts/jquery.cookie.js', array() , '1.0', true ); ?> 
 <?php wp_enqueue_script( 'app', get_bloginfo('stylesheet_directory').'/scripts/app.js', array() , '1.0', true ); ?> 
 
+<?php wp_enqueue_script( 'jplayer', get_bloginfo('stylesheet_directory').'/scripts/jquery.jplayer.min2-5-0.js', array() , '2.5.0', false ); ?> 
+<?php// wp_enqueue_script( 'mp3-jplayer', get_bloginfo('stylesheet_directory').'/scripts/mp3-jplayer-1.8.5.js', array() , '1.8.5', false ); ?> 
+
+<?php if(is_page('Accueil')){
+$cats = get_subcategories_as_array('product_cat', 16);
+
+$resulting_css = "input.filter-All:checked ~ .products li.product {
+  opacity: 1 !important;
+}
+";
+
+foreach( $cats as $cat ){
+  $line1 = "input.filter-{$cat}:checked ~ .products li.product.{$cat}";
+  $line2 = "input.filter-{$cat}:checked ~ .products li.product:not(.{$cat})";
+  
+  $resulting_css = $resulting_css.$line1.'{
+    opacity: 1 !important;
+  }
+  ';
+  
+  $resulting_css = $resulting_css.$line2.'{
+	opacity: 0.2;
+	box-shadow: none;
+	cursor: default;
+  }
+  ';
+  
+  $resulting_css = $resulting_css.$line2.':hover {
+	width: 14%;
+	margin: 3% !important;
+	z-index: 100;
+  }
+  ';
+}
+
+echo ("<style type='text/css'>".$resulting_css.'</style>');
+
+
+/* echo ("
+<style type='text/css'>
+      input.filter-all:checked ~ .products li.product,
+      input.filter-1:checked ~ .products li.product.line1,
+      input.filter-2:checked ~ .products li.product.line2,
+      input.filter-3:checked ~ .products li.product.line3,
+      input.filter-4:checked ~ .products li.product.line4 {
+	opacity: 1 !important;
+      }
+      input.filter-1:checked ~ .products li.product:not(.line1),
+      input.filter-2:checked ~ .products li.product:not(.line2),
+      input.filter-3:checked ~ .products li.product:not(.line3),
+      input.filter-4:checked ~ .products li.product:not(.line4) {
+	opacity: 0.2;
+	box-shadow: none;
+	cursor: default;
+      }
+      input.filter-1:checked ~ .products li.product:not(.line1):hover,
+      input.filter-2:checked ~ .products li.product:not(.line2):hover,
+      input.filter-3:checked ~ .products li.product:not(.line3):hover,
+      input.filter-4:checked ~ .products li.product:not(.line4):hover {
+	width: 14%;
+	margin: 3% !important;
+	z-index: 100;
+      }
+      input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line1,
+      input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line1,
+      input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line1,
+      input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line1 {
+	margin-left: 3% !important;
+      }
+      input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line2,
+      input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line2,
+      input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line2,
+      input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line2 {
+	margin-left: 3% !important;
+      }
+      input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line3,
+      input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line3,
+      input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line3,
+      input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line3 {
+	margin-left: 3% !important;
+      }
+      input.filter-1:checked ~ .products li.product:not(.line1):hover.first.line4,
+      input.filter-2:checked ~ .products li.product:not(.line2):hover.first.line4,
+      input.filter-3:checked ~ .products li.product:not(.line3):hover.first.line4,
+      input.filter-4:checked ~ .products li.product:not(.line4):hover.first.line4 {
+	margin-left: 3% !important;
+      }
+      input.filter-1:checked ~ .products li.product:not(.line1) .rb-trigger,
+      input.filter-2:checked ~ .products li.product:not(.line2) .rb-trigger,
+      input.filter-3:checked ~ .products li.product:not(.line3) .rb-trigger,
+      input.filter-4:checked ~ .products li.product:not(.line4) .rb-trigger {
+	display: none;
+      }
+</style> " );*/
+
+
+} ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>
