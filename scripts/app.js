@@ -2,17 +2,17 @@ jQuery.noConflict();
 (function($) {
     $(function() {
       
-	if($('body').hasClass("single-product")){
-	  var stickyHeaderTop = $('section.purchase').offset().top;
-  
-	  $(window).scroll(function(){
-		  if( $(window).scrollTop() > stickyHeaderTop ) {
-			  $('section.purchase').css({position: 'fixed', top: '0'});
-		  } else {
-			  $('section.purchase').css({position: 'static', top: 'auto' });
-		  }
-	  });
-	}
+// 	if($('body').hasClass("single-product")){
+// 	  var stickyHeaderTop = $('section.purchase').offset().top;
+//   
+// 	  $(window).scroll(function(){
+// 		  if( $(window).scrollTop() > stickyHeaderTop ) {
+// 			  $('section.purchase').css({position: 'fixed', top: '0'});
+// 		  } else {
+// 			  $('section.purchase').css({position: 'static', top: 'auto' });
+// 		  }
+// 	  });
+// 	}
 // 	
        // {{{ change display mode : list/grid 
 
@@ -141,7 +141,7 @@ jQuery.noConflict();
 
     $("#archive-wrapper")
       .empty()
-      .html("<div style='text-align: center; padding: 30px;'><img src='/cordesetames/wp-content/themes/Theme_Cordes&Ames/images/ajax-loader.gif' /></div>");
+      .html("<div style='text-align: center; padding: 30px;'><img src='" + $('#archive-browser').attr('theme-path') + "' /></div>");
   
     var dateArray = $("#date-choice").val().split("/");
     var y = dateArray[4];

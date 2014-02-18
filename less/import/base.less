@@ -3,12 +3,16 @@ body{
   
   font-family: @font1;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 17px;
+//   line-height: 24px;
   
   a{ .link_style1(@font1);
     h1, h2, h3{
       .link_style1(@font2);
+    }
+    
+    &.button{
+      .style1_button;
     }
   }
   
@@ -16,11 +20,20 @@ body{
     font-family: @font2;
     a{ font-family: @font2; }
   }
+  
+  .extenseur{
+    float: none !important;
+    clear: both;
+    width: 100% !important;
+    height: 1px;
+  }
+
 }
 
 
 #header{
-  background:  url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%; 
+  background:  url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%;
+  margin-bottom: 2em;
   
   hgroup {
     margin: 0 15%;
@@ -70,7 +83,6 @@ body{
       &>li.menu-item {
 	text-align: center;
 	float: left;
-	text-align: center;
 	width: 20%;
       }
     }
@@ -84,44 +96,95 @@ body{
 }
 
 #footer{
+  margin-top: 2em;
   background: grey;
   color: white;
-  border-radius: 20% 20% 0% 0%;
 }
 
 .home{
-  background: url("../images/fondindienfinal1.jpg") no-repeat scroll 50% 200px;
-  background-size: auto 60%;
+  background: url("../images/fondindien2.jpg") no-repeat scroll 50% 140px;
+  background-size: 80%;
+
+
+  .product-cloud {
+    .cloud; //generic style
+    
+    width: 100%;
+    float: left;
+  }
+  
+
 }
   
 .single-product{
-  background: @darkdarkgrey;
+  background-color: @darkdarkgrey;
+  background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px black;
+  background-size: 80%;
+  
   color: white !important;
-
-  .product-title{
-    text-align: center;
-    a.artist-image{
-      img{
-	border-radius: 50%;
-      }
-    }
+  a{ 
+    color: white;
+  }
+  h1, h2, h3, h4, h5, h6{
+    color: white;
+  }
+  li.current-menu-item>a {
+    color: grey !important;
   }
   
-  section.purchase{
-    .content_block_dark;
-    float: right;
-    right: 10%;
-    width : 10%;
+  #header #navigation{
+    width: 75%;
   }
+  
+  #content{
+    width: 75%;
+  }
+
+
+  
+
   
   section.product-content{
-    width: 80%;
     
-    h2{
+    &>br{
+      display: none;
+    }
+    
+    &>h2{
+      clear: both;
       padding: 0 2em 0 2em;
       margin: 1em 0 0 0;
       background-color: @pantoneFonce1;
       border-radius: 20px 20px 0 0;
+    }
+    
+    .product-title{
+      margin-bottom: 1em;
+      
+      text-align: center;
+      h1{
+	margin: 0.5em 0 0 0;
+      }
+
+    }
+    
+    section.product-images{
+      float: left;
+      margin: 0 0 2em 10%;
+      a.artist-image{
+	img{
+	  border-radius: 50%;
+	}
+      }
+    }
+    
+    section.purchase{
+      float: left;
+      margin-bottom: 2em;
+      width: 28%;
+      padding: 1%;
+      text-align: center;
+      
     }
     
     .songs-list{
@@ -130,11 +193,21 @@ body{
     
     .description{
       .content_block_dark;
-      .columns(2);
+      &>p{
+	max-width: 60em;
+	margin: 0 auto;
+      }
     }
     
     .listening{
-      .content_block_dark;
+      //.content_block_dark;
+      &>br, &>p{
+	display: none;
+      }
+      float: left;
+      width: 28%;
+      padding: 1%;
+      
   
     }
     
@@ -150,11 +223,23 @@ body{
 }
 
 .blog{
+  .gradient-menu{
+    width: 80% !important;
+  }
+  #header hgroup{
+    width: 75% !important;
+  }
+  #navigation{
+    width: 75% !important;
+  }
+  
   #content{
-    width: 80%;
+    width: 75%;
     
     .col-left{
-      width: 77%;
+      width: 75%;
+      
+      h1{ text-align: center; }
       
       section.post-content{
 	margin-bottom: 2em;
@@ -162,6 +247,7 @@ body{
       
       img.wp-post-image{
 	float: left;
+	max-width: 120px;
 	padding: 1em;
       }
     }
@@ -169,26 +255,186 @@ body{
       background-color: #eee;
       height: 600px;
       border-radius: 20px;
+      margin: 3em 1% 0 1%;
     }
   }
 }
 
 .post-type-archive-product, .page-template-archive-artist-php{
-  background: @darkdarkgrey;
+  background-color: @darkdarkgrey;
+  background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px black;
+  background-size: 80%;
+  
   color: white !important;
-  
-  
   a{ 
     color: white;
   }
-  
-  h1, h2, h3{
+  h1, h2, h3, h4, h5, h6{
     color: white;
   }
-  
   li.current-menu-item>a {
     color: grey !important;
   }
+  
+  #archive-wrapper {
+    clear: both;
+    
+    .woo-pagination {
+      float: left;
+      width: 50%;
+      
+      ul.page-numbers{
+	float: right;
+	list-style: none outside;
+	&>li{
+	  display: inline-block;
+	}
+      }
+    }
+    
+    .woocommerce-result-count{
+      padding: 1%;
+    }
+  }
+  
+  ul.products {
+    
+    clear: both;
+    
+      & > li {
+	padding: 2%;
+	
+	a.thumb img{
+	  width: 100%
+	}
+	
+	a{
+	  color: @pantoneClair2;
+	  &:hover {
+	    color: @pantoneFonce2;
+	  }
+	}
+	  
+      }
+	
+      
+      &.list{
+	& > li {
+	  float: none;
+	  clear: both;
+	  width: 100%;
+	  margin-bottom: 2em;
+	  text-align: left;
+	  
+	  background-color: @darkgrey1;
+	  border-radius: 10px;
+	  
+	  
+	  a.thumb {
+	    float: left;
+	    width: 30%;
+	    margin-right: 5%;
+	    //margin-bottom: 2em;
+	    
+	    img {
+	      overflow: visible;
+	    }
+	  }
+	  
+	  section.content {
+	    min-width: 300px;
+	    margin-bottom: 2em;
+	    vertical-align: top;
+	    
+
+	    
+	    
+	    
+	    section.title-artists{
+	      
+	      
+	      h3{
+		display: inline-block;
+		margin-right: 2em;
+	      }
+	      
+	      ul.artists-names{
+		display: inline-block;
+		list-style: none outside;
+		li{
+		  display: inline-block;
+		  margin-right: 1em;
+		}
+	      }
+	    }
+	    
+	    section.post-data{
+	      margin-bottom: 1em;
+	      span.post-date{ margin-right: 2em; }
+	    }
+	  }
+	}
+      }
+
+      &.grid{
+	
+	background-color: @darkgrey1;
+	border-radius: 10px;
+	
+	& > li {
+	  display: block;
+	  float: left;
+	  width:  28%;
+	  //height: 25%;
+	  margin: 0.5%;
+	  
+	  a.thumb {
+	    width: 100%;
+	  }
+	  
+	  section.content {
+	    padding: 1em 1em 0 1em;
+	  }
+	  
+	  ul.artists-names{
+	    list-style: none outside;
+	  }
+	  
+	  div.post-excerpt{
+	    display: none;
+	  }
+	}
+      }
+    }
+    
+    #archive-browser{
+      
+      padding: 2%;
+      background-color: @darkgrey1;
+      border-radius: 10px;
+    
+      & > div {
+	width: 25%;
+	float: left;
+	text-align: center;
+      }
+      
+      select{ min-width: 8em;}
+      
+      a#mode{
+	display: block;
+	margin: 0 auto;
+	width: 37px;
+	height: 14px;
+	background: url('../images/mode.png') no-repeat scroll 0px 0px transparent;
+	
+	&.flip{
+	  background-position: 0px 100% !important;
+	}
+      }
+      
+    }
+  
 }
   
 

@@ -36,6 +36,8 @@
 @darkgreyblue: #303942;
 @pantone311C: #23C2E3;
 @pantoneClair1: lighten(@pantone311C, 48%);
+@pantoneClair2: lighten(@pantone311C, 8%);
+@pantoneClair3: lighten(@pantone311C, 30%);
 @pantoneFonce1: darken(@pantone311C, 10%);
 @pantoneFonce2: darken(@pantone311C, 15%);
 @pantoneFonce3: darken(@pantone311C, 30%);
@@ -126,7 +128,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
 }
 
 .content_block_dark {
-  padding: 1em 2em 4em 2em;
+  padding: 1em 2em 2em 2em;
   background-color: @darkgrey1;
   border-radius: 0 0 20px 20px;
   margin-bottom: 2em;
@@ -135,6 +137,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
 // ---------------------- BUTTONS ------------------
 
 .style1_button(@font:@font1){
+  background-image: none;
+  border: 0px;
+  text-shadow: none;
+  box-shadow: none;
+  
+  
   padding: 0 0.4em;
   border-radius: 10px;
   min-width: 45px;
@@ -148,9 +156,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
   
   &:hover{
     background-color: @pantoneFonce1;
+    background-image: none;
+    border: 0px;
+    text-shadow: none;
+    box-shadow: none;
   }
   &:active{
     background-color: @pantoneFonce2;
+    background-image: none;
+    border: 0px;
+    text-shadow: none;
+    box-shadow: none;
   }
 }
 

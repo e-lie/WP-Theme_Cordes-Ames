@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
 
-<div id="archive-browser" target="<?php echo site_url().'/?page_id=6173' ?>" type="<?php echo $ajax_request_type ?>" >
+<div id="archive-browser" target="<?php echo site_url().'/?page_id=6173' ?>" theme-path="<?php echo get_stylesheet_directory_uri().'/images/ajax-loader.gif' ; ?>" type="<?php echo $ajax_request_type ?>" >
 	<div>
 		<h4>Année</h4>
 		<select id="date-choice">
@@ -41,5 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		?>
 	</select>
 	</div>
+	<div>
+		<h4>Affichage</h4>
+	<a id="mode" class="" href="javascript: void(0);"></a></div>
+	<div class="extenseur"></div>
 </div>
 

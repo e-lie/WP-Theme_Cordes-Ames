@@ -310,7 +310,7 @@ a {
   font-weight: bold;
 }
 a:hover {
-  color: #ff4800;
+  color: #23c2e3;
   text-decoration: none;
 }
 .clear {
@@ -602,23 +602,23 @@ table tr td:last-child {
   height: 1.618em;
   cursor: pointer;
   font-family: sans-serif;
-  background-color: #ff4800;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff4800), to(#ee3700));
+  background-color: #23c2e3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#23c2e3), to(#189fbb));
   /* Saf4+, Chrome */
 
-  background-image: -webkit-linear-gradient(top, #ff4800, #ee3700);
+  background-image: -webkit-linear-gradient(top, #23c2e3, #189fbb);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
 
-  background-image: -moz-linear-gradient(top, #ff4800, #ee3700);
+  background-image: -moz-linear-gradient(top, #23c2e3, #189fbb);
   /* FF3.6+ */
 
-  background-image: -ms-linear-gradient(top, #ff4800, #ee3700);
+  background-image: -ms-linear-gradient(top, #23c2e3, #189fbb);
   /* IE10 */
 
-  background-image: -o-linear-gradient(top, #ff4800, #ee3700);
+  background-image: -o-linear-gradient(top, #23c2e3, #189fbb);
   /* Opera 11.10+ */
 
-  background-image: linear-gradient(to bottom, #ff4800, #ee3700);
+  background-image: linear-gradient(to bottom, #23c2e3, #189fbb);
   border: 0.202em solid #bb0400;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -626,8 +626,8 @@ table tr td:last-child {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   text-align: center;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 #cc1500;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 #cc1500;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 #189fbb;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 #189fbb;
 }
 #header .nav-toggle a {
   color: #fff;
@@ -739,7 +739,7 @@ table tr td:last-child {
 .type-page .post-meta li {
   display: inline;
   font-size: .857em;
-  text-transform: uppercase;
+  //--text-transform: uppercase;
   margin-right: 1em;
 }
 .post .post-meta li a,
@@ -748,7 +748,7 @@ table tr td:last-child {
 }
 .post .post-meta li a:hover,
 .type-page .post-meta li a:hover {
-  color: #ff4800;
+  color: #23c2e3;
 }
 .post .post-meta li.post-category:before,
 .type-page .post-meta li.post-category:before,
@@ -806,7 +806,7 @@ table tr td:last-child {
 }
 .post img,
 .type-page img {
-  padding: .53em;
+  //--padding: .53em;
   //--border: 1px solid #e8e4e3;
   //--background: #fff;
   max-width: 100%;
@@ -821,7 +821,7 @@ table tr td:last-child {
 .type-page img.thumbnail {
   padding: 0;
   border: 0 !important;
-  border-bottom: 0.327em solid #ff4800 !important;
+  border-bottom: 0.327em solid #23c2e3 !important;
 }
 .post img.wp-smiley,
 .type-page img.wp-smiley {
@@ -881,7 +881,7 @@ table tr td:last-child {
 .nav-entries,
 .wp-pagenavi,
 .woo-pagination {
-  padding: 1em 1.618em;
+  //--padding: 1em 1.618em;
 }
 .nav-entries a {
   display: block;
@@ -904,10 +904,10 @@ table tr td:last-child {
   background-clip: padding-box;
 }
 .woo-pagination .page-numbers:hover {
-  background: #fff;
+  //--background: #fff;
 }
 .woo-pagination .page-numbers.current {
-  background: #ff4800;
+  background: #23C2E3; //--
   color: #fff;
   padding: .382em .857em;
 }
@@ -1179,7 +1179,7 @@ table tr td:last-child {
   padding: .382em .53em !important;
 }
 .widget_woodojo_tabs ul.nav-tabs li a:hover {
-  color: #ff4800;
+  color: #23c2e3;
 }
 .widget_woodojo_tabs ul.nav-tabs li.active {
   position: relative;
@@ -1192,8 +1192,8 @@ table tr td:last-child {
   left: 0;
   right: 0;
   height: .236em;
-  background: #ff4800;
-  border-top: 1px solid #ff5911;
+  background: #23c2e3;
+  border-top: 1px solid #47cce8;
   -webkit-border-top-left-radius: 2px;
   -webkit-border-top-right-radius: 2px;
   border-top-left-radius: 2px;
@@ -1207,8 +1207,8 @@ table tr td:last-child {
   background: #fff;
   box-shadow: 0 1px 2px 0 #e8e4e3;
   -webkit-box-shadow: 0 1px 2px 0 #e8e4e3;
-  color: #ff4800;
-  border-top-color: #ff4800;
+  color: #23c2e3;
+  border-top-color: #23c2e3;
 }
 .widget_woodojo_tabs ul.nav-tabs li.active a:after {
   content: "";
@@ -1801,7 +1801,7 @@ div.quantity .minus {
   border: none;
   font-size: 1.387em;
   padding: 0;
-  color: #ff4800;
+  color: #23c2e3;
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
   -ms-transition: all ease-in-out 0.2s;
@@ -1810,7 +1810,7 @@ div.quantity .minus {
 }
 div.quantity .plus:hover,
 div.quantity .minus:hover {
-  color: #dd2600;
+  color: #189fbb;
 }
 div.quantity .qty {
   margin: 0 .618em;
@@ -1823,10 +1823,10 @@ table div.quantity {
   font-size: .857em;
 }
 .single-product div.quantity {
-  float: left;
-  margin-right: 1.618em;
-  border-right: 4px double #e8e4e3;
-  padding-right: 1.618em;
+  //--float: left;
+  //--margin-right: 1.618em;
+  //--border-right: 4px double #e8e4e3;
+  //--padding-right: 1.618em;
 }
 .single-product table div.quantity {
   padding-right: 0;
@@ -1870,8 +1870,8 @@ dl.variation dd ul {
 .woocommerce-error {
   padding: .618em 1em .618em 2.618em;
   margin-bottom: 1.618em;
-  background: #fff;
-  border: 1px solid #4d65a4;
+  //--background: #fff;
+  border: 3px solid #4d65a4; //--
   border-left-width: .382em ;
   position: relative;
   font-weight: bold;
@@ -1944,13 +1944,13 @@ ul.products li.product {
   width: 48%;
   //--margin-right: 3.8%;
   margin-bottom: 1.618em;
-  text-align: center;
+  //--text-align: center;
 }
 ul.products li.product h3 {
   margin-bottom: 0;
 }
 ul.products li.product a:hover h3 {
-  color: #ff4800;
+  color: #23c2e3;
 }
 ul.products li.product .price {
   display: block;
@@ -1973,7 +1973,7 @@ ul.products li.product img {
 
   //--border: 1px solid #e8e4e3;
   //--background: #fff;
-  margin: 0 auto 1em;
+  //--margin: 0 auto 1em;
 }
 ul.products li.product:nth-child(2n) {
   margin-right: 0;
@@ -2036,7 +2036,7 @@ ul.products .star-rating {
   position: absolute;
   top: 0;
   right: 0;
-  background: #ff4800;
+  background: #23c2e3;
   color: #fff;
   font-weight: bold;
   padding: 0 .857em;
@@ -2548,7 +2548,7 @@ ul.order_details:before {
   cursor: pointer;
   outline: none;
   background: #fff;
-  border: 1px solid #ff4800;
+  border: 1px solid #23c2e3;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
 
@@ -2573,7 +2573,7 @@ ul.order_details:before {
   -ms-transition: all ease-in-out 0.2s;
   -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
-  background: #ff4800;
+  background: #23c2e3;
   -webkit-border-radius: 1em;
   border-radius: 1em;
   -moz-background-clip: padding;
@@ -2702,7 +2702,7 @@ table.my_account_orders .button {
 }
 .shortcode-sale {
   padding: .618em 1em;
-  background: #ff4800;
+  background: #23c2e3;
   color: #fff;
   margin-bottom: 2.618em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -2870,7 +2870,7 @@ input[type="radio"] {
   background-color: #d7d3d2;
 }
 input[type="radio"]:checked {
-  background-color: #ff4800;
+  background-color: #23c2e3;
 }
 a.button,
 a.comment-reply-link,
@@ -2903,32 +2903,32 @@ button.button {
   margin: 0 .327em;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: bold;
-  text-shadow: 0 1px 0 #cc1500;
-  background-color: #ff5911;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff5911), to(#dd2600));
+  text-shadow: 0 1px 0 #189fbb;
+  background-color: #47cce8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#47cce8), to(#189fbb));
   /* Saf4+, Chrome */
 
-  background-image: -webkit-linear-gradient(top, #ff5911, #dd2600);
+  background-image: -webkit-linear-gradient(top, #47cce8, #189fbb);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
 
-  background-image: -moz-linear-gradient(top, #ff5911, #dd2600);
+  background-image: -moz-linear-gradient(top, #47cce8, #189fbb);
   /* FF3.6+ */
 
-  background-image: -ms-linear-gradient(top, #ff5911, #dd2600);
+  background-image: -ms-linear-gradient(top, #47cce8, #189fbb);
   /* IE10 */
 
-  background-image: -o-linear-gradient(top, #ff5911, #dd2600);
+  background-image: -o-linear-gradient(top, #47cce8, #189fbb);
   /* Opera 11.10+ */
 
-  background-image: linear-gradient(to bottom, #ff5911, #dd2600);
-  border: 1px solid #bb0400;
+  background-image: linear-gradient(to bottom, #47cce8, #189fbb);
+  border: 1px solid #0099BB;
   -webkit-border-radius: 0.202em;
   border-radius: 0.202em;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  -webkit-box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px #ff7b33, inset 0 -1px #cc1500;
-  box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px #ff7b33, inset 0 -1px #cc1500;
+  -webkit-box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px #47cce8, inset 0 -1px #189fbb;
+  box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px #47cce8, inset 0 -1px #189fbb;
 }
 a.button.alt,
 a.comment-reply-link.alt,
@@ -3056,23 +3056,23 @@ input[type=submit]:hover,
 input.button:hover,
 button.button:hover {
   text-decoration: none;
-  background-color: #ff5911;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff5911), to(#ee3700));
+  background-color: #47cce8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#47cce8), to(#189fbb));
   /* Saf4+, Chrome */
 
-  background-image: -webkit-linear-gradient(top, #ff5911, #ee3700);
+  background-image: -webkit-linear-gradient(top, #47cce8, #189fbb);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
 
-  background-image: -moz-linear-gradient(top, #ff5911, #ee3700);
+  background-image: -moz-linear-gradient(top, #47cce8, #189fbb);
   /* FF3.6+ */
 
-  background-image: -ms-linear-gradient(top, #ff5911, #ee3700);
+  background-image: -ms-linear-gradient(top, #47cce8, #189fbb);
   /* IE10 */
 
-  background-image: -o-linear-gradient(top, #ff5911, #ee3700);
+  background-image: -o-linear-gradient(top, #47cce8, #189fbb);
   /* Opera 11.10+ */
 
-  background-image: linear-gradient(to bottom, #ff5911, #ee3700);
+  background-image: linear-gradient(to bottom, #47cce8, #189fbb);
 }
 a.button:active,
 a.comment-reply-link:active,
@@ -3081,23 +3081,23 @@ a.comment-reply-link:active,
 input[type=submit]:active,
 input.button:active,
 button.button:active {
-  background-color: #ee3700;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ee3700), to(#ff5911));
+  background-color: #189fbb;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#189fbb), to(#47cce8));
   /* Saf4+, Chrome */
 
-  background-image: -webkit-linear-gradient(top, #ee3700, #ff5911);
+  background-image: -webkit-linear-gradient(top, #189fbb, #47cce8);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
 
-  background-image: -moz-linear-gradient(top, #ee3700, #ff5911);
+  background-image: -moz-linear-gradient(top, #189fbb, #47cce8);
   /* FF3.6+ */
 
-  background-image: -ms-linear-gradient(top, #ee3700, #ff5911);
+  background-image: -ms-linear-gradient(top, #189fbb, #47cce8);
   /* IE10 */
 
-  background-image: -o-linear-gradient(top, #ee3700, #ff5911);
+  background-image: -o-linear-gradient(top, #189fbb, #47cce8);
   /* Opera 11.10+ */
 
-  background-image: linear-gradient(to bottom, #ee3700, #ff5911);
+  background-image: linear-gradient(to bottom, #189fbb, #47cce8);
   -webkit-box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), inset 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }

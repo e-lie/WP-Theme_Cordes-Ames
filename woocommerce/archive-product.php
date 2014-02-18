@@ -39,9 +39,9 @@ get_header('shop'); ?>
 			<?php
           woocommerce_show_messages();
 			?>
-      <a id="mode" class="" href="javascript: void(0);">mode</a> 
 
       <div id="archive-wrapper">
+      
 
       <?php woocommerce_get_template( 'loop/result-count.php' ); ?>
 
@@ -59,6 +59,7 @@ get_header('shop'); ?>
 
 			</ul>
 
+      <?php woocommerce_get_template( 'loop/result-count.php' ); ?>
       <?php get_template_part('pagination-ajax'); ?>
 
 			</div><!-- /#archive-wrapper -->

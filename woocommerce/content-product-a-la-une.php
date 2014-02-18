@@ -48,5 +48,6 @@ $classes[] = "a-la-une";
       <h2>A la une</h2>
       
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id turpis risus. Sed mollis condimentum turpis, nec ultricies libero sollicitudin id. Curabitur sodales risus vitae odio consequat tempor. Curabitur sapien nibh, luctus sit amet erat ut, accumsan egestas ligula. Phasellus a vehicula lorem. In a enim aliquet lectus imperdiet ultrices. Sed pulvinar erat nec lobortis blandit. Quisque congue orci ut interdum imperdiet. Pellentesque eu semper tortor. </p>
+      <div class="extenseur"></div>
 
 </section>
