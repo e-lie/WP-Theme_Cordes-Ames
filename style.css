@@ -1013,7 +1013,7 @@ table tr td:last-child {
   border: 1px double #e8e4e3;
   border-width: 1px 0 4px;
   padding: .618em 0;
-  font-family: "Open Sans", sans-serif;
+  //--font-family: "Open Sans", sans-serif;
 }
 .widget ul {
   list-style: none;

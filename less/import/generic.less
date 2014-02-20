@@ -175,4 +175,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
     background-color: @pantoneFonce2;
   }
 }
+
+.style2_button(@font:@font1, @borderColor: #ddd, @textColor: #333){
+  background: none;
+  border: 2px solid @borderColor;
+  text-shadow: none;
+  box-shadow: none;
+  
+  
+  padding: 0 0.3em;
+  border-radius: 10px;
+  min-width: 45px;
+  
+  font-family: @font;
+  font-weight: 500;
+  line-height: 0.9em;
+  color: @textColor;
+  
+  &:hover{
+    background-color: @borderColor;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+  }
+  &:active{
+    background-color: darken(@borderColor, 20%);
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+.style2_button_checked{
+  &+label{
+    background-color: #aaa;
+  }
+}
+
   

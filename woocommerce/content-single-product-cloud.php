@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	$product_image_link = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
     ?>
     <a href="<?php echo $product_image_link?>" itemprop="image" class="product-image" title="<?php $image_title?>"  rel="prettyPhoto' . $gallery . '">
-     <?php the_post_thumbnail( 'medium', array('title' => $product_image_title)); ?>
+     <?php the_post_thumbnail( 'large', array('title' => $product_image_title)); ?>
     </a>
     <?php }
     
@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	if( has_post_thumbnail($artist->ID)) {
     ?>
     <a href='<?php echo $artist_link?>' class="artist-image" title="<?php $image_title?>">
-     <?php echo get_the_post_thumbnail( $artist->ID, 'medium', array('title' => $artist_image_title)); ?>
+     <?php echo get_the_post_thumbnail( $artist->ID, 'large', array('title' => $artist_image_title)); ?>
     </a> <?php } } ?>
   </section>
   

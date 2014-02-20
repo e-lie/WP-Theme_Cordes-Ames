@@ -41,9 +41,9 @@ $position = ($woocommerce_loop['loop'] - 2) % 14;
     $classes[] = 'line3';
   }
 
-  if ( $position == 0 || $position == 5 || $position == 10 )
+  if ( $position == 0 || $position == 3 || $position == 6 || $position == 9 || $position == 12 )
     $classes[] = 'first';
-  if ( $position == 4 || $position == 9 || $position == 14 )
+  if ( $position == 2 || $position == 5 || $position == 8 || $position == 11 || $position == 14 )
     $classes[] = 'last';
   
  
@@ -54,7 +54,7 @@ $position = ($woocommerce_loop['loop'] - 2) % 14;
 
 		<a href="<?php the_permalink(); ?>"><?php
       if ( has_post_thumbnail() ) {
-        the_post_thumbnail( array(300, 300) );
+        the_post_thumbnail('large');
       }elseif ( woocommerce_placeholder_img_src() ){
         echo woocommerce_placeholder_img( 'shop_catalog' );
       }

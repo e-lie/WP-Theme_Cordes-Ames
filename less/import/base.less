@@ -43,10 +43,10 @@ body{
   #menu-button {
     float: left;
     margin-right: 10%;
-    .style1_button;
+    .style2_button;
     text-align: center;
     font-size: 2em;
-    line-height: 1em;
+    line-height: 0.9em;
   }
 
   #menu-checkbox {
@@ -56,7 +56,7 @@ body{
     }
     &:checked ~ #navigation {
       height: 8.5em; //and can be reopen of course      
-      .style1_button_checked;
+      .style2_button_checked;
     }
   }
   
@@ -120,6 +120,8 @@ body{
   background-color: @darkdarkgrey;
   background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px black;
   background-size: 80%;
+  
+  #header #menu-button { .style2_button(@font1, #555, #ddd); }
   
   color: white !important;
   a{ 
@@ -237,7 +239,7 @@ body{
     width: 75%;
     
     .col-left{
-      width: 75%;
+      width: 70%;
       
       h1{ text-align: center; }
       
@@ -252,10 +254,11 @@ body{
       }
     }
     .col-right{
+      width: 23%;
       background-color: #eee;
-      height: 600px;
       border-radius: 20px;
       margin: 3em 1% 0 1%;
+      padding: 2%
     }
   }
 }
@@ -264,6 +267,9 @@ body{
   background-color: @darkdarkgrey;
   background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px black;
   background-size: 80%;
+  
+  
+  #header #menu-button { .style2_button(@font1, #555, #ddd); }
   
   color: white !important;
   a{ 

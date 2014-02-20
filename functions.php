@@ -9,6 +9,9 @@
 
 // {{{ ----------------- Custom post type and Custom taxonomy declaration
 
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
 
 function custom_init() {
   register_post_type( 'artist', array(
@@ -137,14 +140,14 @@ function music_shortcode( $atts ) {
 	    <?php woocommerce_get_template_part( 'content', 'product-a-la-une' ); ?>
   
       <div class="cloud-wrapper" style="">
-	<input id="select-type-All" name="radio-set-1" type="radio" class="css-filter filter-All" checked="checked" />
+	<?php /*<input id="select-type-All" name="radio-set-1" type="radio" class="css-filter filter-All" checked="checked" />
 	<label for="select-type-All" class="ff-label-type-All">Tous les genres</label>
 	
 	<?php $cats = get_subcategories_as_array('product_cat', 16);
 	  foreach($cats as $cat){ ?>
 	<input id="select-type-<?php echo ($cat) ?>" name="radio-set-1" type="radio" class="css-filter filter-<?php echo ($cat) ?>" />
 	<label for="select-type-<?php echo ($cat) ?>" class="ff-label-type-<?php echo ($cat) ?>"><?php echo ($cat) ?></label>
-	<? } ?>
+	<? } ?>*/ ?>
 
 	<ul class="products rb-grid">
 
