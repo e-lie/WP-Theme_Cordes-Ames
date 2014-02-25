@@ -744,7 +744,7 @@ table tr td:last-child {
 }
 .post .post-meta li a,
 .type-page .post-meta li a {
-  color: #c1b8b5;
+  //--color: #c1b8b5;
 }
 .post .post-meta li a:hover,
 .type-page .post-meta li a:hover {
@@ -809,7 +809,7 @@ table tr td:last-child {
   //--padding: .53em;
   //--border: 1px solid #e8e4e3;
   //--background: #fff;
-  max-width: 100%;
+  max-width: 30%; //-- 100%
   height: auto !important;
   //--display: block;
 }
@@ -836,7 +836,7 @@ table tr td:last-child {
 .post .alignright,
 .type-page .alignright {
   float: right;
-  margin: 0 0 1em 1.618em;
+  //--margin: 0 0 1em 1.618em;
 }
 .post .aligncenter,
 .type-page .aligncenter {

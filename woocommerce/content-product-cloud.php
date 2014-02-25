@@ -19,7 +19,7 @@ if ( empty( $woocommerce_loop['loop'] ) )
 
 // Store column count for displaying the grid
 if ( empty( $woocommerce_loop['columns'] ) )
-	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
+	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 3 );
 
 // Ensure visibility
 if ( ! $product || ! $product->is_visible() )
@@ -31,7 +31,7 @@ $woocommerce_loop['loop']++;
 // Extra post classes
 $classes = array();
 
-$position = ($woocommerce_loop['loop'] - 2) % 14;
+$position = ($woocommerce_loop['loop'] - 1) % 15;
 
   if ( $position >= 0 && $position <= 4) {
     $classes[] = 'line1';
@@ -59,12 +59,6 @@ $position = ($woocommerce_loop['loop'] - 2) % 14;
         echo woocommerce_placeholder_img( 'shop_catalog' );
       }
       ?></a>
-	<?php /*
-    <div class="rb-trigger" > 
-      <div class="rb-overlay" >
-        <span class="rb-close">close</span>    
-        <h3><?php the_title(); ?></h3>
-        <?php woocommerce_get_template_part('content', 'single-product-cloud'); ?>
-      </div>
-    </div>  */ ?>
+	<?php ?>
+
 </li>

@@ -94,13 +94,17 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 		return $tabs;
 	}
 
+	
+	
 // {{{ ------------------ Custom shortcodes declaration
 
 /**
-* Custom shortcode for the home page depending on woocommerce
-* display a cloud of 18 products (albums) 
+* custom actions for the product cloud 
 */
 
+add_action( 'woocommerce_before_cloud_item', 'woocommerce_template_loop_product_thumbnail', 10 );
+
+//----------------------------------- HOME SHORTCODES -----------------------------------------------
 
 function music_shortcode( $atts ) {
 
@@ -108,7 +112,7 @@ function music_shortcode( $atts ) {
 
   extract(shortcode_atts(array(
     'per_page' 	=> '15',
-    'columns' 	=> '4',
+    'columns' 	=> '3',
     'orderby' => 'date',
     'order' => 'desc'
   ), $atts));
@@ -131,27 +135,17 @@ function music_shortcode( $atts ) {
 	 ) ) );
   
 	ob_start();
-  
+	
 	$products = new WP_Query( $args );
-  
-	$woocommerce_loop['columns'] = $columns;
-  
-	if ( $products->have_posts() ) : $products->the_post();?>
-	    <?php woocommerce_get_template_part( 'content', 'product-a-la-une' ); ?>
+	
+	$woocommerce_loop['columns'] = $columns; ?>
+
   
       <div class="cloud-wrapper" style="">
-	<?php /*<input id="select-type-All" name="radio-set-1" type="radio" class="css-filter filter-All" checked="checked" />
-	<label for="select-type-All" class="ff-label-type-All">Tous les genres</label>
-	
-	<?php $cats = get_subcategories_as_array('product_cat', 16);
-	  foreach($cats as $cat){ ?>
-	<input id="select-type-<?php echo ($cat) ?>" name="radio-set-1" type="radio" class="css-filter filter-<?php echo ($cat) ?>" />
-	<label for="select-type-<?php echo ($cat) ?>" class="ff-label-type-<?php echo ($cat) ?>"><?php echo ($cat) ?></label>
-	<? } ?>*/ ?>
 
 	<ul class="products rb-grid">
 
-	  <?php while ( $products->have_posts() ) : $products->the_post(); ?>
+	  <?php  while ( $products->have_posts() ) : $products->the_post(); ?>
 
 	    <?php woocommerce_get_template_part( 'content', 'product-cloud' ); ?>
 
@@ -160,20 +154,42 @@ function music_shortcode( $atts ) {
 	</ul>
       </div>
 
-      <?php endif;
-
-      wp_reset_postdata();
+      <?php wp_reset_postdata();
 
   return '<div class="woocommerce product-cloud">' . ob_get_clean() . '</div>';
 }
 
 add_shortcode( 'music', 'music_shortcode' );
 
-/**
-* custom actions for the product cloud 
-*/
+function a_la_une_1_shortcode ( $atts ) {
+		ob_start();
+		return '<section class="a-la-une"><h2> à la une...</h2><section class="column1">'.ob_get_clean();
+	}
 
-add_action( 'woocommerce_before_cloud_item', 'woocommerce_template_loop_product_thumbnail', 10 );
+add_shortcode( 'a_la_une_1', 'a_la_une_1_shortcode' );
+
+function a_la_une_2_shortcode ( $atts ) {
+		ob_start();
+		return 	'</section><section class="column2">'.ob_get_clean();
+	}
+
+add_shortcode( 'a_la_une_2', 'a_la_une_2_shortcode' );
+
+function a_la_une_3_shortcode ( $atts ) {
+		ob_start();
+		return '</section><section class="column3">'.ob_get_clean();
+	}
+
+add_shortcode( 'a_la_une_3', 'a_la_une_3_shortcode' );
+
+
+function a_la_une_4_shortcode ( $atts ) {
+		ob_start();
+		
+		return '</section></section>'.ob_get_clean();
+	}
+
+add_shortcode( 'a_la_une_4', 'a_la_une_4_shortcode' );
 
 
 /**
@@ -196,124 +212,7 @@ function about_end_shortcode( $atts ) {
 
 add_shortcode( 'about_end', 'about_end_shortcode' ); 
 
-/**
-* Custom shortcodes for the single product page
-* separation for the description part of the content 
-*/
-
-function purchase_shortcode( $atts ) {
-		ob_start();
-		  
-    woocommerce_get_template( 'single-product/add-to-cart/simple.php' );
-    woocommerce_get_template( 'single-product/price.php' );
-  
-  
-      return '<section class="purchase">'.ob_get_clean().'</section>';
-}
-
-add_shortcode( 'purchase', 'purchase_shortcode' );
-
-function product_title_shortcode( $atts ) {
-    ob_start();?>
-    <h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>
-    
-    <?php $related_artists = get_related_artists(get_the_id());
-      if ( ! empty($related_artists) ) {
-	$artist = $related_artists[0];
-	$artist_link = get_permalink($artist->ID);?>
-    <a href="<?php echo $artist_link; ?>"><h2 itemprop="name" class="product_title entry-title"><?php echo get_the_title($artist->ID); ?></h1></a>
-    <?php } 
-  
-      return '<section class="product-title">'.ob_get_clean().'</section>';
-}
-
-add_shortcode( 'product_title', 'product_title_shortcode' );
-
-function product_images_shortcode( $atts ) {
-    ob_start();?>
-    <?php $related_artists = get_related_artists(get_the_id());
-
-      // product-image
-      if ( has_post_thumbnail() ) {
-	$product_image_title = esc_attr( get_the_title( get_post_thumbnail_id() ) );
-	$product_image_link = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-    ?>
-    <a href="<?php echo $product_image_link?>" itemprop="image" class="product-image" title="<?php $image_title?>"  rel="prettyPhoto' . $gallery . '">
-     <?php the_post_thumbnail( 'medium', array('title' => $product_image_title)); ?>
-    </a>
-    <?php }
-    
-      //artist-image
-      if ( ! empty($related_artists)) {
-	$artist = $related_artists[0]; 
-	$artist_image_title = esc_attr( get_the_title( get_post_thumbnail_id($artist_id) ) );
-	if( has_post_thumbnail($artist->ID)) {
-    ?>
-    <a href='<?php echo $artist_link?>' class="artist-image" title="<?php $image_title?>">
-     <?php echo get_the_post_thumbnail( $artist->ID, 'medium', array('title' => $artist_image_title)); ?>
-    </a> <?php } } 
-  
-      return '<section class="product-images">'.ob_get_clean().'</section>';
-}
-
-add_shortcode( 'product_images', 'product_images_shortcode' );
-
-function desc_begin_shortcode( $atts ) {
-		return '<h2>Présentation</h2><div class="description">';
-	}
-
-add_shortcode( 'desc_begin', 'desc_begin_shortcode' );
-
-function desc_end_shortcode( $atts ) {
-
-		return '</div>' ;
-}
-
-add_shortcode( 'desc_end', 'desc_end_shortcode' );
-
-
-function songs_list_begin_shortcode( $atts ) {
-		return '<div class="songs-list">';
-	}
-
-add_shortcode( 'songs_list_begin', 'songs_list_begin_shortcode' );
-
-function songs_list_end_shortcode( $atts ) {
-
-		return '</div>' ;
-}
-
-add_shortcode( 'songs_list_end', 'songs_list_end_shortcode' );
-
-
-function listening_begin_shortcode( $atts ) {
-		return '<div class="listening">';
-	}
-
-add_shortcode( 'listening_begin', 'listening_begin_shortcode' );
-
-function listening_end_shortcode( $atts ) {
-
-		return '</div>' ;
-}
-
-add_shortcode( 'listening_end', 'listening_end_shortcode' );
-
-
-
-
-function gallery_begin_shortcode( $atts ) {
-		return '<h2>Gallerie</h2><div class="gallery">';
-	}
-
-add_shortcode( 'gallery_begin', 'gallery_begin_shortcode' );
-
-function gallery_end_shortcode( $atts ) {
-
-		return '</div>' ;
-}
-
-add_shortcode( 'gallery_end', 'gallery_end_shortcode' );
+	    //-------------------------------------------------------------------------
 
 /**
 * Custom shortcode for the home page depending on woocommerce
@@ -368,6 +267,10 @@ function recent_posts_shortcode( $atts ) {
 
 add_shortcode( 'recent_posts', 'recent_posts_shortcode' );
 
+
+
+	    //-------------------------------------------------------------------------
+
 function bon_coin_shortcode( $atts ) {
 		global $woocommerce_loop;
 
@@ -396,6 +299,141 @@ function bon_coin_shortcode( $atts ) {
 	}
 
 add_shortcode( 'bon_coin', 'bon_coin_shortcode' );
+
+// ----------------------------------SINGLE PRODUCT SHORTCODES --------------------------------------------
+
+/**
+* Custom shortcodes for the single product page
+* separation for the description part of the content 
+*/
+
+function purchase_shortcode( $atts ) {
+		ob_start();
+		  
+    woocommerce_get_template( 'single-product/add-to-cart/simple.php' );
+    woocommerce_get_template( 'single-product/price.php' );
+  
+  
+      return '<section class="purchase">'.ob_get_clean().'</section>';
+}
+
+add_shortcode( 'purchase', 'purchase_shortcode' );
+	    
+	    //-------------------------------------------------------------------------
+
+function product_title_shortcode( $atts ) {
+    ob_start();?>
+    <h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>
+    
+    <?php $related_artists = get_related_artists(get_the_id());
+      if ( ! empty($related_artists) ) {
+	$artist = $related_artists[0];
+	$artist_link = get_permalink($artist->ID);?>
+    <a href="<?php echo $artist_link; ?>"><h2 itemprop="name" class="product_title entry-title"><?php echo get_the_title($artist->ID); ?></h1></a>
+    <?php } 
+  
+      return '<section class="product-title">'.ob_get_clean().'</section>';
+}
+
+add_shortcode( 'product_title', 'product_title_shortcode' );
+
+	    //-------------------------------------------------------------------------
+
+function product_images_shortcode( $atts ) {
+    ob_start();?>
+    <?php $related_artists = get_related_artists(get_the_id());
+
+      // product-image
+      if ( has_post_thumbnail() ) {
+	$product_image_title = esc_attr( get_the_title( get_post_thumbnail_id() ) );
+	$product_image_link = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+    ?>
+    <a href="<?php echo $product_image_link?>" itemprop="image" class="product-image" title="<?php $image_title?>"  rel="prettyPhoto' . $gallery . '">
+     <?php the_post_thumbnail( 'medium', array('title' => $product_image_title)); ?>
+    </a>
+    <?php }
+    
+      //artist-image
+      if ( ! empty($related_artists)) {
+	$artist = $related_artists[0]; 
+	$artist_image_title = esc_attr( get_the_title( get_post_thumbnail_id($artist_id) ) );
+	if( has_post_thumbnail($artist->ID)) {
+    ?>
+    <a href='<?php echo $artist_link?>' class="artist-image" title="<?php $image_title?>">
+     <?php echo get_the_post_thumbnail( $artist->ID, 'medium', array('title' => $artist_image_title)); ?>
+    </a> <?php } } 
+  
+      return '<section class="product-images">'.ob_get_clean().'</section>';
+}
+
+add_shortcode( 'product_images', 'product_images_shortcode' );
+
+	    //-------------------------------------------------------------------------
+
+function desc_begin_shortcode( $atts ) {
+		return '<h2>Présentation</h2><div class="description">';
+	}
+
+add_shortcode( 'desc_begin', 'desc_begin_shortcode' );
+
+function desc_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'desc_end', 'desc_end_shortcode' );
+
+
+
+	    //-------------------------------------------------------------------------
+
+function songs_list_begin_shortcode( $atts ) {
+		return '<div class="songs-list">';
+	}
+
+add_shortcode( 'songs_list_begin', 'songs_list_begin_shortcode' );
+
+function songs_list_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'songs_list_end', 'songs_list_end_shortcode' );
+
+	    //-------------------------------------------------------------------------
+
+function listening_begin_shortcode( $atts ) {
+		return '<div class="listening">';
+	}
+
+add_shortcode( 'listening_begin', 'listening_begin_shortcode' );
+
+function listening_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'listening_end', 'listening_end_shortcode' );
+
+
+	    //-------------------------------------------------------------------------
+
+
+function gallery_begin_shortcode( $atts ) {
+		return '<h2>Galerie</h2><div class="gallery">';
+	}
+
+add_shortcode( 'gallery_begin', 'gallery_begin_shortcode' );
+
+function gallery_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'gallery_end', 'gallery_end_shortcode' );
+
+	    //-------------------------------------------------------------------------
+
 
 // }}}
 

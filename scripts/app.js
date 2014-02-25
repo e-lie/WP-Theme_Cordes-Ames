@@ -15,6 +15,35 @@ jQuery.noConflict();
 // 	}
 // 	
        // {{{ change display mode : list/grid 
+      
+					   		   
+	//-----------------------------------------------------
+	
+	var popID = "a-la-une";
+
+	//Faire apparaitre la pop-up et ajouter le bouton de fermeture
+	$('.' + popID).fadeIn().prepend('<a href="#" class="close">fermer la fenêtre</a>');
+	
+	//Récupération du margin, qui permettra de centrer la fenêtre - on ajuste de 80px en conformité avec le CSS
+	var boxWidth = parseInt($('.'+popID).css('paddingLeft'))  +  $('.'+popID).width()  + parseInt($('.'+popID).css('paddingRight').replace('px', ''));
+	var popMargLeft = ($('body').width()-boxWidth)/$('body').width()/2*100;
+	//Apply Margin to Popup
+	$('.' + popID).css({ 
+		'left' : popMargLeft +'%'
+	});
+	
+	//Apparition du fond - .css({'filter' : 'alpha(opacity=80)'}) pour corriger les bogues d'anciennes versions de IE
+	$('body').append('<div id="fade"></div>');
+	$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
+	
+	//Close Popups and Fade Layer
+	$('a.close').click( function() { //Au clic sur le body...
+		$('.'+popID).fadeOut();
+	});
+	
+	
+	//-----------------------------------------------------
+
 
         if ( $.cookie('mode') == 'grid' ) {
             grid_update();

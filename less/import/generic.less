@@ -46,6 +46,7 @@
 @beigeFonce1: #A0947D;
 @beigeFonce2: #605849;
 @darkgrey1: #333;
+@darkgreyTransparent: rgba(20, 20, 20, 0.8);
 @darkdarkgrey: #111;
 
 // design colors
@@ -177,15 +178,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
 }
 
 .style2_button(@font:@font1, @borderColor: #ddd, @textColor: #333){
+  width: 22px;
+  height: 22px;
   background: none;
   border: 2px solid @borderColor;
   text-shadow: none;
   box-shadow: none;
   
   
-  padding: 0 0.3em;
-  border-radius: 10px;
-  min-width: 45px;
+  border-radius: 50%;
   
   font-family: @font;
   font-weight: 500;

@@ -125,35 +125,14 @@
 */
 
 }
-.cloud .a-la-une {
-  padding: 2%;
-  margin: 0 0 2% 0;
-  background-color: rgba(21, 110, 127, 0.7);
-  border-radius: 10px;
-}
-.cloud .a-la-une img {
-  float: left;
-  clear: both;
-  max-width: 250px;
-  margin-right: 2em;
-}
-.cloud .a-la-une p {
-  text-align: justify;
-  color: white;
-}
-.cloud .a-la-une h2 {
-  color: white;
-}
 .cloud .cloud-wrapper {
-  margin: 0 0% 0 2%;
   clear: both;
 }
 .cloud ul.products li.product {
   position: relative;
-  margin: 6% !important;
-  width: 21%;
-  border-radius: 3px;
-  box-shadow: 0 5px 3px 1px rgba(0, 0, 0, 0.4);
+  margin: 3.6% !important;
+  width: 26.1%;
+  box-shadow: 5px 5px 0 0 rgba(100, 100, 100, 0.8), 0 5px 6px 1px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -165,25 +144,24 @@
   padding: 0;
   margin: 0;
   border: 0px !important;
-  border-radius: 3px;
 }
 .cloud ul.products li.product.first.line1 {
-  margin-left: 6% !important;
+  margin-left: 3.6% !important;
 }
 .cloud ul.products li.product.first.line2 {
-  margin-left: 6% !important;
+  margin-left: 3.6% !important;
 }
 .cloud ul.products li.product.first.line3 {
-  margin-left: 6% !important;
+  margin-left: 3.6% !important;
 }
 .cloud ul.products li.product.first.line4 {
-  margin-left: 6% !important;
+  margin-left: 3.6% !important;
 }
 .cloud ul.products li.product:hover {
-  width: 33%;
+  width: 33.300000000000004%;
   margin: 0 !important;
   z-index: 100;
-  box-shadow: 0 9px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 7px 0 0 rgba(100, 100, 100, 0.8), 0 9px 8px 2px rgba(0, 0, 0, 0.3);
 }
 .cloud ul.products li.product:hover.first.line1 {
   margin-left: 0% !important;
@@ -251,8 +229,8 @@
 }
 .recent-posts .post-content header img.attachment-thumbnail {
   display: inline-block;
-  width: 22%;
-  margin: 3%;
+  max-width: 50px;
+  margin: 1%;
   padding: 0;
   vertical-align: middle;
 }
@@ -265,7 +243,7 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 15px;
 }
 body a {
   font-family: 'Roboto', sans-serif;
@@ -345,25 +323,28 @@ body .extenseur {
   margin-bottom: 2em;
 }
 #header hgroup {
-  margin: 0 15%;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
   margin-bottom: 1.3em;
 }
 #header #menu-button {
-  float: left;
-  margin-right: 10%;
+  float: right;
+  margin-right: 40px;
+  width: 22px;
+  height: 22px;
   background: none;
   border: 2px solid #dddddd;
   text-shadow: none;
   box-shadow: none;
-  padding: 0 0.3em;
-  border-radius: 10px;
-  min-width: 45px;
+  border-radius: 50%;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  line-height: 0.9em;
   color: #333333;
   text-align: center;
-  font-size: 2em;
-  line-height: 0.9em;
+  font-size: 1.4em;
+  line-height: 1em;
 }
 #header #menu-button:hover {
   background-color: #dddddd;
@@ -380,19 +361,21 @@ body .extenseur {
   display: none;
 }
 #header #menu-checkbox:not(:checked) ~ #navigation {
-  height: 2em;
+  height: 1.7em;
 }
 #header #menu-checkbox:checked ~ #navigation {
-  height: 8.5em;
+  height: 8.2em;
 }
 #header #menu-checkbox:checked ~ #navigation + label {
   background-color: #aaa;
 }
 #header #navigation {
   height: auto;
-  width: 61%;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   overflow: hidden;
+  line-height: 1.5em;
   -moz-transition: height 0.4s ease-in-out;
   -o-transition: height 0.4s ease-in-out;
   -webkit-transition: height 0.4s ease-in-out;
@@ -401,6 +384,11 @@ body .extenseur {
 #header #navigation a {
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
+  font-size: 1.2em;
+  color: #999;
+}
+#header #navigation a:hover {
+  color: #23c2e3;
 }
 #header #navigation ul.nav ul.sub-menu li a {
   font-size: 0.85em;
@@ -420,7 +408,20 @@ body .extenseur {
 }
 .home {
   background: url("../images/fondindien2.jpg") no-repeat scroll 50% 140px;
-  background-size: 80%;
+  background-size: 1100px;
+}
+.home .gradient-menu {
+  width: 720px;
+}
+.home #header #navigation {
+  width: 720px;
+}
+.home #header hgroup {
+  width: 700px;
+  margin: 0 auto 1.2em auto;
+}
+.home #content {
+  max-width: 690px;
 }
 .home .product-cloud {
   text-align: center;
@@ -471,37 +472,15 @@ body .extenseur {
 */
 
   width: 100%;
-  float: left;
-}
-.home .product-cloud .a-la-une {
-  padding: 2%;
-  margin: 0 0 2% 0;
-  background-color: rgba(21, 110, 127, 0.7);
-  border-radius: 10px;
-}
-.home .product-cloud .a-la-une img {
-  float: left;
-  clear: both;
-  max-width: 250px;
-  margin-right: 2em;
-}
-.home .product-cloud .a-la-une p {
-  text-align: justify;
-  color: white;
-}
-.home .product-cloud .a-la-une h2 {
-  color: white;
 }
 .home .product-cloud .cloud-wrapper {
-  margin: 0 0% 0 2%;
   clear: both;
 }
 .home .product-cloud ul.products li.product {
   position: relative;
-  margin: 6% !important;
-  width: 21%;
-  border-radius: 3px;
-  box-shadow: 0 5px 3px 1px rgba(0, 0, 0, 0.4);
+  margin: 3.6% !important;
+  width: 26.1%;
+  box-shadow: 5px 5px 0 0 rgba(100, 100, 100, 0.8), 0 5px 6px 1px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -513,25 +492,24 @@ body .extenseur {
   padding: 0;
   margin: 0;
   border: 0px !important;
-  border-radius: 3px;
 }
 .home .product-cloud ul.products li.product.first.line1 {
-  margin-left: 6% !important;
+  margin-left: 3.6% !important;
 }
 .home .product-cloud ul.products li.product.first.line2 {
-  margin-left: 6% !important;
+  margin-left: 3.6% !important;
 }
 .home .product-cloud ul.products li.product.first.line3 {
-  margin-left: 6% !important;
+  margin-left: 3.6% !important;
 }
 .home .product-cloud ul.products li.product.first.line4 {
-  margin-left: 6% !important;
+  margin-left: 3.6% !important;
 }
 .home .product-cloud ul.products li.product:hover {
-  width: 33%;
+  width: 33.300000000000004%;
   margin: 0 !important;
   z-index: 100;
-  box-shadow: 0 9px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 7px 0 0 rgba(100, 100, 100, 0.8), 0 9px 8px 2px rgba(0, 0, 0, 0.3);
 }
 .home .product-cloud ul.products li.product:hover.first.line1 {
   margin-left: 0% !important;
@@ -594,20 +572,65 @@ body .extenseur {
   text-align: center;
   text-indent: 0px;
 }
+.home .a-la-une {
+  display: none;
+  position: absolute;
+  top: 430px;
+  width: 96%;
+  max-width: 900px;
+  padding: 1%;
+  margin: 0 auto;
+  background-color: rgba(21, 110, 127, 0.9);
+  border-radius: 10px;
+  z-index: 9999;
+}
+.home .a-la-une .column1,
+.home .a-la-une .column2,
+.home .a-la-une .column3 {
+  float: left;
+  margin: 1%;
+}
+.home .a-la-une .column1 {
+  max-width: 25%;
+}
+.home .a-la-une .column2 {
+  max-width: 41%;
+}
+.home .a-la-une .column3 {
+  width: 33%;
+  float: right;
+}
+.home .a-la-une p {
+  text-align: justify;
+  color: white;
+}
+.home .a-la-une h2 {
+  color: white;
+}
+.home .a-la-une br {
+  display: none;
+}
+.home .a-la-une a.close {
+  float: right;
+  color: white;
+}
+.home .a-la-une a.close:hover {
+  color: #23c2e3;
+}
 .single-product {
   background-color: #111111;
   background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px #000000;
-  background-size: 80%;
+  background-size: 1500px;
   color: white !important;
 }
 .single-product #header #menu-button {
+  width: 22px;
+  height: 22px;
   background: none;
   border: 2px solid #555555;
   text-shadow: none;
   box-shadow: none;
-  padding: 0 0.3em;
-  border-radius: 10px;
-  min-width: 45px;
+  border-radius: 50%;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 0.9em;
@@ -707,18 +730,6 @@ body .extenseur {
   display: block;
   margin: 0 auto;
 }
-.blog .gradient-menu {
-  width: 80% !important;
-}
-.blog #header hgroup {
-  width: 75% !important;
-}
-.blog #navigation {
-  width: 75% !important;
-}
-.blog #content {
-  width: 75%;
-}
 .blog #content .col-left {
   width: 70%;
 }
@@ -744,18 +755,18 @@ body .extenseur {
 .page-template-archive-artist-php {
   background-color: #111111;
   background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px #000000;
-  background-size: 80%;
+  background-size: 1500px;
   color: white !important;
 }
 .post-type-archive-product #header #menu-button,
 .page-template-archive-artist-php #header #menu-button {
+  width: 22px;
+  height: 22px;
   background: none;
   border: 2px solid #555555;
   text-shadow: none;
   box-shadow: none;
-  padding: 0 0.3em;
-  border-radius: 10px;
-  min-width: 45px;
+  border-radius: 50%;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 0.9em;
@@ -845,7 +856,7 @@ body .extenseur {
   width: 96%;
   margin-bottom: 2em;
   text-align: left;
-  background-color: #333333;
+  background-color: rgba(20, 20, 20, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product ul.products.list > li a.thumb,
@@ -889,7 +900,7 @@ body .extenseur {
 }
 .post-type-archive-product ul.products.grid,
 .page-template-archive-artist-php ul.products.grid {
-  background-color: #333333;
+  background-color: rgba(20, 20, 20, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product ul.products.grid > li,
@@ -918,7 +929,7 @@ body .extenseur {
 .post-type-archive-product #archive-browser,
 .page-template-archive-artist-php #archive-browser {
   padding: 2%;
-  background-color: #333333;
+  background-color: rgba(20, 20, 20, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product #archive-browser > div,
@@ -987,33 +998,14 @@ body .extenseur {
 }
 @media only screen and (min-width: 1160px) {
   #content {
-    width: 60%;
-    max-width: 1400px;
+    max-width: 1100px;
   }
-  .home .about-area {
-    float: left;
-    width: 26%;
-    padding: 2%;
-    margin: 4% 2% 0 0%;
-    background-color: #fcfeff;
-    border-radius: 8px;
-    box-shadow: 5px 2px 10px 0 rgba(0, 0, 0, 0.15);
-  }
-  .home .recent-posts {
-    float: left;
-    width: 26%;
-    margin: 4% 3% 0 3%;
-    padding: 2%;
-    background-color: #fcfeff;
-    border-radius: 8px;
-    box-shadow: 5px 2px 10px 0 rgba(0, 0, 0, 0.15);
-  }
+  .home .about-area,
+  .home .recent-posts,
   .home .bon-coin {
-    float: left;
-    width: 26%;
-    height: 300px;
-    margin: 4% 0% 0 2%;
+    width: 88.8%;
     padding: 2%;
+    margin: 4% 3.6% 0 3.6%;
     background-color: #fcfeff;
     border-radius: 8px;
     box-shadow: 5px 2px 10px 0 rgba(0, 0, 0, 0.15);
