@@ -47,6 +47,40 @@ function custom_init() {
 	);
   
   register_taxonomy( 'genre', array( 'artist' ), $args );
+  
+  register_post_type( 'annonce', array(
+    'label' => __('Annonces'),
+    'singular_label' => __('Annonce'),
+    'public' => true,
+    'has_archive' => true,
+    'show_ui' => true,
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'trackbacks', 'revisions', 'page-attributes')
+  )); 
+
+	$labels = array(
+		'name'              => _x( 'Types', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Type', 'taxonomy singular name' ),
+		'search_items'      => __( 'Rechercher par type' ),
+		'all_items'         => __( 'Tous les types' ),
+		'edit_item'         => __( 'Editer le type ' ),
+		'update_item'       => __( 'Mettre à jour le type' ),
+		'add_new_item'      => __( 'Ajouter type' ),
+		'new_item_name'     => __( 'Nouveau type' ),
+		'menu_name'         => __( 'Type' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'type' ),
+	);
+  
+  register_taxonomy( 'type', array( 'annonce' ), $args );
 }
 add_action('init', 'custom_init');
 
@@ -268,10 +302,13 @@ function recent_posts_shortcode( $atts ) {
 add_shortcode( 'recent_posts', 'recent_posts_shortcode' );
 
 
-
-	    //-------------------------------------------------------------------------
+/**
+* Custom shortcode for the home page depending on woocommerce
+* display the recent post area
+*/
 
 function bon_coin_shortcode( $atts ) {
+
 		global $woocommerce_loop;
 
 		extract(shortcode_atts(array(
@@ -282,7 +319,7 @@ function bon_coin_shortcode( $atts ) {
 		), $atts));
 
 		$args = array(
-			'post_type'	=> 'post',
+			'post_type'	=> 'annonce',
 			'post_status' => 'publish',
 			'ignore_sticky_posts'	=> 1,
 			'posts_per_page' => $per_page,
@@ -290,10 +327,28 @@ function bon_coin_shortcode( $atts ) {
 			'order' => $order
 		);
 
-		ob_start(); ?>
+		ob_start();
+
+		$products = new WP_Query( $args );
+
+
+		if ( $products->have_posts() ) : ?>
 
       <a href="#"><h2><?php echo $atts['title'] ?></h2></a>
-      <?php
+  
+      <ul class="annonces-list">
+
+				<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+
+					<?php get_template_part( 'content', 'short'); ?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			</ul>
+
+		<?php endif;
+
+		wp_reset_postdata();
 
 		return '<div class="bon-coin">' . ob_get_clean() . '</div>';
 	}

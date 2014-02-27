@@ -239,6 +239,21 @@
   width: 70%;
   vertical-align: middle;
 }
+.bon-coin .annonces-list {
+  list-style: none outside none;
+}
+.bon-coin .post-content header img.attachment-thumbnail {
+  display: inline-block;
+  max-width: 90px;
+  margin: 1%;
+  padding: 0;
+  vertical-align: middle;
+}
+.bon-coin .post-content header h3 {
+  display: inline-block;
+  width: 70%;
+  vertical-align: middle;
+}
 body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
