@@ -886,6 +886,8 @@ body .extenseur {
 }
 .post-type-archive-product ul.products.list > li section.content,
 .page-template-archive-artist-php ul.products.list > li section.content {
+  float: left;
+  width: 65%;
   min-width: 300px;
   margin-bottom: 2em;
   vertical-align: top;
