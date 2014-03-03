@@ -458,7 +458,7 @@ table tr td:last-child {
 #navigation {
   clear: both;
   //--margin-bottom: 2.618em;
-  display: none;
+  //--display: none;
 }
 #navigation ul {
   list-style: none;
@@ -666,7 +666,7 @@ table tr td:last-child {
 }
 #footer {
   padding: 2.618em 0;
-  border-top: 1px solid #e8e4e3;
+  //--border-top: 1px solid #e8e4e3;
   color: #877c78;
 }
 #footer #credit img {
@@ -677,7 +677,7 @@ table tr td:last-child {
 }
 #footer-widgets {
   border-top: 1px solid #e8e4e3;
-  padding: 3.631em 0;
+  padding: 1em 0;//--3.631em 0;
 }
 /* 2.7 Breadcrumbs */
 #breadcrumbs {
@@ -809,7 +809,7 @@ table tr td:last-child {
   //--padding: .53em;
   //--border: 1px solid #e8e4e3;
   //--background: #fff;
-  max-width: 30%; //-- 100%
+  max-width:  100%;
   height: auto !important;
   //--display: block;
 }
@@ -1006,7 +1006,7 @@ table tr td:last-child {
 /*-------------------------------------------------------------------------------------------*/
 /* 4.1 Generic Widgets */
 .widget {
-  margin-bottom: 2.618em;
+  margin-bottom: 0.5em;//--2.618em;
 }
 .widget h3 {
   color: #39302d;
@@ -1037,7 +1037,7 @@ table tr td:last-child {
   font-size: .857em;
   margin-right: .618em;
   font-weight: normal;
-  content: ">";
+  //--content: ">";
   color: #e3dad7;
   width: .857em;
 }

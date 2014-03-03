@@ -32,7 +32,7 @@ body{
 
 
 #header{
-  background:  url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%;
+  //background:  url("../images/bandeauTricolor1.jpg") repeat-x scroll 50% 0%;
   margin-bottom: 2em;
   
   hgroup {
@@ -43,23 +43,11 @@ body{
   }
   
   #menu-button {
-    float: right;
-    margin-right: 40px;
-    .style2_button;
-    text-align: center;
-    font-size: 1.4em;
-    line-height: 1em;
+    display: none;
   }
 
   #menu-checkbox {
     display: none;
-    &:not(:checked) ~ #navigation{
-      height: 1.7em; //if recent css3 rules are supported, the menu is closed
-    }
-    &:checked ~ #navigation {
-      height: 8.2em; //and can be reopen of course      
-      .style2_button_checked;
-    }
   }
   
   #navigation {
@@ -82,6 +70,7 @@ body{
     .transition(height, 0.4s, ease-in-out);  
     
     ul.nav {
+      .columns(3);
       ul.sub-menu li a {
 	  font-size: 0.85em;
       }
@@ -89,8 +78,6 @@ body{
       
       &>li.menu-item {
 	text-align: center;
-	float: left;
-	width: 20%;
       }
     }
     
@@ -102,10 +89,24 @@ body{
   }
 }
 
-#footer{
-  margin-top: 2em;
-  background: grey;
-  color: white;
+#content{
+  max-width: 1100px;
+}
+
+
+.footer-wrap{ 
+  background: #555;
+  a{
+    color: white;
+  }
+  
+  #footer-widgets{
+    width: 75%;
+  }
+  
+  #footer{
+    display: none;
+  }
 }
 
 // ------------------------------------------- HOME ----------------------------------------------------
@@ -113,10 +114,11 @@ body{
 .home{
   background: url("../images/fondindien2.jpg") no-repeat scroll 50% 140px;
   background-size: 1100px;
+ 
+    .gradient-menu{ width: 100%; }
   
-  .gradient-menu{ width: 720px; }
   #header{
-    #navigation{ width: 720px; }
+  
     hgroup {
       width: 700px;
       margin: 0 auto 1.2em auto;
@@ -130,9 +132,70 @@ body{
 
 
   .product-cloud {
-    .cloud; //generic style
-    
-    width: 100%;
+
+    @base-margin: 3.5%;
+    @reduced-margin: 3.5%;
+    @base-width: 26.1%;
+    @active-width: @base-width + (2 * (@base-margin - @reduced-margin)) ;
+    @big-margin-left: 3.5%;
+    @reduced-bml: @big-margin-left - (@base-margin - @reduced-margin);
+    @small-margin-left: 3.5%;
+    @reduced-sml: @small-margin-left - (@base-margin - @reduced-margin);
+  
+    text-align: center;
+  
+  
+    .cloud-wrapper{
+      clear: both;
+    }
+  
+    ul.products li.product {
+      position: relative;
+      margin: @base-margin !important;
+      width: @base-width;
+  //     opacity: 0;
+      box-shadow: 5px 5px 0 0 rgba(100, 100, 100, 0.8), 0 5px 6px 1px rgba(0,0,0,0.2);
+
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      
+      
+      &>a>img{
+	width: 100%;
+      }
+      
+      img {
+	padding: 0;
+	margin: 0;
+	border: 0px !important;
+  //       width: 100%;
+      }
+      
+      &.first{
+	&.line1{
+	  margin-left: @big-margin-left !important;
+	}
+	&.line2{
+	  margin-left: @small-margin-left !important;
+	}
+	&.line3{
+	  margin-left: @small-margin-left !important;
+	}
+	&.line4{
+	  margin-left: @big-margin-left !important;
+	}
+      }
+    }
+  }
+  
+  .about-area, .recent-posts, .bon-coin {
+    width: 93%;
+    padding: 3%;
+    margin: 4% 0.5% 0 0.5%;
+    background-color: @pantoneClair1;
+    border-radius: 8px;
+    box-shadow: 5px 2px 10px 0 rgba(0,0,0,0.15);
   }
   
   .a-la-une{
@@ -141,28 +204,29 @@ body{
     top: 430px;
     width: 96%;
     max-width: 900px;
-    padding: 1%;
+    padding: 1% 2%;
     margin: 0 auto;
     background-color: rgba(21, 110, 127, 0.9);
     border-radius: 10px;
     z-index: 9999;
     
     .column1, .column2, .column3 {
-      float: left;
-      margin: 1%;
+      text-align: center;
+      margin: 1em auto 0 auto;
+      max-width: 500px;
     }
     
     .column1{
-      max-width: 25%;
+      img{
+	float: none;
+      }
     }
     
     .column2{
-      max-width: 36%;
     }
     
     .column3{
-	width: 33%;
-      float: right;
+      
     }
     
     p{
@@ -298,6 +362,9 @@ body{
  // ------------------------------------------- BLOG ----------------------------------------------------
 
 .blog{
+  
+  background: url("../images/fondpapier4.jpg") repeat scroll ;
+
   
   #content{
     
