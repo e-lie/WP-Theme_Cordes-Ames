@@ -795,7 +795,7 @@ body .extenseur {
     line-height: 0.9em;
     color: #333333;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.3em;
     line-height: 1em;
   }
   #header #menu-button:hover {
@@ -921,11 +921,10 @@ body .extenseur {
   }
   .home .a-la-une .column2 {
     max-width: 36%;
-    margin: 0 1%;
+    margin: 0.5em 3%;
   }
   .home .a-la-une .column3 {
     width: 33%;
-    float: right;
   }
   .home .a-la-une .about-area {
     width: 100%;
