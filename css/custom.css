@@ -154,7 +154,7 @@
 body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
 }
 body a {
@@ -518,42 +518,82 @@ body .extenseur {
   display: block;
   margin: 0 auto;
 }
-.blog {
+.blog,
+.single-post,
+.archive.category {
   background: url("../images/fondpapier4.jpg") repeat scroll;
 }
-.blog #content .col-left {
-  width: 60%;
+.blog #content aside.post-meta > ul,
+.single-post #content aside.post-meta > ul,
+.archive.category #content aside.post-meta > ul {
+  margin-bottom: 0;
 }
-.blog #content .col-left h1 {
-  text-align: center;
+.blog #content .col-left,
+.single-post #content .col-left,
+.archive.category #content .col-left {
+  width: 65%;
 }
-.blog #content .col-left section.post-content {
+.blog #content .col-left section.post-content,
+.single-post #content .col-left section.post-content,
+.archive.category #content .col-left section.post-content {
   margin-bottom: 2em;
 }
-.blog #content .col-left img.wp-post-image {
+.blog #content .col-left section.post-content blockquote,
+.single-post #content .col-left section.post-content blockquote,
+.archive.category #content .col-left section.post-content blockquote {
+  padding: 0 2em;
+}
+.blog #content .col-left section.post-content blockquote p,
+.single-post #content .col-left section.post-content blockquote p,
+.archive.category #content .col-left section.post-content blockquote p {
+  font-size: 1em;
+}
+.blog #content .col-left section.post-content blockquote .pullquote,
+.single-post #content .col-left section.post-content blockquote .pullquote,
+.archive.category #content .col-left section.post-content blockquote .pullquote {
+  font-size: 1em;
+}
+.blog #content .col-left section.post-content ul,
+.single-post #content .col-left section.post-content ul,
+.archive.category #content .col-left section.post-content ul {
+  padding-left: 2em;
+}
+.blog #content .col-left img.wp-post-image,
+.single-post #content .col-left img.wp-post-image,
+.archive.category #content .col-left img.wp-post-image {
   float: left;
   max-width: 120px;
   padding: 1em;
 }
-.blog #content .col-right {
+.blog #content .col-right,
+.single-post #content .col-right,
+.archive.category #content .col-right {
   width: 23%;
-  background-color: #eee;
+  background-color: rgba(21, 110, 127, 0.6);
   border-radius: 20px;
   margin: 3em 1% 0 1%;
   padding: 2%;
 }
-.blog #sidebar {
+.blog #sidebar,
+.single-post #sidebar,
+.archive.category #sidebar {
   display: block;
 }
 .post-type-archive-product,
-.page-template-archive-artist-php {
+.page-template-archive-artist-php,
+.archive.tax-product_cat,
+.single-artist,
+.post-type-archive-artist {
   background-color: #111111;
   background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px #000000;
   background-size: 1500px;
   color: white !important;
 }
 .post-type-archive-product #header #menu-button,
-.page-template-archive-artist-php #header #menu-button {
+.page-template-archive-artist-php #header #menu-button,
+.archive.tax-product_cat #header #menu-button,
+.single-artist #header #menu-button,
+.post-type-archive-artist #header #menu-button {
   width: 22px;
   height: 22px;
   background: none;
@@ -567,84 +607,147 @@ body .extenseur {
   color: #dddddd;
 }
 .post-type-archive-product #header #menu-button:hover,
-.page-template-archive-artist-php #header #menu-button:hover {
+.page-template-archive-artist-php #header #menu-button:hover,
+.archive.tax-product_cat #header #menu-button:hover,
+.single-artist #header #menu-button:hover,
+.post-type-archive-artist #header #menu-button:hover {
   background-color: #555555;
   background-image: none;
   text-shadow: none;
   box-shadow: none;
 }
 .post-type-archive-product #header #menu-button:active,
-.page-template-archive-artist-php #header #menu-button:active {
+.page-template-archive-artist-php #header #menu-button:active,
+.archive.tax-product_cat #header #menu-button:active,
+.single-artist #header #menu-button:active,
+.post-type-archive-artist #header #menu-button:active {
   background-color: #222222;
   text-shadow: none;
   box-shadow: none;
 }
 .post-type-archive-product a,
-.page-template-archive-artist-php a {
+.page-template-archive-artist-php a,
+.archive.tax-product_cat a,
+.single-artist a,
+.post-type-archive-artist a {
   color: white;
 }
 .post-type-archive-product h1,
 .page-template-archive-artist-php h1,
+.archive.tax-product_cat h1,
+.single-artist h1,
+.post-type-archive-artist h1,
 .post-type-archive-product h2,
 .page-template-archive-artist-php h2,
+.archive.tax-product_cat h2,
+.single-artist h2,
+.post-type-archive-artist h2,
 .post-type-archive-product h3,
 .page-template-archive-artist-php h3,
+.archive.tax-product_cat h3,
+.single-artist h3,
+.post-type-archive-artist h3,
 .post-type-archive-product h4,
 .page-template-archive-artist-php h4,
+.archive.tax-product_cat h4,
+.single-artist h4,
+.post-type-archive-artist h4,
 .post-type-archive-product h5,
 .page-template-archive-artist-php h5,
+.archive.tax-product_cat h5,
+.single-artist h5,
+.post-type-archive-artist h5,
 .post-type-archive-product h6,
-.page-template-archive-artist-php h6 {
+.page-template-archive-artist-php h6,
+.archive.tax-product_cat h6,
+.single-artist h6,
+.post-type-archive-artist h6 {
   color: white;
 }
 .post-type-archive-product li.current-menu-item > a,
-.page-template-archive-artist-php li.current-menu-item > a {
+.page-template-archive-artist-php li.current-menu-item > a,
+.archive.tax-product_cat li.current-menu-item > a,
+.single-artist li.current-menu-item > a,
+.post-type-archive-artist li.current-menu-item > a {
   color: grey !important;
 }
 .post-type-archive-product #archive-wrapper,
-.page-template-archive-artist-php #archive-wrapper {
+.page-template-archive-artist-php #archive-wrapper,
+.archive.tax-product_cat #archive-wrapper,
+.single-artist #archive-wrapper,
+.post-type-archive-artist #archive-wrapper {
   clear: both;
 }
 .post-type-archive-product #archive-wrapper .woo-pagination,
-.page-template-archive-artist-php #archive-wrapper .woo-pagination {
+.page-template-archive-artist-php #archive-wrapper .woo-pagination,
+.archive.tax-product_cat #archive-wrapper .woo-pagination,
+.single-artist #archive-wrapper .woo-pagination,
+.post-type-archive-artist #archive-wrapper .woo-pagination {
   float: left;
   width: 50%;
 }
 .post-type-archive-product #archive-wrapper .woo-pagination ul.page-numbers,
-.page-template-archive-artist-php #archive-wrapper .woo-pagination ul.page-numbers {
+.page-template-archive-artist-php #archive-wrapper .woo-pagination ul.page-numbers,
+.archive.tax-product_cat #archive-wrapper .woo-pagination ul.page-numbers,
+.single-artist #archive-wrapper .woo-pagination ul.page-numbers,
+.post-type-archive-artist #archive-wrapper .woo-pagination ul.page-numbers {
   float: right;
   list-style: none outside;
 }
 .post-type-archive-product #archive-wrapper .woo-pagination ul.page-numbers > li,
-.page-template-archive-artist-php #archive-wrapper .woo-pagination ul.page-numbers > li {
+.page-template-archive-artist-php #archive-wrapper .woo-pagination ul.page-numbers > li,
+.archive.tax-product_cat #archive-wrapper .woo-pagination ul.page-numbers > li,
+.single-artist #archive-wrapper .woo-pagination ul.page-numbers > li,
+.post-type-archive-artist #archive-wrapper .woo-pagination ul.page-numbers > li {
   display: inline-block;
 }
 .post-type-archive-product #archive-wrapper .woocommerce-result-count,
-.page-template-archive-artist-php #archive-wrapper .woocommerce-result-count {
+.page-template-archive-artist-php #archive-wrapper .woocommerce-result-count,
+.archive.tax-product_cat #archive-wrapper .woocommerce-result-count,
+.single-artist #archive-wrapper .woocommerce-result-count,
+.post-type-archive-artist #archive-wrapper .woocommerce-result-count {
   padding: 1%;
 }
 .post-type-archive-product ul.products,
-.page-template-archive-artist-php ul.products {
+.page-template-archive-artist-php ul.products,
+.archive.tax-product_cat ul.products,
+.single-artist ul.products,
+.post-type-archive-artist ul.products {
   clear: both;
 }
 .post-type-archive-product ul.products > li,
-.page-template-archive-artist-php ul.products > li {
+.page-template-archive-artist-php ul.products > li,
+.archive.tax-product_cat ul.products > li,
+.single-artist ul.products > li,
+.post-type-archive-artist ul.products > li {
   padding: 2%;
 }
 .post-type-archive-product ul.products > li a.thumb img,
-.page-template-archive-artist-php ul.products > li a.thumb img {
+.page-template-archive-artist-php ul.products > li a.thumb img,
+.archive.tax-product_cat ul.products > li a.thumb img,
+.single-artist ul.products > li a.thumb img,
+.post-type-archive-artist ul.products > li a.thumb img {
   width: 100%;
 }
 .post-type-archive-product ul.products > li a,
-.page-template-archive-artist-php ul.products > li a {
+.page-template-archive-artist-php ul.products > li a,
+.archive.tax-product_cat ul.products > li a,
+.single-artist ul.products > li a,
+.post-type-archive-artist ul.products > li a {
   color: #47cce8;
 }
 .post-type-archive-product ul.products > li a:hover,
-.page-template-archive-artist-php ul.products > li a:hover {
+.page-template-archive-artist-php ul.products > li a:hover,
+.archive.tax-product_cat ul.products > li a:hover,
+.single-artist ul.products > li a:hover,
+.post-type-archive-artist ul.products > li a:hover {
   color: #158ca5;
 }
 .post-type-archive-product ul.products.list > li,
-.page-template-archive-artist-php ul.products.list > li {
+.page-template-archive-artist-php ul.products.list > li,
+.archive.tax-product_cat ul.products.list > li,
+.single-artist ul.products.list > li,
+.post-type-archive-artist ul.products.list > li {
   float: none;
   clear: both;
   width: 96%;
@@ -654,17 +757,26 @@ body .extenseur {
   border-radius: 10px;
 }
 .post-type-archive-product ul.products.list > li a.thumb,
-.page-template-archive-artist-php ul.products.list > li a.thumb {
+.page-template-archive-artist-php ul.products.list > li a.thumb,
+.archive.tax-product_cat ul.products.list > li a.thumb,
+.single-artist ul.products.list > li a.thumb,
+.post-type-archive-artist ul.products.list > li a.thumb {
   float: left;
   width: 30%;
   margin-right: 5%;
 }
 .post-type-archive-product ul.products.list > li a.thumb img,
-.page-template-archive-artist-php ul.products.list > li a.thumb img {
+.page-template-archive-artist-php ul.products.list > li a.thumb img,
+.archive.tax-product_cat ul.products.list > li a.thumb img,
+.single-artist ul.products.list > li a.thumb img,
+.post-type-archive-artist ul.products.list > li a.thumb img {
   overflow: visible;
 }
 .post-type-archive-product ul.products.list > li section.content,
-.page-template-archive-artist-php ul.products.list > li section.content {
+.page-template-archive-artist-php ul.products.list > li section.content,
+.archive.tax-product_cat ul.products.list > li section.content,
+.single-artist ul.products.list > li section.content,
+.post-type-archive-artist ul.products.list > li section.content {
   float: left;
   width: 65%;
   min-width: 300px;
@@ -672,74 +784,119 @@ body .extenseur {
   vertical-align: top;
 }
 .post-type-archive-product ul.products.list > li section.content section.title-artists h3,
-.page-template-archive-artist-php ul.products.list > li section.content section.title-artists h3 {
+.page-template-archive-artist-php ul.products.list > li section.content section.title-artists h3,
+.archive.tax-product_cat ul.products.list > li section.content section.title-artists h3,
+.single-artist ul.products.list > li section.content section.title-artists h3,
+.post-type-archive-artist ul.products.list > li section.content section.title-artists h3 {
   display: inline-block;
   margin-right: 2em;
 }
 .post-type-archive-product ul.products.list > li section.content section.title-artists ul.artists-names,
-.page-template-archive-artist-php ul.products.list > li section.content section.title-artists ul.artists-names {
+.page-template-archive-artist-php ul.products.list > li section.content section.title-artists ul.artists-names,
+.archive.tax-product_cat ul.products.list > li section.content section.title-artists ul.artists-names,
+.single-artist ul.products.list > li section.content section.title-artists ul.artists-names,
+.post-type-archive-artist ul.products.list > li section.content section.title-artists ul.artists-names {
   display: inline-block;
   list-style: none outside;
 }
 .post-type-archive-product ul.products.list > li section.content section.title-artists ul.artists-names li,
-.page-template-archive-artist-php ul.products.list > li section.content section.title-artists ul.artists-names li {
+.page-template-archive-artist-php ul.products.list > li section.content section.title-artists ul.artists-names li,
+.archive.tax-product_cat ul.products.list > li section.content section.title-artists ul.artists-names li,
+.single-artist ul.products.list > li section.content section.title-artists ul.artists-names li,
+.post-type-archive-artist ul.products.list > li section.content section.title-artists ul.artists-names li {
   display: inline-block;
   margin-right: 1em;
 }
 .post-type-archive-product ul.products.list > li section.content section.post-data,
-.page-template-archive-artist-php ul.products.list > li section.content section.post-data {
+.page-template-archive-artist-php ul.products.list > li section.content section.post-data,
+.archive.tax-product_cat ul.products.list > li section.content section.post-data,
+.single-artist ul.products.list > li section.content section.post-data,
+.post-type-archive-artist ul.products.list > li section.content section.post-data {
   margin-bottom: 1em;
 }
 .post-type-archive-product ul.products.list > li section.content section.post-data span.post-date,
-.page-template-archive-artist-php ul.products.list > li section.content section.post-data span.post-date {
+.page-template-archive-artist-php ul.products.list > li section.content section.post-data span.post-date,
+.archive.tax-product_cat ul.products.list > li section.content section.post-data span.post-date,
+.single-artist ul.products.list > li section.content section.post-data span.post-date,
+.post-type-archive-artist ul.products.list > li section.content section.post-data span.post-date {
   margin-right: 2em;
 }
 .post-type-archive-product ul.products.grid,
-.page-template-archive-artist-php ul.products.grid {
+.page-template-archive-artist-php ul.products.grid,
+.archive.tax-product_cat ul.products.grid,
+.single-artist ul.products.grid,
+.post-type-archive-artist ul.products.grid {
   background-color: rgba(20, 20, 20, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product ul.products.grid > li,
-.page-template-archive-artist-php ul.products.grid > li {
+.page-template-archive-artist-php ul.products.grid > li,
+.archive.tax-product_cat ul.products.grid > li,
+.single-artist ul.products.grid > li,
+.post-type-archive-artist ul.products.grid > li {
   display: block;
   float: left;
   width: 28%;
   margin: 0.5%;
 }
 .post-type-archive-product ul.products.grid > li a.thumb,
-.page-template-archive-artist-php ul.products.grid > li a.thumb {
+.page-template-archive-artist-php ul.products.grid > li a.thumb,
+.archive.tax-product_cat ul.products.grid > li a.thumb,
+.single-artist ul.products.grid > li a.thumb,
+.post-type-archive-artist ul.products.grid > li a.thumb {
   width: 100%;
 }
 .post-type-archive-product ul.products.grid > li section.content,
-.page-template-archive-artist-php ul.products.grid > li section.content {
+.page-template-archive-artist-php ul.products.grid > li section.content,
+.archive.tax-product_cat ul.products.grid > li section.content,
+.single-artist ul.products.grid > li section.content,
+.post-type-archive-artist ul.products.grid > li section.content {
   padding: 1em 1em 0 1em;
 }
 .post-type-archive-product ul.products.grid > li ul.artists-names,
-.page-template-archive-artist-php ul.products.grid > li ul.artists-names {
+.page-template-archive-artist-php ul.products.grid > li ul.artists-names,
+.archive.tax-product_cat ul.products.grid > li ul.artists-names,
+.single-artist ul.products.grid > li ul.artists-names,
+.post-type-archive-artist ul.products.grid > li ul.artists-names {
   list-style: none outside;
 }
 .post-type-archive-product ul.products.grid > li div.post-excerpt,
-.page-template-archive-artist-php ul.products.grid > li div.post-excerpt {
+.page-template-archive-artist-php ul.products.grid > li div.post-excerpt,
+.archive.tax-product_cat ul.products.grid > li div.post-excerpt,
+.single-artist ul.products.grid > li div.post-excerpt,
+.post-type-archive-artist ul.products.grid > li div.post-excerpt {
   display: none;
 }
 .post-type-archive-product #archive-browser,
-.page-template-archive-artist-php #archive-browser {
+.page-template-archive-artist-php #archive-browser,
+.archive.tax-product_cat #archive-browser,
+.single-artist #archive-browser,
+.post-type-archive-artist #archive-browser {
   padding: 2%;
   background-color: rgba(20, 20, 20, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product #archive-browser > div,
-.page-template-archive-artist-php #archive-browser > div {
+.page-template-archive-artist-php #archive-browser > div,
+.archive.tax-product_cat #archive-browser > div,
+.single-artist #archive-browser > div,
+.post-type-archive-artist #archive-browser > div {
   width: 25%;
   float: left;
   text-align: center;
 }
 .post-type-archive-product #archive-browser select,
-.page-template-archive-artist-php #archive-browser select {
+.page-template-archive-artist-php #archive-browser select,
+.archive.tax-product_cat #archive-browser select,
+.single-artist #archive-browser select,
+.post-type-archive-artist #archive-browser select {
   min-width: 8em;
 }
 .post-type-archive-product #archive-browser a#mode,
-.page-template-archive-artist-php #archive-browser a#mode {
+.page-template-archive-artist-php #archive-browser a#mode,
+.archive.tax-product_cat #archive-browser a#mode,
+.single-artist #archive-browser a#mode,
+.post-type-archive-artist #archive-browser a#mode {
   display: block;
   margin: 0 auto;
   width: 37px;
@@ -747,7 +904,10 @@ body .extenseur {
   background: url('../images/mode.png') no-repeat scroll 0px 0px transparent;
 }
 .post-type-archive-product #archive-browser a#mode.flip,
-.page-template-archive-artist-php #archive-browser a#mode.flip {
+.page-template-archive-artist-php #archive-browser a#mode.flip,
+.archive.tax-product_cat #archive-browser a#mode.flip,
+.single-artist #archive-browser a#mode.flip,
+.post-type-archive-artist #archive-browser a#mode.flip {
   background-position: 0px 100% !important;
 }
 .product-cloud input.css-filter {

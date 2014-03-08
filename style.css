@@ -378,7 +378,7 @@ table,
 form,
 pre,
 hr {
-  //--margin: 0 0 1.618em 0;
+  margin: 0 0 1.618em 0;
 }
 li > ul,
 li > ol {
@@ -836,7 +836,7 @@ table tr td:last-child {
 .post .alignright,
 .type-page .alignright {
   float: right;
-  //--margin: 0 0 1em 1.618em;
+  margin: 0 0 1em 1.618em;
 }
 .post .aligncenter,
 .type-page .aligncenter {

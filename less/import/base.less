@@ -2,7 +2,7 @@ body{
   padding: 0;
   
   font-family: @font1;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
 //   line-height: 24px;
   
@@ -365,20 +365,46 @@ body{
 
  // ------------------------------------------- BLOG ----------------------------------------------------
 
-.blog{
+.blog, .single-post, .archive.category{
   
   background: url("../images/fondpapier4.jpg") repeat scroll ;
 
   
   #content{
+    //max-width: 700px;
+  
+    
+  aside.post-meta>ul {
+     margin-bottom: 0;
+  }
+  
+
+  
+  
     
     .col-left{
-      width: 60%;
+      width: 65%;
       
-      h1{ text-align: center; }
+      //h1{ text-align: center; }
       
       section.post-content{
 	margin-bottom: 2em;
+	
+	
+	  blockquote{
+	    padding: 0 2em;
+	    p{
+	      font-size: 1em;
+	    }
+	    .pullquote{
+	      font-size: 1em;
+	    }
+	    
+
+	  }
+	  ul{
+	    padding-left: 2em;
+	  }
       }
       
       img.wp-post-image{
@@ -389,7 +415,7 @@ body{
     }
     .col-right{
       width: 23%;
-      background-color: #eee;
+      background-color: rgba(21, 110, 127, 0.6);
       border-radius: 20px;
       margin: 3em 1% 0 1%;
       padding: 2%
@@ -404,7 +430,7 @@ body{
  // ------------------------------------------- MUSIQUE ----------------------------------------------------
 
 
-.post-type-archive-product, .page-template-archive-artist-php{
+.post-type-archive-product, .page-template-archive-artist-php, .archive.tax-product_cat, .single-artist, .post-type-archive-artist{
   background-color: @darkdarkgrey;
   background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px black;
   background-size: 1500px;
@@ -422,6 +448,7 @@ body{
   li.current-menu-item>a {
     color: grey !important;
   }
+
   
   #archive-wrapper {
     clear: both;

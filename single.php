@@ -45,14 +45,14 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         		while ( have_posts() ) { the_post(); $count++;
         ?>
 			<article <?php post_class(); ?>>
-				<aside class="meta">
+				<?php /*<aside class="meta">
 					<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
 						<?php echo get_avatar( get_the_author_meta('email'), '128' ); ?>
 					</a>
 					<span class="month"><?php the_time( 'M' ); ?></span>
 					<span class="day"><?php the_time( 'd' ); ?></span>
 					<span class="year"><?php the_time( 'o' ); ?></span>
-				</aside>
+				</aside>*/ ?>
 				
 				<section class="post-content">
 
@@ -62,8 +62,9 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	                <header>
 	                
 		                <h1><?php the_title(); ?></h1>
+		                <p class="postinfo"><?php the_author_posts_link(); ?> | <?php the_time('d M Y') ?> </p>
 		                
-	                	<?php woo_post_meta(); ?>
+	                	<?php //woo_post_meta(); ?>
 	                	
 	                </header>
 	                
