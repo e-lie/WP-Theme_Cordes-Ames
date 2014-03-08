@@ -292,6 +292,7 @@ body .extenseur {
   display: none;
 }
 .footer-wrap {
+  margin-top: 1em;
   background: #555;
 }
 .footer-wrap a {
@@ -410,30 +411,6 @@ body .extenseur {
   background-size: 1500px;
   color: white !important;
 }
-.single-product #header #menu-button {
-  width: 22px;
-  height: 22px;
-  background: none;
-  border: 2px solid #555555;
-  text-shadow: none;
-  box-shadow: none;
-  border-radius: 50%;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  line-height: 0.9em;
-  color: #dddddd;
-}
-.single-product #header #menu-button:hover {
-  background-color: #555555;
-  background-image: none;
-  text-shadow: none;
-  box-shadow: none;
-}
-.single-product #header #menu-button:active {
-  background-color: #222222;
-  text-shadow: none;
-  box-shadow: none;
-}
 .single-product a {
   color: white;
 }
@@ -522,10 +499,28 @@ body .extenseur {
 .archive.category {
   background: url("../images/fondpapier4.jpg") repeat scroll;
 }
+.blog #content,
+.single-post #content,
+.archive.category #content {
+  margin-top: 1.7em;
+}
 .blog #content aside.post-meta > ul,
 .single-post #content aside.post-meta > ul,
 .archive.category #content aside.post-meta > ul {
   margin-bottom: 0;
+}
+.blog #content nav#post-entries,
+.single-post #content nav#post-entries,
+.archive.category #content nav#post-entries {
+  width: 100%;
+}
+.blog #content nav#post-entries .nav-prev,
+.single-post #content nav#post-entries .nav-prev,
+.archive.category #content nav#post-entries .nav-prev,
+.blog #content nav#post-entries .nav-next,
+.single-post #content nav#post-entries .nav-next,
+.archive.category #content nav#post-entries .nav-next {
+  max-width: 45%;
 }
 .blog #content .col-left,
 .single-post #content .col-left,
@@ -911,11 +906,12 @@ body .extenseur {
   #header #menu-button {
     display: block;
     float: right;
-    margin-right: 150px;
+    margin-right: 90px;
     text-align: center;
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
     font-size: 1.6em;
+    line-height: 1em;
     color: #999;
   }
   #header #menu-button:hover {

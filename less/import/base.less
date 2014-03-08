@@ -97,6 +97,7 @@ body{
 }
 
 .footer-wrap{ 
+  margin-top: 1em;
   background: #555;
   a{
     color: white;
@@ -263,7 +264,6 @@ body{
   background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px black;
   background-size: 1500px;
   
-  #header #menu-button { .style2_button(@font1, #555, #ddd); }
   
   color: white !important;
   a{ 
@@ -374,7 +374,7 @@ body{
 
   
   #content{
-    //max-width: 700px;
+    margin-top: 1.7em;
   
     
   aside.post-meta>ul {
@@ -382,7 +382,12 @@ body{
   }
   
 
-  
+  nav#post-entries{
+    width: 100%;
+    .nav-prev, .nav-next{
+      max-width: 45%;
+    }
+  }
   
     
     .col-left{
@@ -451,6 +456,8 @@ body{
   li.current-menu-item>a {
     color: grey !important;
   }
+  
+
 
   
   #archive-wrapper {
