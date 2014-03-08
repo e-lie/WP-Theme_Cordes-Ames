@@ -1,11 +1,11 @@
 <?php
 /* functions.php : Thème Cordes&Âmes */
 
-add_action('wp_head', 'show_template');
-function show_template() {
-    global $template;
-    print_r($template);
-}
+// add_action('wp_head', 'show_template');
+// function show_template() {
+//     global $template;
+//     print_r($template);
+// }
 
 // {{{ ----------------- Custom post type and Custom taxonomy declaration
 
