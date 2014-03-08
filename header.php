@@ -138,7 +138,7 @@ echo ("<style type='text/css'>".$resulting_css.'</style>');
 	        <div class="gradient-menu"></div>
     <input id="menu-checkbox" name="menu-panel" type="checkbox" autocomplete="off" />
 		<nav id="navigation" class="col-full" role="navigation">
-    <label id="menu-button" class="button_type1" for="menu-checkbox">+</label> 
+    <label id="menu-button" class="button_type1" for="menu-checkbox">☰</label> 
 			<?php
 			if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
 				wp_nav_menu( array( 'depth' => 4, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav fr', 'theme_location' => 'primary-menu' ) );

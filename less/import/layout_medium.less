@@ -4,12 +4,20 @@
   #menu-button {
     display: block;
     float: right;
-    margin-right: 40px;
-    .style2_button;
+    margin-right: 150px;
+    //.style2_button;
     text-align: center;
-    font-size: 1.3em;
-    line-height: 1em;
+    //font-size: 1.3em;
+    //line-height: 1em;
+    font-family: @font2;
+      font-weight: 700;
+      font-size: 1.6em;
+      //line-height: 1em;
+      color: #999;
+      &:hover{ color: @pantone311C; }
   }
+  
+
 
   #menu-checkbox {
     display: none;
@@ -36,6 +44,10 @@
     
   }
 }
+
+  .home #header #menu-button {
+    margin-right: 40px;
+  }
 }
 
 
@@ -46,6 +58,7 @@
 	max-width: 30%;
 }
 
+    .gradient-menu{ width: 1200px; }
 
 
   .home {

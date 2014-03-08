@@ -230,9 +230,6 @@ body .extenseur {
   width: 100% !important;
   height: 1px;
 }
-#header {
-  margin-bottom: 2em;
-}
 #header hgroup {
   width: 100%;
   max-width: 1160px;
@@ -247,8 +244,7 @@ body .extenseur {
 }
 #header #navigation {
   height: auto;
-  width: 100%;
-  max-width: 1280px;
+  max-width: 1250px;
   margin: 0 auto;
   overflow: hidden;
   line-height: 1.5em;
@@ -320,6 +316,9 @@ body .extenseur {
 }
 .home #content {
   max-width: 690px;
+}
+.home #content p {
+  margin: 0px;
 }
 .home .product-cloud {
   text-align: center;
@@ -588,42 +587,6 @@ body .extenseur {
   background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px #000000;
   background-size: 1500px;
   color: white !important;
-}
-.post-type-archive-product #header #menu-button,
-.page-template-archive-artist-php #header #menu-button,
-.archive.tax-product_cat #header #menu-button,
-.single-artist #header #menu-button,
-.post-type-archive-artist #header #menu-button {
-  width: 22px;
-  height: 22px;
-  background: none;
-  border: 2px solid #555555;
-  text-shadow: none;
-  box-shadow: none;
-  border-radius: 50%;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  line-height: 0.9em;
-  color: #dddddd;
-}
-.post-type-archive-product #header #menu-button:hover,
-.page-template-archive-artist-php #header #menu-button:hover,
-.archive.tax-product_cat #header #menu-button:hover,
-.single-artist #header #menu-button:hover,
-.post-type-archive-artist #header #menu-button:hover {
-  background-color: #555555;
-  background-image: none;
-  text-shadow: none;
-  box-shadow: none;
-}
-.post-type-archive-product #header #menu-button:active,
-.page-template-archive-artist-php #header #menu-button:active,
-.archive.tax-product_cat #header #menu-button:active,
-.single-artist #header #menu-button:active,
-.post-type-archive-artist #header #menu-button:active {
-  background-color: #222222;
-  text-shadow: none;
-  box-shadow: none;
 }
 .post-type-archive-product a,
 .page-template-archive-artist-php a,
@@ -948,32 +911,15 @@ body .extenseur {
   #header #menu-button {
     display: block;
     float: right;
-    margin-right: 40px;
-    width: 22px;
-    height: 22px;
-    background: none;
-    border: 2px solid #dddddd;
-    text-shadow: none;
-    box-shadow: none;
-    border-radius: 50%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    line-height: 0.9em;
-    color: #333333;
+    margin-right: 150px;
     text-align: center;
-    font-size: 1.3em;
-    line-height: 1em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 1.6em;
+    color: #999;
   }
   #header #menu-button:hover {
-    background-color: #dddddd;
-    background-image: none;
-    text-shadow: none;
-    box-shadow: none;
-  }
-  #header #menu-button:active {
-    background-color: #aaaaaa;
-    text-shadow: none;
-    box-shadow: none;
+    color: #23c2e3;
   }
   #header #menu-checkbox {
     display: none;
@@ -1012,11 +958,17 @@ body .extenseur {
     float: left;
     width: 20%;
   }
+  .home #header #menu-button {
+    margin-right: 40px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .post img,
   .type-page img {
     max-width: 30%;
+  }
+  .gradient-menu {
+    width: 1200px;
   }
   .home .product-cloud {
     text-align: center;
