@@ -395,11 +395,19 @@ add_shortcode( 'product_title', 'product_title_shortcode' );
 	    //-------------------------------------------------------------------------
 
 function product_images_shortcode( $atts ) {
+
+    extract(shortcode_atts(array(
+		      'type' 	=> 'product',
+			'shape' 	=> 'circle',
+		), $atts));
+		
+    
     ob_start();?>
     <?php $related_artists = get_related_artists(get_the_id());
 
       // product-image
       if ( has_post_thumbnail() ) {
+      if ( $type == 'product' ) {
 	$product_image_title = esc_attr( get_the_title( get_post_thumbnail_id() ) );
 	$product_image_link = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
     ?>
@@ -414,9 +422,17 @@ function product_images_shortcode( $atts ) {
 	$artist_image_title = esc_attr( get_the_title( get_post_thumbnail_id($artist_id) ) );
 	if( has_post_thumbnail($artist->ID)) {
     ?>
-    <a href='<?php echo $artist_link?>' class="artist-image" title="<?php $image_title?>">
+    <a href='<?php echo $artist_link?>' class="artist-image <?php if($shape == 'circle') { echo('circle');} ?>" title="<?php $image_title?>">
      <?php echo get_the_post_thumbnail( $artist->ID, 'medium', array('title' => $artist_image_title)); ?>
-    </a> <?php } } 
+    </a> <?php } 
+    }elseif( $type == 'artist' ){
+      $product_image_title = esc_attr( get_the_title( get_post_thumbnail_id() ) );
+      $product_image_link = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+    ?>
+    <a href="<?php echo $product_image_link?>" itemprop="image" class="product-image" title="<?php $image_title?>"  rel="prettyPhoto' . $gallery . '">
+     <?php the_post_thumbnail( 'medium', array('title' => $product_image_title)); ?>
+    </a><?php
+    } }
   
       return '<section class="product-images">'.ob_get_clean().'</section>';
 }
@@ -437,6 +453,22 @@ function desc_end_shortcode( $atts ) {
 }
 
 add_shortcode( 'desc_end', 'desc_end_shortcode' );
+
+//------------------------------------------
+
+function albums_begin_shortcode( $atts ) {
+		return '<h2>Présentation</h2><div class="description">';
+	}
+
+add_shortcode( 'albums_begin', 'albums_begin_shortcode' );
+
+function albums_end_shortcode( $atts ) {
+
+		return '</div>' ;
+}
+
+add_shortcode( 'albums_end', 'albums_end_shortcode' );
+
 
 
 

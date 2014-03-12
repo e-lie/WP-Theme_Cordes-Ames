@@ -65,10 +65,11 @@
 
 }
 .content_block_dark {
-  padding: 1em 2em 2em 2em;
+  max-width: 700px;
+  padding: 1em 60px 2em 60px;
   background-color: #333333;
   border-radius: 0 0 20px 20px;
-  margin-bottom: 2em;
+  margin: 0 auto 2em auto;
 }
 .style1_button_checked + label {
   background-color: #158ca5;
@@ -328,10 +329,13 @@ body .extenseur {
   clear: both;
 }
 .home .product-cloud ul.products li.product {
+  background: url("../images/volume_pochette.png") no-repeat scroll;
+  background-size: cover;
   position: relative;
   margin: 3.5% !important;
-  width: 26.1%;
-  box-shadow: 5px 5px 0 0 rgba(100, 100, 100, 0.8), 0 5px 6px 1px rgba(0, 0, 0, 0.2);
+  width: 25.2%;
+  padding: 0 5px 5px 0;
+  box-shadow: 8px 9px 10px 1px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -369,7 +373,7 @@ body .extenseur {
 .home .a-la-une {
   display: none;
   position: absolute;
-  top: 430px;
+  top: 500px;
   width: 96%;
   max-width: 900px;
   padding: 1% 2%;
@@ -405,94 +409,203 @@ body .extenseur {
 .home .a-la-une a.close:hover {
   color: #23c2e3;
 }
-.single-product {
+.single-product,
+.single-artist {
   background-color: #111111;
-  background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px #000000;
+  background: url("../images/fondindien3noir.jpg") no-repeat scroll 50% 140px #000000;
   background-size: 1500px;
   color: white !important;
 }
-.single-product a {
+.single-product a,
+.single-artist a {
   color: white;
 }
 .single-product h1,
+.single-artist h1,
 .single-product h2,
+.single-artist h2,
 .single-product h3,
+.single-artist h3,
 .single-product h4,
+.single-artist h4,
 .single-product h5,
-.single-product h6 {
+.single-artist h5,
+.single-product h6,
+.single-artist h6 {
   color: white;
 }
-.single-product li.current-menu-item > a {
+.single-product li.current-menu-item > a,
+.single-artist li.current-menu-item > a {
   color: grey !important;
 }
-.single-product #header #navigation {
+.single-product #header #navigation,
+.single-artist #header #navigation {
   width: 75%;
 }
-.single-product #content {
+.single-product #content,
+.single-artist #content {
   width: 75%;
 }
-.single-product section.product-content > br {
+.single-product section.product-content > br,
+.single-artist section.product-content > br,
+.single-product section.post-content > br,
+.single-artist section.post-content > br,
+.single-product section.related-albums > br,
+.single-artist section.related-albums > br {
   display: none;
 }
-.single-product section.product-content > h2 {
+.single-product section.product-content > h2,
+.single-artist section.product-content > h2,
+.single-product section.post-content > h2,
+.single-artist section.post-content > h2,
+.single-product section.related-albums > h2,
+.single-artist section.related-albums > h2 {
   clear: both;
-  padding: 0 2em 0 2em;
-  margin: 1em 0 0 0;
+  padding: 0 60px 0 60px;
+  margin: 1em auto 0 auto;
   background-color: #189fbb;
   border-radius: 20px 20px 0 0;
+  max-width: 700px;
 }
-.single-product section.product-content .product-title {
+.single-product section.product-content > ul,
+.single-artist section.product-content > ul,
+.single-product section.post-content > ul,
+.single-artist section.post-content > ul,
+.single-product section.related-albums > ul,
+.single-artist section.related-albums > ul {
+  max-width: 700px;
+  padding: 1em 60px 2em 60px;
+  background-color: #333333;
+  border-radius: 0 0 20px 20px;
+  margin: 0 auto 2em auto;
+}
+.single-product section.product-content .product-title,
+.single-artist section.product-content .product-title,
+.single-product section.post-content .product-title,
+.single-artist section.post-content .product-title,
+.single-product section.related-albums .product-title,
+.single-artist section.related-albums .product-title {
   margin-bottom: 1em;
   text-align: center;
 }
-.single-product section.product-content .product-title h1 {
+.single-product section.product-content .product-title h1,
+.single-artist section.product-content .product-title h1,
+.single-product section.post-content .product-title h1,
+.single-artist section.post-content .product-title h1,
+.single-product section.related-albums .product-title h1,
+.single-artist section.related-albums .product-title h1 {
   margin: 0.5em 0 0 0;
 }
-.single-product section.product-content section.product-images {
+.single-product section.product-content section.product-images,
+.single-artist section.product-content section.product-images,
+.single-product section.post-content section.product-images,
+.single-artist section.post-content section.product-images,
+.single-product section.related-albums section.product-images,
+.single-artist section.related-albums section.product-images {
   float: left;
   margin: 0 0 2em 10%;
 }
-.single-product section.product-content section.product-images a.artist-image img {
+.single-product section.product-content section.product-images a.artist-image.circle img,
+.single-artist section.product-content section.product-images a.artist-image.circle img,
+.single-product section.post-content section.product-images a.artist-image.circle img,
+.single-artist section.post-content section.product-images a.artist-image.circle img,
+.single-product section.related-albums section.product-images a.artist-image.circle img,
+.single-artist section.related-albums section.product-images a.artist-image.circle img {
   border-radius: 50%;
 }
-.single-product section.product-content section.purchase {
+.single-product section.product-content section.purchase,
+.single-artist section.product-content section.purchase,
+.single-product section.post-content section.purchase,
+.single-artist section.post-content section.purchase,
+.single-product section.related-albums section.purchase,
+.single-artist section.related-albums section.purchase {
   float: left;
   margin-bottom: 2em;
   width: 28%;
   padding: 1%;
   text-align: center;
 }
-.single-product section.product-content .songs-list {
+.single-product section.product-content .songs-list,
+.single-artist section.product-content .songs-list,
+.single-product section.post-content .songs-list,
+.single-artist section.post-content .songs-list,
+.single-product section.related-albums .songs-list,
+.single-artist section.related-albums .songs-list {
   display: none;
 }
-.single-product section.product-content .description {
-  padding: 1em 2em 2em 2em;
+.single-product section.product-content .description,
+.single-artist section.product-content .description,
+.single-product section.post-content .description,
+.single-artist section.post-content .description,
+.single-product section.related-albums .description,
+.single-artist section.related-albums .description {
+  max-width: 700px;
+  padding: 1em 60px 2em 60px;
   background-color: #333333;
   border-radius: 0 0 20px 20px;
-  margin-bottom: 2em;
+  margin: 0 auto 2em auto;
 }
-.single-product section.product-content .description > p {
-  max-width: 60em;
+.single-product section.product-content .description > p,
+.single-artist section.product-content .description > p,
+.single-product section.post-content .description > p,
+.single-artist section.post-content .description > p,
+.single-product section.related-albums .description > p,
+.single-artist section.related-albums .description > p {
   margin: 0 auto;
 }
-.single-product section.product-content .listening {
+.single-product section.product-content .listening,
+.single-artist section.product-content .listening,
+.single-product section.post-content .listening,
+.single-artist section.post-content .listening,
+.single-product section.related-albums .listening,
+.single-artist section.related-albums .listening {
   float: left;
   width: 28%;
   padding: 1%;
 }
 .single-product section.product-content .listening > br,
-.single-product section.product-content .listening > p {
+.single-artist section.product-content .listening > br,
+.single-product section.post-content .listening > br,
+.single-artist section.post-content .listening > br,
+.single-product section.related-albums .listening > br,
+.single-artist section.related-albums .listening > br,
+.single-product section.product-content .listening > p,
+.single-artist section.product-content .listening > p,
+.single-product section.post-content .listening > p,
+.single-artist section.post-content .listening > p,
+.single-product section.related-albums .listening > p,
+.single-artist section.related-albums .listening > p {
   display: none;
 }
-.single-product section.product-content .gallery {
-  padding: 1em 2em 2em 2em;
+.single-product section.product-content .gallery,
+.single-artist section.product-content .gallery,
+.single-product section.post-content .gallery,
+.single-artist section.post-content .gallery,
+.single-product section.related-albums .gallery,
+.single-artist section.related-albums .gallery {
+  max-width: 700px;
+  padding: 1em 60px 2em 60px;
   background-color: #333333;
   border-radius: 0 0 20px 20px;
-  margin-bottom: 2em;
+  margin: 0 auto 2em auto;
 }
-.single-product section.product-content iframe {
+.single-product section.product-content iframe,
+.single-artist section.product-content iframe,
+.single-product section.post-content iframe,
+.single-artist section.post-content iframe,
+.single-product section.related-albums iframe,
+.single-artist section.related-albums iframe {
   display: block;
   margin: 0 auto;
+}
+.single-product section.post-content section.product-images,
+.single-artist section.post-content section.product-images {
+  float: left;
+  margin: 0  auto 2em auto;
+}
+.single-product section.post-content section.product-images a.artist-image img,
+.single-artist section.post-content section.product-images a.artist-image img {
+  border-radius: 50%;
 }
 .blog,
 .single-post,
@@ -579,7 +692,7 @@ body .extenseur {
 .single-artist,
 .post-type-archive-artist {
   background-color: #111111;
-  background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px #000000;
+  background: url("../images/fondindien3noir.jpg") no-repeat scroll 50% 140px #000000;
   background-size: 1500px;
   color: white !important;
 }
@@ -975,8 +1088,7 @@ body .extenseur {
   .home .product-cloud ul.products li.product {
     position: relative;
     margin: 3.6% !important;
-    width: 26.1%;
-    box-shadow: 5px 5px 0 0 rgba(100, 100, 100, 0.8), 0 5px 6px 1px rgba(0, 0, 0, 0.2);
+    width: 25.2%;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -1002,10 +1114,10 @@ body .extenseur {
     margin-left: 3.6% !important;
   }
   .home .product-cloud ul.products li.product:hover {
-    width: 33.300000000000004%;
+    width: 32.4%;
     margin: 0 !important;
     z-index: 100;
-    box-shadow: 7px 7px 0 0 rgba(100, 100, 100, 0.8), 0 9px 8px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 12px 13px 15px 2px rgba(0, 0, 0, 0.3);
   }
   .home .product-cloud ul.products li.product:hover.first.line1 {
     margin-left: 0% !important;

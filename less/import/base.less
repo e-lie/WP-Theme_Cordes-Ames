@@ -143,7 +143,7 @@ body{
 
     @base-margin: 3.5%;
     @reduced-margin: 3.5%;
-    @base-width: 26.1%;
+    @base-width: 25.2%;
     @active-width: @base-width + (2 * (@base-margin - @reduced-margin)) ;
     @big-margin-left: 3.5%;
     @reduced-bml: @big-margin-left - (@base-margin - @reduced-margin);
@@ -158,11 +158,14 @@ body{
     }
   
     ul.products li.product {
+      background: url("../images/volume_pochette.png") no-repeat scroll;
+      background-size: cover;
       position: relative;
       margin: @base-margin !important;
       width: @base-width;
+      padding: 0 5px 5px 0;
   //     opacity: 0;
-      box-shadow: 5px 5px 0 0 rgba(100, 100, 100, 0.8), 0 5px 6px 1px rgba(0,0,0,0.2);
+      box-shadow: 8px 9px 10px 1px rgba(0,0,0,0.2);
 
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
@@ -209,7 +212,7 @@ body{
   .a-la-une{
     display: none;
     position: absolute;
-    top: 430px;
+    top: 500px;
     width: 96%;
     max-width: 900px;
     padding: 1% 2%;
@@ -259,9 +262,9 @@ body{
 
 }
   
-.single-product{
+.single-product, .single-artist{
   background-color: @darkdarkgrey;
-  background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px black;
+  background: url("../images/fondindien3noir.jpg") no-repeat scroll 50% 140px black;
   background-size: 1500px;
   
   
@@ -288,7 +291,7 @@ body{
   
 
   
-  section.product-content{
+  section.product-content, section.post-content, section.related-albums{
     
     &>br{
       display: none;
@@ -296,10 +299,15 @@ body{
     
     &>h2{
       clear: both;
-      padding: 0 2em 0 2em;
-      margin: 1em 0 0 0;
+      padding: 0 60px 0 60px;
+      margin: 1em auto 0 auto;
       background-color: @pantoneFonce1;
       border-radius: 20px 20px 0 0;
+      max-width: 700px;
+    }
+    
+    &>ul{
+      .content_block_dark;
     }
     
     .product-title{
@@ -315,7 +323,7 @@ body{
     section.product-images{
       float: left;
       margin: 0 0 2em 10%;
-      a.artist-image{
+      a.artist-image.circle{
 	img{
 	  border-radius: 50%;
 	}
@@ -338,7 +346,6 @@ body{
     .description{
       .content_block_dark;
       &>p{
-	max-width: 60em;
 	margin: 0 auto;
       }
     }
@@ -364,6 +371,19 @@ body{
       margin: 0 auto;
     }
   }
+  
+  section.post-content{
+    section.product-images{
+      float: left;
+      margin: 0  auto 2em auto;
+      a.artist-image{
+	img{
+	  border-radius: 50%;
+	}
+      }
+    }
+  }
+
 }
 
  // ------------------------------------------- BLOG ----------------------------------------------------
@@ -440,7 +460,7 @@ body{
 
 .post-type-archive-product, .page-template-archive-artist-php, .archive.tax-product_cat, .single-artist, .post-type-archive-artist{
   background-color: @darkdarkgrey;
-  background: url("../images/fondindien2noir.jpg") no-repeat scroll 50% 140px black;
+  background: url("../images/fondindien3noir.jpg") no-repeat scroll 50% 140px black;
   background-size: 1500px;
   
   
