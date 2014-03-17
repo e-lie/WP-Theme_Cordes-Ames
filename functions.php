@@ -365,8 +365,12 @@ add_shortcode( 'bon_coin', 'bon_coin_shortcode' );
 function purchase_shortcode( $atts ) {
 		ob_start();
 		  
-    woocommerce_get_template( 'single-product/add-to-cart/simple.php' );
-    woocommerce_get_template( 'single-product/price.php' );
+//     woocommerce_get_template( 'single-product/add-to-cart/simple.php' );
+//     woocommerce_get_template( 'single-product/price.php' );
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+    do_action( 'woocommerce_single_product_summary' );
   
   
       return '<section class="purchase">'.ob_get_clean().'</section>';

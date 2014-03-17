@@ -379,6 +379,7 @@ body .extenseur {
   padding: 1% 2%;
   margin: 0 auto;
   background-color: rgba(220, 241, 247, 0.9);
+  box-shadow: 8px 9px 10px 1px rgba(0, 0, 0, 0.2);
   z-index: 9999;
 }
 .home .a-la-une .column1,
@@ -499,8 +500,16 @@ body .extenseur {
 .single-artist section.post-content section.product-images,
 .single-product section.related-albums section.product-images,
 .single-artist section.related-albums section.product-images {
-  float: left;
-  margin: 0 0 2em 10%;
+  max-width: 590px;
+  margin: 0 auto 2em auto;
+}
+.single-product section.product-content section.product-images a img,
+.single-artist section.product-content section.product-images a img,
+.single-product section.post-content section.product-images a img,
+.single-artist section.post-content section.product-images a img,
+.single-product section.related-albums section.product-images a img,
+.single-artist section.related-albums section.product-images a img {
+  width: 49%;
 }
 .single-product section.product-content section.product-images a.artist-image.circle img,
 .single-artist section.product-content section.product-images a.artist-image.circle img,
@@ -518,7 +527,7 @@ body .extenseur {
 .single-artist section.related-albums section.purchase {
   float: left;
   margin-bottom: 2em;
-  width: 28%;
+  width: 29%;
   padding: 1%;
   text-align: center;
 }
@@ -557,7 +566,8 @@ body .extenseur {
 .single-product section.related-albums .listening,
 .single-artist section.related-albums .listening {
   float: left;
-  width: 28%;
+  width: 29%;
+  min-width: 250px;
   padding: 1%;
 }
 .single-product section.product-content .listening > br,
@@ -1154,6 +1164,14 @@ body .extenseur {
   }
   .home .a-la-une .recent-posts {
     width: 100%;
+  }
+  .single-product section.product-content .listening,
+  .single-artist section.product-content .listening,
+  .single-product section.post-content .listening,
+  .single-artist section.post-content .listening,
+  .single-product section.related-albums .listening,
+  .single-artist section.related-albums .listening {
+    margin-left: 20%;
   }
 }
 @media only screen and (min-width: 1160px) {
