@@ -302,7 +302,7 @@ body{
       padding: 0 60px 0 60px;
       margin: 1em auto 0 auto;
       background-color: @pantoneFonce1;
-      border-radius: 20px 20px 0 0;
+      border-radius: 3px 3px 0 0;
       max-width: 700px;
     }
     
@@ -323,7 +323,10 @@ body{
     section.product-images{
       max-width: 590px;
       margin: 0 auto 2em auto;
-      a img{ width: 49%; }
+      a img{
+	width: 49%;
+	vertical-align: middle;
+      }
       a.artist-image.circle{
 	img{
 	  border-radius: 50%;
@@ -380,6 +383,7 @@ body{
       max-width: 290px;
       a img{ 
 	width: 100%;
+	vertical-align: middle;
 	margin: 0 auto;
       }
       a.artist-image{

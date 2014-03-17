@@ -68,7 +68,7 @@
   max-width: 700px;
   padding: 1em 60px 2em 60px;
   background-color: #333333;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 3px 3px;
   margin: 0 auto 2em auto;
 }
 .style1_button_checked + label {
@@ -462,7 +462,7 @@ body .extenseur {
   padding: 0 60px 0 60px;
   margin: 1em auto 0 auto;
   background-color: #189fbb;
-  border-radius: 20px 20px 0 0;
+  border-radius: 3px 3px 0 0;
   max-width: 700px;
 }
 .single-product section.product-content > ul,
@@ -474,7 +474,7 @@ body .extenseur {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
   background-color: #333333;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 3px 3px;
   margin: 0 auto 2em auto;
 }
 .single-product section.product-content .product-title,
@@ -510,6 +510,7 @@ body .extenseur {
 .single-product section.related-albums section.product-images a img,
 .single-artist section.related-albums section.product-images a img {
   width: 49%;
+  vertical-align: middle;
 }
 .single-product section.product-content section.product-images a.artist-image.circle img,
 .single-artist section.product-content section.product-images a.artist-image.circle img,
@@ -548,7 +549,7 @@ body .extenseur {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
   background-color: #333333;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 3px 3px;
   margin: 0 auto 2em auto;
 }
 .single-product section.product-content .description > p,
@@ -593,7 +594,7 @@ body .extenseur {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
   background-color: #333333;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 3px 3px;
   margin: 0 auto 2em auto;
 }
 .single-product section.product-content iframe,
@@ -613,6 +614,7 @@ body .extenseur {
 .single-product section.post-content section.product-images a img,
 .single-artist section.post-content section.product-images a img {
   width: 100%;
+  vertical-align: middle;
   margin: 0 auto;
 }
 .single-product section.post-content section.product-images a.artist-image img,
