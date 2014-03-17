@@ -378,8 +378,7 @@ body .extenseur {
   max-width: 900px;
   padding: 1% 2%;
   margin: 0 auto;
-  background-color: rgba(21, 110, 127, 0.9);
-  border-radius: 10px;
+  background-color: rgba(220, 241, 247, 0.9);
   z-index: 9999;
 }
 .home .a-la-une .column1,
@@ -394,17 +393,15 @@ body .extenseur {
 }
 .home .a-la-une p {
   text-align: justify;
-  color: white;
 }
 .home .a-la-une h2 {
-  color: white;
+  /*color: white;*/
 }
 .home .a-la-une br {
   display: none;
 }
 .home .a-la-une a.close {
   float: right;
-  color: white;
 }
 .home .a-la-une a.close:hover {
   color: #23c2e3;

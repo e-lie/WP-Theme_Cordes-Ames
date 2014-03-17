@@ -234,7 +234,7 @@ add_shortcode( 'a_la_une_4', 'a_la_une_4_shortcode' );
 function about_begin_shortcode( $atts ) {
 		ob_start();
 		return '<div class="about-area">
-                <a href="#"><h2>' . $atts['title'] . '</h2></a>' . ob_get_clean() ;
+                <a href="'.$atts['title_link'].'"><h2>' . $atts['title'] . '</h2></a>' . ob_get_clean() ;
 	}
 
 add_shortcode( 'about_begin', 'about_begin_shortcode' );
