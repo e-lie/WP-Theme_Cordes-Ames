@@ -458,6 +458,22 @@ function desc_end_shortcode( $atts ) {
 
 add_shortcode( 'desc_end', 'desc_end_shortcode' );
 
+function bloc_begin_shortcode( $atts ) {
+		extract(shortcode_atts(array(
+		      'title' 	=> ''
+		), $atts));
+		return '<h2>'.$atts['title'].'</h2><div class="description">';
+	}
+
+add_shortcode( 'bloc_begin', 'bloc_begin_shortcode' );
+
+function bloc_end_shortcode( $atts ) {
+		
+		return '<div class="extenseur"></div></div>' ;
+}
+
+add_shortcode( 'bloc_end', 'bloc_end_shortcode' );
+
 //------------------------------------------
 
 function albums_begin_shortcode( $atts ) {

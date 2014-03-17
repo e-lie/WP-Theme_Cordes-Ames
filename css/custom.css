@@ -527,7 +527,7 @@ body .extenseur {
 .single-artist section.related-albums section.purchase {
   float: left;
   margin-bottom: 2em;
-  width: 29%;
+  width: 48%;
   padding: 1%;
   text-align: center;
 }
@@ -566,7 +566,7 @@ body .extenseur {
 .single-product section.related-albums .listening,
 .single-artist section.related-albums .listening {
   float: left;
-  width: 29%;
+  width: 48%;
   min-width: 250px;
   padding: 1%;
 }
@@ -607,8 +607,13 @@ body .extenseur {
 }
 .single-product section.post-content section.product-images,
 .single-artist section.post-content section.product-images {
-  float: left;
   margin: 0  auto 2em auto;
+  max-width: 290px;
+}
+.single-product section.post-content section.product-images a img,
+.single-artist section.post-content section.product-images a img {
+  width: 100%;
+  margin: 0 auto;
 }
 .single-product section.post-content section.product-images a.artist-image img,
 .single-artist section.post-content section.product-images a.artist-image img {
@@ -1044,7 +1049,7 @@ body .extenseur {
     height: 1.7em;
   }
   #header #menu-checkbox:checked ~ #navigation {
-    height: 8.2em;
+    height: 9.6em;
   }
   #header #menu-checkbox:checked ~ #navigation + label {
     background-color: #aaa;
@@ -1164,14 +1169,6 @@ body .extenseur {
   }
   .home .a-la-une .recent-posts {
     width: 100%;
-  }
-  .single-product section.product-content .listening,
-  .single-artist section.product-content .listening,
-  .single-product section.post-content .listening,
-  .single-artist section.post-content .listening,
-  .single-product section.related-albums .listening,
-  .single-artist section.related-albums .listening {
-    margin-left: 20%;
   }
 }
 @media only screen and (min-width: 1160px) {
