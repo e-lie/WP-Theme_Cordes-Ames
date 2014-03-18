@@ -125,8 +125,8 @@ jQuery.noConflict();
       .html("<div style='text-align: center; padding: 30px;'><img src='" + $('#archive-browser').attr('theme-path') + "' /></div>");
   
     var dateArray = $("#date-choice").val().split("/");
-    var y = dateArray[4];
-    var m = dateArray[5];
+    var y = dateArray[3];
+    var m = dateArray[4];
     var cat = $("#cat").val();
     var target = $("#archive-browser").attr("target");
     var type = $("#archive-browser").attr("type");
