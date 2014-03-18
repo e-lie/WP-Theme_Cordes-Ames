@@ -15,7 +15,7 @@
 .gradient-menu {
   width: 65%;
   margin: 0 auto;
-  height: 0.6em;
+  height: 8px;
   background: -moz-linear-gradient(left, rgba(21, 110, 127, 0) 0%, rgba(21, 110, 127, 0.9) 30%, #156e7f 50%, rgba(21, 110, 127, 0.9) 70%, rgba(21, 110, 127, 0) 100%);
   /* FF3.6+ */
 
@@ -67,12 +67,12 @@
 .content_block_dark {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
-  background-color: #333333;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0 0 3px 3px;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 0em auto;
 }
 .style1_button_checked + label {
-  background-color: #158ca5;
+  background-color: #12798e;
 }
 .style2_button_checked + label {
   background-color: #aaa;
@@ -209,7 +209,7 @@ body a.button:hover {
   box-shadow: none;
 }
 body a.button:active {
-  background-color: #158ca5;
+  background-color: #12798e;
   background-image: none;
   border: 0px;
   text-shadow: none;
@@ -233,7 +233,7 @@ body .extenseur {
 }
 #header hgroup {
   width: 100%;
-  max-width: 1160px;
+  max-width: 960px;
   margin: 0 auto;
   margin-bottom: 1.3em;
 }
@@ -245,7 +245,7 @@ body .extenseur {
 }
 #header #navigation {
   height: auto;
-  max-width: 1250px;
+  max-width: 1050px;
   margin: 0 auto;
   overflow: hidden;
   line-height: 1.5em;
@@ -287,7 +287,7 @@ body .extenseur {
   color: black;
 }
 #content {
-  max-width: 1100px;
+  max-width: 900px;
 }
 #sidebar {
   display: none;
@@ -409,28 +409,9 @@ body .extenseur {
 }
 .single-product,
 .single-artist {
-  background-color: #111111;
-  background: url("../images/fondindien3noir.jpg") no-repeat scroll 50% 140px #000000;
+  background-color: white;
+  background: url("../images/fondindien2.jpg") no-repeat scroll 50% 140px;
   background-size: 1500px;
-  color: white !important;
-}
-.single-product a,
-.single-artist a {
-  color: white;
-}
-.single-product h1,
-.single-artist h1,
-.single-product h2,
-.single-artist h2,
-.single-product h3,
-.single-artist h3,
-.single-product h4,
-.single-artist h4,
-.single-product h5,
-.single-artist h5,
-.single-product h6,
-.single-artist h6 {
-  color: white;
 }
 .single-product li.current-menu-item > a,
 .single-artist li.current-menu-item > a {
@@ -459,10 +440,15 @@ body .extenseur {
 .single-product section.related-albums > h2,
 .single-artist section.related-albums > h2 {
   clear: both;
-  padding: 0 60px 0 60px;
-  margin: 1em auto 0 auto;
-  background-color: #189fbb;
+  padding: 0 60px 8px 60px;
+  margin: 0.5em auto 0 auto;
   border-radius: 3px 3px 0 0;
+  background: -moz-linear-gradient(left, rgba(21, 110, 127, 0) 0%, rgba(21, 110, 127, 0.9) 30%, #156e7f 50%, rgba(21, 110, 127, 0.9) 70%, rgba(21, 110, 127, 0) 100%);
+  /* FF3.6+ */
+
+  background-repeat: no-repeat;
+  background-size: 100% 8px;
+  background-position: 0 100%;
   max-width: 700px;
 }
 .single-product section.product-content > ul,
@@ -473,9 +459,9 @@ body .extenseur {
 .single-artist section.related-albums > ul {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
-  background-color: #333333;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0 0 3px 3px;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 0em auto;
 }
 .single-product section.product-content .product-title,
 .single-artist section.product-content .product-title,
@@ -501,7 +487,7 @@ body .extenseur {
 .single-product section.related-albums section.product-images,
 .single-artist section.related-albums section.product-images {
   max-width: 590px;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 1em auto;
 }
 .single-product section.product-content section.product-images a img,
 .single-artist section.product-content section.product-images a img,
@@ -527,7 +513,6 @@ body .extenseur {
 .single-product section.related-albums section.purchase,
 .single-artist section.related-albums section.purchase {
   float: left;
-  margin-bottom: 2em;
   width: 48%;
   padding: 1%;
   text-align: center;
@@ -548,9 +533,9 @@ body .extenseur {
 .single-artist section.related-albums .description {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
-  background-color: #333333;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0 0 3px 3px;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 0em auto;
 }
 .single-product section.product-content .description > p,
 .single-artist section.product-content .description > p,
@@ -593,9 +578,9 @@ body .extenseur {
 .single-artist section.related-albums .gallery {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
-  background-color: #333333;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0 0 3px 3px;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 0em auto;
 }
 .single-product section.product-content iframe,
 .single-artist section.product-content iframe,
@@ -608,7 +593,7 @@ body .extenseur {
 }
 .single-product section.post-content section.product-images,
 .single-artist section.post-content section.product-images {
-  margin: 0  auto 2em auto;
+  margin: 0  auto 1em auto;
   max-width: 290px;
 }
 .single-product section.post-content section.product-images a img,
@@ -705,49 +690,16 @@ body .extenseur {
 .archive.tax-product_cat,
 .single-artist,
 .post-type-archive-artist {
-  background-color: #111111;
-  background: url("../images/fondindien3noir.jpg") no-repeat scroll 50% 140px #000000;
+  background-color: white;
+  background: url("../images/fondindien2.jpg") no-repeat scroll 50% 140px;
   background-size: 1500px;
-  color: white !important;
 }
-.post-type-archive-product a,
-.page-template-archive-artist-php a,
-.archive.tax-product_cat a,
-.single-artist a,
-.post-type-archive-artist a {
-  color: white;
-}
-.post-type-archive-product h1,
-.page-template-archive-artist-php h1,
-.archive.tax-product_cat h1,
-.single-artist h1,
-.post-type-archive-artist h1,
-.post-type-archive-product h2,
-.page-template-archive-artist-php h2,
-.archive.tax-product_cat h2,
-.single-artist h2,
-.post-type-archive-artist h2,
-.post-type-archive-product h3,
-.page-template-archive-artist-php h3,
-.archive.tax-product_cat h3,
-.single-artist h3,
-.post-type-archive-artist h3,
-.post-type-archive-product h4,
-.page-template-archive-artist-php h4,
-.archive.tax-product_cat h4,
-.single-artist h4,
-.post-type-archive-artist h4,
-.post-type-archive-product h5,
-.page-template-archive-artist-php h5,
-.archive.tax-product_cat h5,
-.single-artist h5,
-.post-type-archive-artist h5,
-.post-type-archive-product h6,
-.page-template-archive-artist-php h6,
-.archive.tax-product_cat h6,
-.single-artist h6,
-.post-type-archive-artist h6 {
-  color: white;
+.post-type-archive-product ul,
+.page-template-archive-artist-php ul,
+.archive.tax-product_cat ul,
+.single-artist ul,
+.post-type-archive-artist ul {
+  margin: 0;
 }
 .post-type-archive-product li.current-menu-item > a,
 .page-template-archive-artist-php li.current-menu-item > a,
@@ -819,14 +771,14 @@ body .extenseur {
 .archive.tax-product_cat ul.products > li a,
 .single-artist ul.products > li a,
 .post-type-archive-artist ul.products > li a {
-  color: #47cce8;
+  color: #189fbb;
 }
 .post-type-archive-product ul.products > li a:hover,
 .page-template-archive-artist-php ul.products > li a:hover,
 .archive.tax-product_cat ul.products > li a:hover,
 .single-artist ul.products > li a:hover,
 .post-type-archive-artist ul.products > li a:hover {
-  color: #158ca5;
+  color: #12798e;
 }
 .post-type-archive-product ul.products.list > li,
 .page-template-archive-artist-php ul.products.list > li,
@@ -838,7 +790,7 @@ body .extenseur {
   width: 96%;
   margin-bottom: 2em;
   text-align: left;
-  background-color: rgba(20, 20, 20, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product ul.products.list > li a.thumb,
@@ -911,7 +863,7 @@ body .extenseur {
 .archive.tax-product_cat ul.products.grid,
 .single-artist ul.products.grid,
 .post-type-archive-artist ul.products.grid {
-  background-color: rgba(20, 20, 20, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product ul.products.grid > li,
@@ -958,7 +910,7 @@ body .extenseur {
 .single-artist #archive-browser,
 .post-type-archive-artist #archive-browser {
   padding: 2%;
-  background-color: rgba(20, 20, 20, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product #archive-browser > div,
@@ -1020,14 +972,14 @@ body .extenseur {
   box-shadow: none;
 }
 .product-cloud label:active {
-  background-color: #158ca5;
+  background-color: #12798e;
   background-image: none;
   border: 0px;
   text-shadow: none;
   box-shadow: none;
 }
 .product-cloud input.css-filter:checked + label {
-  background-color: #158ca5;
+  background-color: #12798e;
 }
 @media only screen and (min-width: 600px) {
   #header #menu-button {
@@ -1091,7 +1043,7 @@ body .extenseur {
     max-width: 30%;
   }
   .gradient-menu {
-    width: 1200px;
+    width: 1000px;
   }
   .home .product-cloud {
     text-align: center;
