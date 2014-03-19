@@ -52,7 +52,6 @@ get_header('shop'); ?>
 				<?php woocommerce_product_subcategories(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-				    <?php var_dump(wp_get_object_terms($post->ID, 'product_cat')); ?>
 				    <?php if ( has_term('albums', 'product_cat', $post) ) : ?>
 
 					<?php woocommerce_get_template_part( 'content', 'product' ); ?>

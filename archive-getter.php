@@ -45,7 +45,6 @@
 	    <?php 
 	        if (have_posts()) : while (have_posts()) : the_post(); ?>
 				    <?php if ( has_term('albums', 'product_cat', $post) ) : ?>
-		
 					<?php woocommerce_get_template_part( 'content' , $post_type ); ?>
 				    <?php endif; ?>
 	    <?php 
