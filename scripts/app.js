@@ -27,7 +27,7 @@ jQuery.noConflict();
 	//Récupération du margin, qui permettra de centrer la fenêtre - on ajuste de 80px en conformité avec le CSS
 	var boxWidth = parseInt($('.'+popID).css('paddingLeft'))  +  $('.'+popID).width()  + parseInt($('.'+popID).css('paddingRight'));
 	var popMargLeft = ($('body').width()-boxWidth)/$('body').width()/2*100;
-	var margTop = $(window).height()-70;
+	var margTop = $(window).height()-100;
 	console.log(margTop);
 	//Apply Margin to Popup
 	$('.' + popID).css({ 
