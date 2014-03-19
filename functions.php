@@ -199,7 +199,7 @@ add_shortcode( 'music', 'music_shortcode' );
 
 function a_la_une_1_shortcode ( $atts ) {
 		ob_start();
-		return '<section class="a-la-une"><h2> à la une...</h2><section class="column1">'.ob_get_clean();
+		return '<section class="a-la-une"><div class="bg-block1"></div><h2> à la une...</h2><section class="column1">'.ob_get_clean();
 	}
 
 add_shortcode( 'a_la_une_1', 'a_la_une_1_shortcode' );
