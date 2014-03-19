@@ -180,9 +180,11 @@ function music_shortcode( $atts ) {
 	<ul class="products rb-grid">
 
 	  <?php  while ( $products->have_posts() ) : $products->the_post(); ?>
+	    <?php if ( has_term('albums', 'product_cat', $post) ) : ?>
 
 	    <?php woocommerce_get_template_part( 'content', 'product-cloud' ); ?>
 
+	    <?php endif; ?>
 	  <?php endwhile; // end of the loop. ?>
 
 	</ul>
