@@ -27,9 +27,12 @@ jQuery.noConflict();
 	//Récupération du margin, qui permettra de centrer la fenêtre - on ajuste de 80px en conformité avec le CSS
 	var boxWidth = parseInt($('.'+popID).css('paddingLeft'))  +  $('.'+popID).width()  + parseInt($('.'+popID).css('paddingRight'));
 	var popMargLeft = ($('body').width()-boxWidth)/$('body').width()/2*100;
+	var margTop = $(window).height()-70;
+	console.log(margTop);
 	//Apply Margin to Popup
 	$('.' + popID).css({ 
-		'left' : popMargLeft +'%'
+		'left' : popMargLeft +'%',
+		'top' : margTop + 'px'
 	});
 	
 	//Apparition du fond - .css({'filter' : 'alpha(opacity=80)'}) pour corriger les bogues d'anciennes versions de IE
