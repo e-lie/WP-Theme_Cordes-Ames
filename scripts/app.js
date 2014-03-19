@@ -107,7 +107,8 @@ jQuery.noConflict();
     //}}}
 
     //{{{ AJAX get archives and display
-    if($('body').hasClass("post-type-archive-product") || $('body').hasClass("page-template-archive-artist-php") ){
+    if($('body').hasClass("post-type-archive-product") || $('body').hasClass("page-template-archive-artist-php") ||
+	( $('body').hasClass('archive') && $('body').hasClass('tax-product_cat') ) ) {
       
       $("a.page-numbers").each(function() {
           $(this).attr("page", $(this).attr("href").split("//")[1]);

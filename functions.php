@@ -282,7 +282,7 @@ function recent_posts_shortcode( $atts ) {
 
 		if ( $products->have_posts() ) : ?>
 
-      <a href="<?php echo $atts['title_link'] ?>"><h2><?php echo $atts['title'] ?></h2></a>
+      <a href="<?php echo $atts['title_linkgg'] ?>"><h2><?php echo $atts['title'] ?></h2></a>
   
       <ul class="recent-posts-list">
 
