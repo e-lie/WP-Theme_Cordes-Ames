@@ -64,10 +64,9 @@
   /* IE6-9 */
 
 }
-.content_block_dark {
+.content_block {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0 0 3px 3px;
   margin: 0 auto 0em auto;
 }
@@ -491,7 +490,6 @@ body .extenseur {
 .single-artist section.related-albums > ul {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0 0 3px 3px;
   margin: 0 auto 0em auto;
 }
@@ -518,8 +516,29 @@ body .extenseur {
 .single-artist section.post-content section.product-images,
 .single-product section.related-albums section.product-images,
 .single-artist section.related-albums section.product-images {
-  max-width: 590px;
+  max-width: 700px;
   margin: 0 auto 1em auto;
+}
+.single-product section.product-content section.product-images a,
+.single-artist section.product-content section.product-images a,
+.single-product section.post-content section.product-images a,
+.single-artist section.post-content section.product-images a,
+.single-product section.related-albums section.product-images a,
+.single-artist section.related-albums section.product-images a {
+  background: url("../images/volume_pochette.png") no-repeat scroll;
+  background-size: cover;
+  display: block;
+  padding: 0 5px 5px 0;
+  width: 40%;
+  float: left;
+}
+.single-product section.product-content section.product-images a.artist-image,
+.single-artist section.product-content section.product-images a.artist-image,
+.single-product section.post-content section.product-images a.artist-image,
+.single-artist section.post-content section.product-images a.artist-image,
+.single-product section.related-albums section.product-images a.artist-image,
+.single-artist section.related-albums section.product-images a.artist-image {
+  float: right;
 }
 .single-product section.product-content section.product-images a img,
 .single-artist section.product-content section.product-images a img,
@@ -527,8 +546,7 @@ body .extenseur {
 .single-artist section.post-content section.product-images a img,
 .single-product section.related-albums section.product-images a img,
 .single-artist section.related-albums section.product-images a img {
-  width: 49%;
-  vertical-align: middle;
+  width: 100%;
 }
 .single-product section.product-content section.product-images a.artist-image.circle img,
 .single-artist section.product-content section.product-images a.artist-image.circle img,
@@ -565,7 +583,6 @@ body .extenseur {
 .single-artist section.related-albums .description {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0 0 3px 3px;
   margin: 0 auto 0em auto;
 }
@@ -610,7 +627,6 @@ body .extenseur {
 .single-artist section.related-albums .gallery {
   max-width: 700px;
   padding: 1em 60px 2em 60px;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0 0 3px 3px;
   margin: 0 auto 0em auto;
 }
@@ -822,7 +838,6 @@ body .extenseur {
   width: 96%;
   margin-bottom: 2em;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product ul.products.list > li a.thumb,
@@ -830,8 +845,12 @@ body .extenseur {
 .archive.tax-product_cat ul.products.list > li a.thumb,
 .single-artist ul.products.list > li a.thumb,
 .post-type-archive-artist ul.products.list > li a.thumb {
+  background: url("../images/volume_pochette.png") no-repeat scroll;
+  background-size: cover;
+  display: block;
+  padding: 0 5px 5px 0;
   float: left;
-  width: 30%;
+  width: 29%;
   margin-right: 5%;
 }
 .post-type-archive-product ul.products.list > li a.thumb img,
@@ -895,7 +914,6 @@ body .extenseur {
 .archive.tax-product_cat ul.products.grid,
 .single-artist ul.products.grid,
 .post-type-archive-artist ul.products.grid {
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product ul.products.grid > li,
@@ -942,7 +960,6 @@ body .extenseur {
 .single-artist #archive-browser,
 .post-type-archive-artist #archive-browser {
   padding: 2%;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 .post-type-archive-product #archive-browser > div,

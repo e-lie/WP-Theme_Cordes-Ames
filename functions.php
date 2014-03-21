@@ -437,8 +437,11 @@ function product_images_shortcode( $atts ) {
     ?>
     <a href="<?php echo $product_image_link?>" itemprop="image" class="product-image" title="<?php $image_title?>"  rel="prettyPhoto' . $gallery . '">
      <?php the_post_thumbnail( 'medium', array('title' => $product_image_title)); ?>
-    </a><?php
+    </a>
+    <?php
     } }
+    ?><div class="extenseur"></div>
+    <?php
   
       return '<section class="product-images">'.ob_get_clean().'</section>';
 }

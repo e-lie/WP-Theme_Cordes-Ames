@@ -328,7 +328,7 @@ body{
     }
     
     &>ul{
-      .content_block_dark;
+      .content_block;
     }
     
     .product-title{
@@ -342,11 +342,23 @@ body{
     }
     
     section.product-images{
-      max-width: 590px;
+      max-width: 700px;
       margin: 0 auto 1em auto;
-      a img{
-	width: 49%;
-	vertical-align: middle;
+      a{
+	background: url("../images/volume_pochette.png") no-repeat scroll;
+	background-size: cover;
+	display: block;
+	padding: 0 5px 5px 0;
+	width: 40%;
+	float: left;
+	
+	&.artist-image{
+	  float: right;
+	}
+	
+	img{
+	  width: 100%;
+	}
       }
       a.artist-image.circle{
 	img{
@@ -368,14 +380,14 @@ body{
     }
     
     .description{
-      .content_block_dark;
+      .content_block;
       &>p{
 	margin: 0 auto;
       }
     }
     
     .listening{
-      //.content_block_dark;
+      //.content_block;
       &>br, &>p{
 	display: none;
       }
@@ -388,7 +400,7 @@ body{
     }
     
     .gallery{
-      .content_block_dark;
+      .content_block;
     }
     
     iframe{
@@ -533,8 +545,10 @@ body{
       & > li {
 	padding: 2%;
 	
-	a.thumb img{
-	  width: 100%
+	a.thumb {
+	  img{
+	    width: 100%
+	  }
 	}
 	
 	a{
@@ -555,13 +569,16 @@ body{
 	  margin-bottom: 2em;
 	  text-align: left;
 	  
-	  background-color: @whiteTransparent;
 	  border-radius: 10px;
 	  
 	  
 	  a.thumb {
+	    background: url("../images/volume_pochette.png") no-repeat scroll;
+	    background-size: cover;
+	    display: block;
+	    padding: 0 5px 5px 0;
 	    float: left;
-	    width: 30%;
+	    width: 29%;
 	    margin-right: 5%;
 	    //margin-bottom: 2em;
 	    
@@ -609,7 +626,6 @@ body{
 
       &.grid{
 	
-	background-color: @whiteTransparent;
 	border-radius: 10px;
 	
 	& > li {
@@ -641,7 +657,6 @@ body{
     #archive-browser{
       
       padding: 2%;
-      background-color: @whiteTransparent;
       border-radius: 10px;
     
       & > div {
