@@ -28,7 +28,7 @@ global $woo_options, $woocommerce;
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo(get_bloginfo( 'stylesheet_directory' ).'/css/custom.css'); ?>" media="screen" />
-
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <?php
@@ -36,53 +36,12 @@ global $woo_options, $woocommerce;
 	woo_head();
 ?>
 
-<!--<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/custom.less" /> -->
-<?php  //wp_enqueue_script( 'less_js', get_bloginfo('stylesheet_directory').'/scripts/less-1.5.0.min.js', array() , '1.5.0', false ); ?>
-
 <?php wp_enqueue_script( 'modernizr', get_bloginfo('stylesheet_directory').'/scripts/modernizr.custom.js', array() , '2.6.2', true ); ?> 
 <?php wp_enqueue_script( 'boxgrid', get_bloginfo('stylesheet_directory').'/scripts/boxgrid.js', array() , '1.0', true ); ?> 
 <?php wp_enqueue_script( 'cookie', get_bloginfo('stylesheet_directory').'/scripts/jquery.cookie.js', array() , '1.0', true ); ?> 
 <?php wp_enqueue_script( 'app', get_bloginfo('stylesheet_directory').'/scripts/app.js', array() , '1.0', true ); ?> 
 
 <?php wp_enqueue_script( 'jplayer', get_bloginfo('stylesheet_directory').'/scripts/jquery.jplayer.min2-5-0.js', array() , '2.5.0', false ); ?> 
-<?php// wp_enqueue_script( 'mp3-jplayer', get_bloginfo('stylesheet_directory').'/scripts/mp3-jplayer-1.8.5.js', array() , '1.8.5', false ); ?> 
-
-<?php /*if(is_page('Accueil')){
-$cats = get_subcategories_as_array('product_cat', 16);
-
-$resulting_css = "input.filter-All:checked ~ .products li.product {
-  opacity: 1 !important;
-}
-";
-
-foreach( $cats as $cat ){
-  $line1 = "input.filter-{$cat}:checked ~ .products li.product.{$cat}";
-  $line2 = "input.filter-{$cat}:checked ~ .products li.product:not(.{$cat})";
-  
-  $resulting_css = $resulting_css.$line1.'{
-    opacity: 1 !important;
-  }
-  ';
-  
-  $resulting_css = $resulting_css.$line2.'{
-	opacity: 0.2;
-	box-shadow: none;
-	cursor: default;
-  }
-  ';
-  
-  $resulting_css = $resulting_css.$line2.':hover {
-	width: 14%;
-	margin: 3% !important;
-	z-index: 100;
-  }
-  ';
-}
-
-echo ("<style type='text/css'>".$resulting_css.'</style>');
-
-
-}*/ ?>
 
 
 </head>
