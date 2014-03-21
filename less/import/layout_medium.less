@@ -1,5 +1,7 @@
 
 @media only screen and (min-width: 600px) { 
+  
+
 #header {
   #menu-button {
     display: block;
@@ -52,11 +54,12 @@
 @media only screen and (min-width: 768px) { 
 
   .post img,
-.type-page img {
-	max-width: 30%;
-}
+  .type-page img {
+	  max-width: 30%;
+  }
+    
 
-    .gradient-menu{ width: 1000px; }
+  .gradient-menu{ width: 1000px; }
 
 
   .home {
@@ -177,6 +180,15 @@
   }
   
   .single-product, .single-artist{
+	
+    #header #navigation{
+      width: 75%;
+    }
+    
+    #content{
+      width: 75%;
+    }
+
     section.product-content, section.post-content, section.related-albums{
       .listening{
 	//margin-left: 20%;
@@ -184,5 +196,29 @@
     }
   }
   
+  
+  .post-type-archive-product, .page-template-archive-artist-php, .archive.tax-product_cat, .single-artist, .post-type-archive-artist{
+    #archive-browser{
+      & > div {
+	width: 25%;
+	float: left;
+	text-align: center;
+      }
+    }
+  }
+  
+   
+  .blog, .single-post, .archive.category{
+    #content{
+      margin: 1.7em auto 0 auto;
+      
+      .col-left{
+	width: 65%
+      }
+      .col-right{
+	width: 23%;
+      }
+    }
+  }
   
 }

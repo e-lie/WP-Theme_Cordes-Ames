@@ -66,9 +66,14 @@
 }
 .content_block {
   max-width: 700px;
-  padding: 1em 60px 2em 60px;
+  padding: 1em 20px 2em 20px;
   border-radius: 0 0 3px 3px;
   margin: 0 auto 0em auto;
+}
+@media only screen and (min-width: 600px) {
+  .content_block {
+    padding: 1em 60px 2em 60px;
+  }
 }
 .style1_button_checked + label {
   background-color: #12798e;
@@ -384,7 +389,6 @@ body .extenseur {
   margin-bottom: 40px;
 }
 .home .a-la-une .bg-block1 {
-  opacity: 0.9;
   padding: 2px 190px 0px 7px;
   background: url("../images/fond-a-la-une/top-left.png") no-repeat top left, url("../images/fond-a-la-une/bottom-left.png") no-repeat bottom left, url("../images/fond-a-la-une/top-right2.png") no-repeat top right, url("../images/fond-a-la-une/center.jpg") repeat top left content-box;
   position: absolute;
@@ -429,14 +433,6 @@ body .extenseur {
 .single-product li.current-menu-item > a,
 .single-artist li.current-menu-item > a {
   color: grey !important;
-}
-.single-product #header #navigation,
-.single-artist #header #navigation {
-  width: 75%;
-}
-.single-product #content,
-.single-artist #content {
-  width: 75%;
 }
 .single-product section.product-content > br,
 .single-artist section.product-content > br,
@@ -489,9 +485,19 @@ body .extenseur {
 .single-product section.related-albums > ul,
 .single-artist section.related-albums > ul {
   max-width: 700px;
-  padding: 1em 60px 2em 60px;
+  padding: 1em 20px 2em 20px;
   border-radius: 0 0 3px 3px;
   margin: 0 auto 0em auto;
+}
+@media only screen and (min-width: 600px) {
+  .single-product section.product-content > ul,
+  .single-artist section.product-content > ul,
+  .single-product section.post-content > ul,
+  .single-artist section.post-content > ul,
+  .single-product section.related-albums > ul,
+  .single-artist section.related-albums > ul {
+    padding: 1em 60px 2em 60px;
+  }
 }
 .single-product section.product-content .product-title,
 .single-artist section.product-content .product-title,
@@ -516,8 +522,22 @@ body .extenseur {
 .single-artist section.post-content section.product-images,
 .single-product section.related-albums section.product-images,
 .single-artist section.related-albums section.product-images {
-  max-width: 700px;
+  max-width: 820px;
   margin: 0 auto 1em auto;
+  max-width: 700px;
+  padding: 1em 20px 2em 20px;
+  border-radius: 0 0 3px 3px;
+  margin: 0 auto 0em auto;
+}
+@media only screen and (min-width: 600px) {
+  .single-product section.product-content section.product-images,
+  .single-artist section.product-content section.product-images,
+  .single-product section.post-content section.product-images,
+  .single-artist section.post-content section.product-images,
+  .single-product section.related-albums section.product-images,
+  .single-artist section.related-albums section.product-images {
+    padding: 1em 60px 2em 60px;
+  }
 }
 .single-product section.product-content section.product-images a,
 .single-artist section.product-content section.product-images a,
@@ -564,7 +584,7 @@ body .extenseur {
 .single-artist section.related-albums section.purchase {
   float: left;
   width: 48%;
-  padding: 1%;
+  padding: 2%;
   text-align: center;
 }
 .single-product section.product-content .songs-list,
@@ -582,9 +602,19 @@ body .extenseur {
 .single-product section.related-albums .description,
 .single-artist section.related-albums .description {
   max-width: 700px;
-  padding: 1em 60px 2em 60px;
+  padding: 1em 20px 2em 20px;
   border-radius: 0 0 3px 3px;
   margin: 0 auto 0em auto;
+}
+@media only screen and (min-width: 600px) {
+  .single-product section.product-content .description,
+  .single-artist section.product-content .description,
+  .single-product section.post-content .description,
+  .single-artist section.post-content .description,
+  .single-product section.related-albums .description,
+  .single-artist section.related-albums .description {
+    padding: 1em 60px 2em 60px;
+  }
 }
 .single-product section.product-content .description > p,
 .single-artist section.product-content .description > p,
@@ -603,7 +633,6 @@ body .extenseur {
   float: left;
   width: 48%;
   min-width: 250px;
-  padding: 1%;
 }
 .single-product section.product-content .listening > br,
 .single-artist section.product-content .listening > br,
@@ -626,9 +655,19 @@ body .extenseur {
 .single-product section.related-albums .gallery,
 .single-artist section.related-albums .gallery {
   max-width: 700px;
-  padding: 1em 60px 2em 60px;
+  padding: 1em 20px 2em 20px;
   border-radius: 0 0 3px 3px;
   margin: 0 auto 0em auto;
+}
+@media only screen and (min-width: 600px) {
+  .single-product section.product-content .gallery,
+  .single-artist section.product-content .gallery,
+  .single-product section.post-content .gallery,
+  .single-artist section.post-content .gallery,
+  .single-product section.related-albums .gallery,
+  .single-artist section.related-albums .gallery {
+    padding: 1em 60px 2em 60px;
+  }
 }
 .single-product section.product-content iframe,
 .single-artist section.product-content iframe,
@@ -662,7 +701,7 @@ body .extenseur {
 .blog #content,
 .single-post #content,
 .archive.category #content {
-  margin-top: 1.7em;
+  margin: 1.7em 20px 0 20px;
 }
 .blog #content aside.post-meta > ul,
 .single-post #content aside.post-meta > ul,
@@ -681,11 +720,6 @@ body .extenseur {
 .single-post #content nav#post-entries .nav-next,
 .archive.category #content nav#post-entries .nav-next {
   max-width: 45%;
-}
-.blog #content .col-left,
-.single-post #content .col-left,
-.archive.category #content .col-left {
-  width: 65%;
 }
 .blog #content .col-left section.post-content,
 .single-post #content .col-left section.post-content,
@@ -722,9 +756,8 @@ body .extenseur {
 .blog #content .col-right,
 .single-post #content .col-right,
 .archive.category #content .col-right {
-  width: 23%;
-  background-color: rgba(21, 110, 127, 0.6);
-  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
   margin: 3em 1% 0 1%;
   padding: 2%;
 }
@@ -931,6 +964,10 @@ body .extenseur {
 .archive.tax-product_cat ul.products.grid > li a.thumb,
 .single-artist ul.products.grid > li a.thumb,
 .post-type-archive-artist ul.products.grid > li a.thumb {
+  background: url("../images/volume_pochette.png") no-repeat scroll;
+  background-size: cover;
+  display: block;
+  padding: 0 5px 5px 0;
   width: 100%;
 }
 .post-type-archive-product ul.products.grid > li section.content,
@@ -967,7 +1004,7 @@ body .extenseur {
 .archive.tax-product_cat #archive-browser > div,
 .single-artist #archive-browser > div,
 .post-type-archive-artist #archive-browser > div {
-  width: 25%;
+  width: 50%;
   float: left;
   text-align: center;
 }
@@ -1172,6 +1209,38 @@ body .extenseur {
   }
   .home .a-la-une .recent-posts {
     width: 100%;
+  }
+  .single-product #header #navigation,
+  .single-artist #header #navigation {
+    width: 75%;
+  }
+  .single-product #content,
+  .single-artist #content {
+    width: 75%;
+  }
+  .post-type-archive-product #archive-browser > div,
+  .page-template-archive-artist-php #archive-browser > div,
+  .archive.tax-product_cat #archive-browser > div,
+  .single-artist #archive-browser > div,
+  .post-type-archive-artist #archive-browser > div {
+    width: 25%;
+    float: left;
+    text-align: center;
+  }
+  .blog #content,
+  .single-post #content,
+  .archive.category #content {
+    margin: 1.7em auto 0 auto;
+  }
+  .blog #content .col-left,
+  .single-post #content .col-left,
+  .archive.category #content .col-left {
+    width: 65%;
+  }
+  .blog #content .col-right,
+  .single-post #content .col-right,
+  .archive.category #content .col-right {
+    width: 23%;
   }
 }
 @media only screen and (min-width: 1160px) {
