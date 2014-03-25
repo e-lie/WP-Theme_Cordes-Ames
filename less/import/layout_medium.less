@@ -31,7 +31,7 @@
   }
   
   #navigation {
-    .transition(height, 0.4s, ease-in-out);  
+    .transition(height 0.4s ease-in-out);  
     
     ul.nav {
       .columns(1);
@@ -88,9 +88,7 @@
 	width: @base-width;
     //     opacity: 0;
   
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+	.transition( all 0.3s);
 	
 	
 	&>a>img{
@@ -123,7 +121,7 @@
 	  width: @active-width;
 	  margin: 0 !important;
 	  z-index: 100;
-	  box-shadow: 12px 13px 15px 2px rgba(0,0,0,0.3);
+	  .box-shadow( 12px 13px 15px 2px rgba(0,0,0,0.3));
   
 	  &.first{
 	    &.line1{

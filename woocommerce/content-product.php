@@ -45,7 +45,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
     <?php
 	$size = 'shop_catalog';
 	if ( has_post_thumbnail() )
-	  the_post_thumbnail("large");
+	  the_post_thumbnail("medium");
 	elseif ( woocommerce_placeholder_img_src() )
 	  echo woocommerce_placeholder_img( $size );
     ?>

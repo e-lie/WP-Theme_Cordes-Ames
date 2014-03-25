@@ -37,12 +37,8 @@ global $woo_options, $woocommerce;
 ?>
 
 <?php wp_enqueue_script( 'modernizr', get_bloginfo('stylesheet_directory').'/scripts/modernizr.custom.js', array() , '2.6.2', true ); ?> 
-<?php wp_enqueue_script( 'boxgrid', get_bloginfo('stylesheet_directory').'/scripts/boxgrid.js', array() , '1.0', true ); ?> 
 <?php wp_enqueue_script( 'cookie', get_bloginfo('stylesheet_directory').'/scripts/jquery.cookie.js', array() , '1.0', true ); ?> 
 <?php wp_enqueue_script( 'app', get_bloginfo('stylesheet_directory').'/scripts/app.js', array() , '1.0', true ); ?> 
-
-<?php wp_enqueue_script( 'jplayer', get_bloginfo('stylesheet_directory').'/scripts/jquery.jplayer.min2-5-0.js', array() , '2.5.0', false ); ?> 
-
 
 </head>
 

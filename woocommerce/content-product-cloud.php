@@ -54,7 +54,7 @@ $position = ($woocommerce_loop['loop'] - 1) % 15;
 
 		<a href="<?php the_permalink(); ?>"><?php
       if ( has_post_thumbnail() ) {
-        the_post_thumbnail('large');
+        the_post_thumbnail('medium');
       }elseif ( woocommerce_placeholder_img_src() ){
         echo woocommerce_placeholder_img( 'shop_catalog' );
       }

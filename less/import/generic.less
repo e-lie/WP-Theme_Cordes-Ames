@@ -1,22 +1,22 @@
-// ---------------------- CSS3 MIXINS ----------------------
-.transition (@target: all, @delay: 0.3s, @mode: ease){
-  -moz-transition: @target @delay @mode;
-  -o-transition: @target @delay @mode;
-  -webkit-transition: @target @delay @mode;
-  transition: @target @delay @mode
-}
+// // ---------------------- CSS3 MIXINS ----------------------
+// .transition (@target: all, @delay: 0.3s, @mode: ease){
+//   -moz-transition: @target @delay @mode;
+//   -o-transition: @target @delay @mode;
+//   -webkit-transition: @target @delay @mode;
+//   transition: @target @delay @mode
+// }
 
-.columns(@number){
-/*   -webkit-columns: @number; */
-/*   -moz-columns: @number; */
-/*   columns: @number; */
-  column-count: @number;
-  column-fill: balance;
-  -moz-column-count: @number;
-  -moz-column-fill: balance;
-  -webkit-column-count: @number;
-  -webkit-column-fill: balance;
-}
+// .columns(@number){
+// /*   -webkit-columns: @number; */
+// /*   -moz-columns: @number; */
+// /*   columns: @number; */
+//   column-count: @number;
+//   column-fill: balance;
+//   -moz-column-count: @number;
+//   -moz-column-fill: balance;
+//   -webkit-column-count: @number;
+//   -webkit-column-fill: balance;
+// }
 
 .background-linear-gradient(@color1, @color2:@color1, @color3:@color2, @position1:0%, @position2:50%, @position3:100%, @gradient-shape:linear, @begin:left, @end:right ){
   background: @color1; /* Old browsers */
@@ -65,8 +65,8 @@
   font-family: @font;
   color: #444;
   font-weight: 400;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
-  .transition(all, 0.2s);
+  .text-shadow( 0 1px rgba(0,0,0,0.3));
+  .transition(all 0.2s);
   &:hover{
     color: @pantone311C;
   }
@@ -101,13 +101,13 @@
 .bordered_glass_block{
   border: 1px solid #ccc;
   background: rgba(0, 0, 0, 0.02);
-  border-radius: 0.6em;
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,0.4);
+  .border-radius( 0.6em);
+  .box-shadow( 0 2px 2px -2px rgba(0,0,0,0.4));
 }
 
 .inner_shadow_block{ // bloc avec une ombre interne en haut et en bas (menu)
   background: @bgMenu;
-  box-shadow: inset 0 0 9px 4px rgba(0,0,0,.2);
+  .box-shadow( inset 0 0 9px 4px rgba(0,0,0,.2));
 }
 
 
@@ -132,7 +132,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
 .content_block {
   max-width: 700px;
   padding: 1em 20px 2em 20px;
-  border-radius: 0 0 3px 3px;
+  .border-radius( 0 0 3px 3px);
   margin: 0 auto 0em auto;
   @media only screen and (min-width: 600px) { 
     padding: 1em 60px 2em 60px;
@@ -144,12 +144,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
 .style1_button(@font:@font1){
   background-image: none;
   border: 0px;
-  text-shadow: none;
-  box-shadow: none;
+  .text-shadow( none);
+  .box-shadow( none);
   
   
   padding: 0 0.4em;
-  border-radius: 10px;
+  .border-radius( 10px);
   min-width: 45px;
   
   font-family: @font;
@@ -163,15 +163,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
     background-color: @pantoneFonce1;
     background-image: none;
     border: 0px;
-    text-shadow: none;
-    box-shadow: none;
+    .text-shadow( none);
+    .box-shadow( none);
   }
   &:active{
     background-color: @pantoneFonce2;
     background-image: none;
     border: 0px;
-    text-shadow: none;
-    box-shadow: none;
+    .text-shadow( none);
+    .box-shadow( none);
   }
 }
 
@@ -186,11 +186,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
   height: 22px;
   background: none;
   border: 2px solid @borderColor;
-  text-shadow: none;
-  box-shadow: none;
+  .text-shadow( none);
+  .box-shadow( none);
   
   
-  border-radius: 50%;
+  .border-radius( 50%);
   
   font-family: @font;
   font-weight: 500;
@@ -200,13 +200,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00156e7f', e
   &:hover{
     background-color: @borderColor;
     background-image: none;
-    text-shadow: none;
-    box-shadow: none;
+    .text-shadow( none);
+    .box-shadow( none);
   }
   &:active{
     background-color: darken(@borderColor, 20%);
-    text-shadow: none;
-    box-shadow: none;
+    .text-shadow( none);
+    .box-shadow( none);
   }
 }
 .style2_button_checked{
