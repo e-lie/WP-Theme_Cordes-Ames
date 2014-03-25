@@ -404,7 +404,7 @@ function product_images_shortcode( $atts ) {
 
     extract(shortcode_atts(array(
 		      'type' 	=> 'product',
-			'shape' 	=> 'circle',
+			'shape' 	=> 'square',
 		), $atts));
 		
     
