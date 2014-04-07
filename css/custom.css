@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,900|Roboto+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400|Roboto+Slab:400,700|);
 /* WOO CUSTOM STYLESHEET
 ---------------------
 */
@@ -282,12 +282,14 @@ body .extenseur {
   color: #23c2e3;
 }
 #header #navigation ul.nav {
-  -webkit-columns: 3;
-  -moz-columns: 3;
-  columns: 3;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  margin-bottom: 5px;
 }
 #header #navigation ul.nav ul.sub-menu li a {
   font-size: 0.85em;
+  display: none;
 }
 #header #navigation ul.nav > li.menu-item {
   text-align: center;
@@ -331,6 +333,9 @@ body .extenseur {
 .home #content p {
   margin: 30px 0 0 0;
 }
+.home #content .a-la-une p {
+  margin: 0px;
+}
 .home .product-cloud {
   text-align: center;
 }
@@ -341,7 +346,7 @@ body .extenseur {
   background: url("../images/volume_pochette.png") no-repeat scroll;
   background-size: cover;
   position: relative;
-  margin: 3.5% !important;
+  margin: 3% !important;
   width: 25.2%;
   padding: 0 5px 5px 0;
   -webkit-box-shadow: 8px 9px 10px 1px rgba(0, 0, 0, 0.2);
@@ -361,16 +366,16 @@ body .extenseur {
   border: 0px !important;
 }
 .home .product-cloud ul.products li.product.first.line1 {
-  margin-left: 3.5% !important;
+  margin-left: 3% !important;
 }
 .home .product-cloud ul.products li.product.first.line2 {
-  margin-left: 3.5% !important;
+  margin-left: 3% !important;
 }
 .home .product-cloud ul.products li.product.first.line3 {
-  margin-left: 3.5% !important;
+  margin-left: 3% !important;
 }
 .home .product-cloud ul.products li.product.first.line4 {
-  margin-left: 3.5% !important;
+  margin-left: 3% !important;
 }
 .home .about-area,
 .home .recent-posts,
@@ -389,25 +394,58 @@ body .extenseur {
   display: none;
   position: absolute;
   top: 500px;
-  width: 96%;
-  max-width: 900px;
+  width: 92%;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 40px 2%;
+  padding: 3%;
   -webkit-box-shadow: 0px 19px 10px -10px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 19px 10px -10px rgba(0, 0, 0, 0.2);
   z-index: 9999;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  border: 2px solid #999;
+}
+.home .a-la-une p {
+  line-height: 1.2em;
+}
+.home .a-la-une img {
+  float: none;
+  margin: 0;
 }
 .home .a-la-une h2 {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  font-size: 3em;
+  text-align: center;
+  max-width: 402px;
+  height: 82px;
+  background: url("../images/fond-a-la-une/a-la-une-title.png") no-repeat top center;
+}
+.home .a-la-une h3 {
+  text-align: left;
+  font-size: 1.6em;
+  line-height: 1em;
+  margin: 0;
+}
+.home .a-la-une p,
+.home .a-la-une h1,
+.home .a-la-une h2,
+.home .a-la-une h3,
+.home .a-la-une h4,
+.home .a-la-une h5 {
+  color: black;
+  font-family: "Crimson Text", serif;
+}
+.home .a-la-une a {
+  font-family: "Crimson Text", serif;
 }
 .home .a-la-une .bg-block1 {
-  padding: 2px 190px 0px 7px;
-  background: url("../images/fond-a-la-une/top-left.png") no-repeat top left, url("../images/fond-a-la-une/bottom-left.png") no-repeat bottom left, url("../images/fond-a-la-une/top-right2.png") no-repeat top right, url("../images/fond-a-la-une/bottom-right.jpg") no-repeat bottom right, url("../images/fond-a-la-une/center.jpg") repeat top left content-box;
+  background: url("../images/fond-a-la-une/center.jpg") repeat top left;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 830px;
   height: 100%;
   z-index: -100;
 }
@@ -415,11 +453,15 @@ body .extenseur {
 .home .a-la-une .column2,
 .home .a-la-une .column3 {
   text-align: center;
-  margin: 1em auto 0 auto;
+  margin: 2em auto 1em auto;
   max-width: 500px;
 }
-.home .a-la-une .column1 img {
-  float: none;
+.home .a-la-une .column1 img,
+.home .a-la-une .column2 img,
+.home .a-la-une .column3 img {
+  float: left;
+  width: 45%;
+  margin: 0 10px 0 0;
 }
 .home .a-la-une p {
   text-align: justify;
@@ -432,6 +474,7 @@ body .extenseur {
 }
 .home .a-la-une a.close {
   float: right;
+  font-family: sans-serif;
 }
 .home .a-la-une a.close:hover {
   color: #23c2e3;
@@ -1154,6 +1197,9 @@ body .extenseur {
     float: left;
     width: 20%;
   }
+  #header #navigation ul.nav ul.sub-menu li a {
+    display: inline;
+  }
   .home #header #menu-button {
     margin-right: 40px;
   }
@@ -1227,26 +1273,51 @@ body .extenseur {
   .home #header #navigation {
     width: 720px;
   }
+  .home .a-la-une {
+    width: 714px;
+    max-width: 900px;
+    height: 274px;
+    padding: 25px 10px 10px 25px;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-clip: padding-box;
+  }
+  .home .a-la-une > h2 {
+    opacity: 0;
+  }
+  .home .a-la-une .bg-block1 {
+    background: url("../images/fond-a-la-une/fond-a-la-une1.png") no-repeat top left;
+  }
   .home .a-la-une .column1,
   .home .a-la-une .column2,
   .home .a-la-une .column3 {
     float: left;
+    max-height: 202px;
+    overflow: hidden;
+    margin: 0;
+  }
+  .home .a-la-une .column1 img,
+  .home .a-la-une .column2 img,
+  .home .a-la-une .column3 img {
+    width: 100%;
+    float: none;
+    margin: 0;
   }
   .home .a-la-une .column1 {
-    max-width: 25%;
+    max-width: 39%;
   }
   .home .a-la-une .column2 {
-    max-width: 36%;
-    margin: 0.5em 3%;
+    max-width: 28%;
+    margin: 0 2%;
   }
   .home .a-la-une .column3 {
-    width: 33%;
+    max-width: 28%;
   }
-  .home .a-la-une .about-area {
-    width: 100%;
-  }
-  .home .a-la-une .recent-posts {
-    width: 100%;
+  .home .a-la-une a.close {
+    position: relative;
+    top: 55px;
+    right: 70px;
   }
   .single-product #header #navigation,
   .single-artist #header #navigation {

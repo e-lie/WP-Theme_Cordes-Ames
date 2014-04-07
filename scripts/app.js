@@ -22,7 +22,7 @@ jQuery.noConflict();
 	var popID = "a-la-une";
 
 	//Faire apparaitre la pop-up et ajouter le bouton de fermeture
-	$('.' + popID).fadeIn(1000).prepend('<a href="#" class="close" style="margin-right: 100px;">fermer la fenêtre</a>');
+	$('.' + popID).fadeIn(1000).prepend('<a href="#" class="close" style="font-size: 30px">x</a>');
 	
 	//Récupération du margin, qui permettra de centrer la fenêtre - on ajuste de 80px en conformité avec le CSS
 	var boxWidth = parseInt($('.'+popID).css('paddingLeft'))  +  $('.'+popID).width()  + parseInt($('.'+popID).css('paddingRight'));

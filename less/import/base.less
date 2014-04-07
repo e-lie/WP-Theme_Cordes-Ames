@@ -68,9 +68,11 @@ body{
     .transition(height 0.4s ease-in-out);  
     
     ul.nav {
-      .columns(3);
+      .columns(2);
+      margin-bottom: 5px;
       ul.sub-menu li a {
 	  font-size: 0.85em;
+	  display: none;
       }
       
       
@@ -136,18 +138,21 @@ body{
     p{
       margin: 30px 0 0 0;
     }
+    .a-la-une p{
+      margin: 0px;
+    }
   }
 
 
   .product-cloud {
 
-    @base-margin: 3.5%;
-    @reduced-margin: 3.5%;
+    @base-margin: 3%;
+    @reduced-margin: 3%;
     @base-width: 25.2%;
     @active-width: @base-width + (2 * (@base-margin - @reduced-margin)) ;
-    @big-margin-left: 3.5%;
+    @big-margin-left: 3%;
     @reduced-bml: @big-margin-left - (@base-margin - @reduced-margin);
-    @small-margin-left: 3.5%;
+    @small-margin-left: 3%;
     @reduced-sml: @small-margin-left - (@base-margin - @reduced-margin);
   
     text-align: center;
@@ -211,50 +216,72 @@ body{
     display: none;
     position: absolute;
     top: 500px;
-    width: 96%;
-    max-width: 900px;
+    width: 92%;
+    max-width: 520px;
     margin: 0 auto;
-    padding: 40px 2%;
+    padding: 3%;
     .box-shadow( 0px 19px 10px -10px rgba(0, 0, 0, 0.2));
     z-index: 9999;
+    overflow: hidden;
+    .border-radius(5px);
+    border: 2px solid #999;
+    
+    p  { 
+      line-height: 1.2em;
+    }
+    
+    img{
+      float: none;
+      margin: 0;
+    }
     
     h2{
-      margin-bottom: 40px;
+      margin-bottom: 10px;
+      font-size: 3em;
+      text-align: center;
+      max-width: 402px;
+      height: 82px;
+      background: url("../images/fond-a-la-une/a-la-une-title.png") no-repeat top center;
+    }
+    h3{
+      text-align: left;
+      font-size: 1.6em;
+      line-height: 1em;
+      margin: 0;
+    }
+    p, h1, h2, h3, h4, h5 {
+      color: black;
+      font-family: "Crimson Text", serif;
+    }
+    
+    a{
+      font-family: "Crimson Text", serif;
     }
     
     .bg-block1{
-    padding: 2px 190px 0px 7px;
-    background: url("../images/fond-a-la-une/top-left.png") no-repeat top left, 
-		      url("../images/fond-a-la-une/bottom-left.png") no-repeat bottom left ,
-		      url("../images/fond-a-la-une/top-right2.png") no-repeat top right,
-		      url("../images/fond-a-la-une/bottom-right.jpg") no-repeat bottom right,
-		      url("../images/fond-a-la-une/center.jpg") repeat top left content-box;
+    //--padding: 2px 190px 0px 7px;
+      background: url("../images/fond-a-la-une/center.jpg") repeat top left;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      max-width: 830px;
+      //--max-width: 830px;
       height: 100%;
       z-index:-100;
+      //--opacity: 0.9;
     }
+    
     
     .column1, .column2, .column3 {
       text-align: center;
-      margin: 1em auto 0 auto;
+      margin: 2em auto 1em auto;
       max-width: 500px;
-    }
-    
-    .column1{
-      img{
-	float: none;
-      }
-    }
-    
-    .column2{
-    }
-    
-    .column3{
       
+      img{
+	float: left;
+	width: 45%;
+	margin: 0 10px 0 0;
+      }
     }
     
     p{
@@ -269,7 +296,7 @@ body{
     
     a.close{
       float: right;
-      //color: white;
+      font-family: sans-serif;
       &:hover{ color: @pantone311C;}
     }
   }

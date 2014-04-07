@@ -199,21 +199,25 @@ add_shortcode( 'music', 'music_shortcode' );
 
 function a_la_une_1_shortcode ( $atts ) {
 		ob_start();
-		return '<section class="a-la-une"><div class="bg-block1"></div><h2> à la une...</h2><section class="column1">'.ob_get_clean();
+		if(isset($atts['layout']) && $atts['layout'] == '3-columns-layout'){
+		  return '<section class="a-la-une layout3"><div class="bg-block1"></div><h2></h2><section class="column1" '.$style.'>'.ob_get_clean();
+		} else {
+		  return '<section class="a-la-une layout1-2"><div class="bg-block1"></div><h2></h2><section class="column1" '.$style.'>'.ob_get_clean();
+		}
 	}
 
 add_shortcode( 'a_la_une_1', 'a_la_une_1_shortcode' );
 
 function a_la_une_2_shortcode ( $atts ) {
 		ob_start();
-		return 	'</section><section class="column2">'.ob_get_clean();
+		return '</section><section class="column2" '.$style.'>'.ob_get_clean();
 	}
 
 add_shortcode( 'a_la_une_2', 'a_la_une_2_shortcode' );
 
 function a_la_une_3_shortcode ( $atts ) {
 		ob_start();
-		return '</section><section class="column3">'.ob_get_clean();
+		return '</section><section class="column3" '.$style.'>'.ob_get_clean();
 	}
 
 add_shortcode( 'a_la_une_3', 'a_la_une_3_shortcode' );
@@ -274,7 +278,7 @@ function recent_posts_shortcode( $atts ) {
 			'orderby' => $orderby,
 			'order' => $order
 		);
-
+		
 		ob_start();
 
 		$products = new WP_Query( $args );
@@ -616,7 +620,7 @@ function custom_post_wp_get_archives($args = '') {
 
 	$defaults = array(
 		'type' => 'monthly', 'limit' => '',
-		'format' => 'html', 'before' => '',
+		'layout' => 'html', 'before' => '',
 		'after' => '', 'show_post_count' => false,
 		'echo' => 1, 'order' => 'DESC',
     'post_type' => 'post'

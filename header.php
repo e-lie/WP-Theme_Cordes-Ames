@@ -28,6 +28,7 @@ global $woo_options, $woocommerce;
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo(get_bloginfo( 'stylesheet_directory' ).'/css/custom.css'); ?>" media="screen" />
+<?php if(is_page('Accueil')) : ?> <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'> <?php endif; ?>
 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
