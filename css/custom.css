@@ -415,7 +415,6 @@ body .extenseur {
   margin: 0;
 }
 .home .a-la-une h2 {
-  margin-bottom: 10px;
   font-size: 3em;
   text-align: center;
   max-width: 402px;
@@ -1285,6 +1284,7 @@ body .extenseur {
   }
   .home .a-la-une > h2 {
     opacity: 0;
+    height: 75px;
   }
   .home .a-la-une .bg-block1 {
     background: url("../images/fond-a-la-une/fond-a-la-une1.png") no-repeat top left;
